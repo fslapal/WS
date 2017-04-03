@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  $.datepicker.regional['cs'] = {
+                closeText: 'Hotovo',
+                prevText: 'Předchozí',
+                nextText: 'Další',
+                currentText: 'Dnes',
+                monthNames: ['Leden','Únor','Březen','Duben','Květen','Červen', 'Červenec','Srpen','Září','Říjen','Listopad','Prosinec'],
+                monthNamesShort: ['Le','Ún','Bř','Du','Kv','Čn', 'Čc','Sr','Zá','Ří','Li','Pr'],
+                dayNames: ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'],
+                dayNamesShort: ['Ne','Po','Út','St','Čt','Pá','So',],
+                dayNamesMin: ['Ne','Po','Út','St','Čt','Pá','So'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd.mm.yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+
+
+$.datepicker.setDefaults($.datepicker.regional['cs']);
+
+$(function() {
+  $("#datepicker1").datepicker({
+        dateFormat: "yy-mm-dd",
+        maxDate: 0,
+});
+});
+$(function() {
+  $("#datepicker2").datepicker({
+        dateFormat: "yy-mm-dd",
+        maxDate: 0,
+});
+});
+
+</script>
+</head>
+<body>
+</body>
+
+</HTML>

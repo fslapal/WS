@@ -1,0 +1,218 @@
+body{
+    font-family: Verdana;
+    }
+
+#body{
+  width:100%;
+  height:auto;
+}
+
+#menu {
+  background: #f96e5b;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+}
+#menu ul:after {
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+
+}
+#menu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li:first-child a {
+  color: #333333;
+}
+
+#menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -ms-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+#menu ul li a:hover {
+  color: #333333;
+}
+
+#menu ul li a:hover:before {
+  width: 100%;
+}
+
+#menu ul li.li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right:-3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: 0.5;
+}
+#menu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -ms-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
+}
+
+@media screen and (max-width: 40em) {
+  #menu ul li {
+    float: none;
+    display: block;
+  }
+
+     #menu ul li.li a:after {
+    display: none;
+  }
+  #menu ul li a:before {
+    display: none;
+  }
+  }
+
+  div.cals{
+  float: left;
+  width: auto;
+  height: 4.75em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.75em 1em 1em 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  overflow: auto;
+  }
+
+  div.values{
+  width: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.75em 1em 1em 1em;
+  margin-top: 1em;
+  overflow: auto;
+  height: auto;
+  }
+  div.title{
+  width: auto;
+  height: 4.75em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.75em 1em 1em 1em;
+  margin-top: 1em;
+  overflow: auto;
+  }
+  #day{
+     visibility: hidden;
+     height: 0px;
+     width: 0px;
+     overflow: hidden;
+  }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  }
+table{
+    width: 95%;
+    margin:auto;
+     }
+caption{
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  }
+  div.data{
+  width: auto;
+  float: left;
+  min-width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em 1em 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  overflow: auto;
+  height:34em;
+  }
+  div.calendar{
+  width: auto;
+  height: 20em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em 1em 1em;
+  margin-top: 1em;
+  overflow: auto;
+  }
+  div.time{
+  width: auto;
+  height: 11.4em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em 1em 1em;
+  margin-top: 1em;
+  overflow: auto;
+  }
+
+
+  @media screen and (max-width: 60em) {
+  div.calendar{
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  }
+  div.data{
+  width: 90%;
+  margin: auto;
+  float: none;
+  margin-top: 1em;
+  }
+  div.time{
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  }
+  div.cals{
+  margin-bottom: 1em;
+  float: none;
+  height: auto;
+  margin-right: 0em;
+  }
+  div.title{
+  height: auto;
+  }}
+#min{
+margin-top: 1em;
+}
