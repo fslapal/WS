@@ -3,7 +3,6 @@ WS is a proof-of-concept student project. It was aimed at creating an indoor wea
 
 # Components, wiring
 ![Wiring diagram](/Documentation/WS_diagram.png)
-Format: ![Alt Text](url)
 The complete scheme in Fritzing is available in the Documentation file.
 
 ## Components:
