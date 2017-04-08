@@ -1,4 +1,4 @@
-# WS {#mainpage}
+# WS
 WS is a proof-of-concept student project. It was aimed at creating an indoor weather station based on Arduino that sends measured values to a web database.
 
 # Components, wiring
@@ -41,7 +41,9 @@ A communication between client and database is based on PDO and SQL commands.
 # How to use WS?
 The index page shows average, max and min data for last week with a possibility to change the time horizon. There is also displayed the current date and time and last added row to the database. In the right bottom corner you can choose a specific date to see the detail values and graph.
 ![Index](/Documentation/index.png)
+
 The STATISTIKY page shows the longterm statistics of all values together with graph. You can change the desired date range.
 ![Stats](/Documentation/stats.png)
+
 The VÝPIS HODNOT page creates a table of last 50 recorded values.
 ![List of values](/Documentation/list.png)

@@ -1,4 +1,4 @@
-# WS {#mainpage}
+# WS
 WS je studentským projektem ověřujícím možnost realizace konceptu vnitřní meteostanice fungující na bázi Arduina, který umožňuje posílat naměřené hodnoty do webové databáze.
 
 # Komponenty, schéma zapojení
@@ -41,7 +41,9 @@ Komunikace mezi klientem a databází je založena na PDO a SQL příkazech.
 # Jak WS používat?
 Index zobrazuje průměrné, minimální a maximální hodnoty za poslední týden s možností změny časového rozpětí. Aktuální čas, datum a poslední přidané hodnoty jsou také zobrazeny. V pravém dolním rohu je v kalendáři možnost výběru specifického data pro detailní zobrazení hodnot a grafu.
 ![Index](/Documentation/index.png)
+
 Ve STATISTIKách se zobrazují data za poslední rok s možností změny rozpětí dat.
 ![Stats](/Documentation/stats.png)
+
 VÝPIS HODNOT zobrazí tabulku s posledními 50 zaznamenanými hodnotami.
 ![List of values](/Documentation/list.png)
