@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ws_2eino',['WS.ino',['../_w_s_8ino.html',1,'']]]
+  ['blink_2eino',['Blink.ino',['../_blink_8ino.html',1,'']]]
 ];

@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -54,6 +61,20 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('globals.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,205 +92,157 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
 
-<h3><a id="index_a"></a>- a -</h3><ul>
-<li>a
-: <a class="el" href="_w_s_8ino.html#aa4c2a5552e9bc49b1816ff532f558c74">WS.ino</a>
+<h3><a id="index_0x24"></a>- $ -</h3><ul>
+<li>$conn
+: <a class="el" href="averages_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">averages.php</a>
+, <a class="el" href="export_8php.html#a210cde6eb27b4e674643358d6976b9fd">export.php</a>
+, <a class="el" href="import_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">import.php</a>
+, <a class="el" href="stats_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">stats.php</a>
+, <a class="el" href="import__test_8php.html#a3d69d43ccb27ec6b4f0cf5b68c1bc558">import_test.php</a>
+, <a class="el" href="graphs_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">graphs.php</a>
+, <a class="el" href="index_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">index.php</a>
+, <a class="el" href="mysql__connect_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">mysql_connect.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_b"></a>- b -</h3><ul>
-<li>bme()
-: <a class="el" href="_w_s_8ino.html#aaa44a3bc15fc4819e1e0e66a80d6a693">WS.ino</a>
+<li>$date
+: <a class="el" href="import_8php.html#a481c918f8d853749e00b5942cabf599a">import.php</a>
+, <a class="el" href="import__test_8php.html#a481c918f8d853749e00b5942cabf599a">import_test.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>connectWiFi()
-: <a class="el" href="_w_s_8ino.html#a144025702d7aa7708d704324ecb09eff">WS.ino</a>
+<li>$day
+: <a class="el" href="graphs_8php.html#a4db742f2faa33cdbae6722a11051f3bd">graphs.php</a>
+, <a class="el" href="import_8php.html#a4db742f2faa33cdbae6722a11051f3bd">import.php</a>
+, <a class="el" href="import__test_8php.html#a4db742f2faa33cdbae6722a11051f3bd">import_test.php</a>
+, <a class="el" href="stats_8php.html#a4db742f2faa33cdbae6722a11051f3bd">stats.php</a>
 </li>
-<li>count
-: <a class="el" href="_w_s_8ino.html#ad43c3812e6d13e0518d9f8b8f463ffcf">WS.ino</a>
+<li>$dayfrom
+: <a class="el" href="averages_8php.html#afa49fae2c49cb212ce1b0eac97f82241">averages.php</a>
 </li>
-<li>cs_pin
-: <a class="el" href="_w_s_8ino.html#ad7860cb7dbe49e4f2ebde8c624b448ef">WS.ino</a>
+<li>$days_no
+: <a class="el" href="index_8php.html#a71e392718e830e37a3354e643808a166">index.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_d"></a>- d -</h3><ul>
-<li>d
-: <a class="el" href="_w_s_8ino.html#a7e3f4a5179b8e7fc0d3cee2a12bb3f44">WS.ino</a>
+<li>$dayto
+: <a class="el" href="averages_8php.html#adbeca6419514ae8ddb61e4f841ece4b2">averages.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_g"></a>- g -</h3><ul>
-<li>getDate()
-: <a class="el" href="_w_s_8ino.html#a100af87d91fcaa6f23f2ca6a2fe146cc">WS.ino</a>
+<li>$db
+: <a class="el" href="variables_8php.html#a1fa3127fc82f96b1436d871ef02be319">variables.php</a>
 </li>
-<li>getTime()
-: <a class="el" href="_w_s_8ino.html#ae96ca3df2e8b9eef75d400de6ef06db3">WS.ino</a>
+<li>$dbe
+: <a class="el" href="variables_8php.html#ab2cb86815112182d3a14b8ad8b51089e">variables.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_h"></a>- h -</h3><ul>
-<li>h
-: <a class="el" href="_w_s_8ino.html#a5977e838367785a7176dc7d4106df5e3">WS.ino</a>
+<li>$hour
+: <a class="el" href="import_8php.html#a54248578d000a0f9808d29c20ed18b38">import.php</a>
+, <a class="el" href="import__test_8php.html#a54248578d000a0f9808d29c20ed18b38">import_test.php</a>
 </li>
-<li>host
-: <a class="el" href="_w_s_8ino.html#ad9949162675c2cb74b115f5dfb224732">WS.ino</a>
+<li>$hum
+: <a class="el" href="import_8php.html#a0c87ad8226d1badaa73904d159666bd3">import.php</a>
+, <a class="el" href="import__test_8php.html#a0c87ad8226d1badaa73904d159666bd3">import_test.php</a>
 </li>
-<li>host1
-: <a class="el" href="_w_s_8ino.html#a9e2e38c07417ce7edf45d45a5a6b92c9">WS.ino</a>
+<li>$huma
+: <a class="el" href="average_8php.html#a29dc8b646ccc31d3f81aa1a74581e018">average.php</a>
+, <a class="el" href="average__longterm_8php.html#a29dc8b646ccc31d3f81aa1a74581e018">average_longterm.php</a>
 </li>
-<li>humidity
-: <a class="el" href="_w_s_8ino.html#a6a87b2b0cff24d38b367ccd34843a206">WS.ino</a>
+<li>$int
+: <a class="el" href="graphs_8php.html#ab1e3f34fd9304146bfc0a8849523080a">graphs.php</a>
+, <a class="el" href="index_8php.html#ab1e3f34fd9304146bfc0a8849523080a">index.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_i"></a>- i -</h3><ul>
-<li>i
-: <a class="el" href="_w_s_8ino.html#acb559820d9ca11295b4500f179ef6392">WS.ino</a>
+<li>$interval
+: <a class="el" href="graphs_8php.html#a02df6fd14302ba88fecc15b95d513e5b">graphs.php</a>
+, <a class="el" href="index_8php.html#a02df6fd14302ba88fecc15b95d513e5b">index.php</a>
 </li>
-<li>interval
-: <a class="el" href="_w_s_8ino.html#ae0c690118932b32ef40a74bb6a259acd">WS.ino</a>
+<li>$lastyear
+: <a class="el" href="averages_8php.html#a3c7ea3f0fbf0982030fecb2450c95402">averages.php</a>
 </li>
-<li>interval_hour
-: <a class="el" href="_w_s_8ino.html#a4e07ce7aef83b2e94bd353d77029423e">WS.ino</a>
+<li>$minute
+: <a class="el" href="import__test_8php.html#a08355553540e06b50acd4138d6254fd0">import_test.php</a>
+, <a class="el" href="import_8php.html#a08355553540e06b50acd4138d6254fd0">import.php</a>
 </li>
-<li>interval_lcd
-: <a class="el" href="_w_s_8ino.html#a64d680b4be82b34d0731c9dd84986ead">WS.ino</a>
+<li>$month
+: <a class="el" href="import_8php.html#a6ba6e82c39e80d5d00afeb6f4383a549">import.php</a>
+, <a class="el" href="import__test_8php.html#a6ba6e82c39e80d5d00afeb6f4383a549">import_test.php</a>
 </li>
-<li>interval_second
-: <a class="el" href="_w_s_8ino.html#a0a56e85c196bfb2b3bf61abe7f007541">WS.ino</a>
+<li>$oney
+: <a class="el" href="averages_8php.html#abc7362f0cb108127f2de86a9f0d541e6">averages.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_l"></a>- l -</h3><ul>
-<li>l
-: <a class="el" href="_w_s_8ino.html#a3d755e761d498d63ec8ff4ba107f9b37">WS.ino</a>
+<li>$pass
+: <a class="el" href="variables_8php.html#a12ec2780b52bd1c54d38c2f981c0349f">variables.php</a>
 </li>
-<li>lcd()
-: <a class="el" href="_w_s_8ino.html#ad3d81d27015e5977de8035c02307bdc5">WS.ino</a>
+<li>$password
+: <a class="el" href="import_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">import.php</a>
+, <a class="el" href="variables_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">variables.php</a>
 </li>
-<li>lex
-: <a class="el" href="_w_s_8ino.html#a50a22a42df187974707beaeeb46ee1ec">WS.ino</a>
+<li>$pres
+: <a class="el" href="import_8php.html#a829cc53a4b993d7a7eefdcc9ae1d2e10">import.php</a>
+, <a class="el" href="import__test_8php.html#a829cc53a4b993d7a7eefdcc9ae1d2e10">import_test.php</a>
 </li>
-<li>loop()
-: <a class="el" href="_w_s_8ino.html#afe461d27b9c48d5921c00d521181f12f">WS.ino</a>
+<li>$presa
+: <a class="el" href="average_8php.html#a2b0df464a962196e7245f2c46057ba1a">average.php</a>
+, <a class="el" href="average__longterm_8php.html#a2b0df464a962196e7245f2c46057ba1a">average_longterm.php</a>
 </li>
-<li>lx
-: <a class="el" href="_w_s_8ino.html#a27093eb2a51400e98a5a829312514cab">WS.ino</a>
+<li>$result
+: <a class="el" href="days__select_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">days_select.php</a>
+, <a class="el" href="average_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">average.php</a>
+, <a class="el" href="average__longterm_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">average_longterm.php</a>
+, <a class="el" href="day_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">day.php</a>
+, <a class="el" href="day__data_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">day_data.php</a>
+, <a class="el" href="export_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">export.php</a>
+, <a class="el" href="extremes_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">extremes.php</a>
+, <a class="el" href="extremes__longterm_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">extremes_longterm.php</a>
+, <a class="el" href="index_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">index.php</a>
+, <a class="el" href="graph_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">graph.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_m"></a>- m -</h3><ul>
-<li>mi
-: <a class="el" href="_w_s_8ino.html#a27f338e2e1e0c6b4e800a9a05aeeb00f">WS.ino</a>
+<li>$servername
+: <a class="el" href="variables_8php.html#ad79b54e31bd1050001133c4d70f850fe">variables.php</a>
 </li>
-<li>mi_0
-: <a class="el" href="_w_s_8ino.html#a941e7622afb12acf931c6da1910cc461">WS.ino</a>
+<li>$sql
+: <a class="el" href="graph_8php.html#a047170d6020a882807665812a27e2525">graph.php</a>
+, <a class="el" href="index_8php.html#a047170d6020a882807665812a27e2525">index.php</a>
+, <a class="el" href="day__data_8php.html#a047170d6020a882807665812a27e2525">day_data.php</a>
+, <a class="el" href="import__test_8php.html#a047170d6020a882807665812a27e2525">import_test.php</a>
+, <a class="el" href="export_8php.html#a047170d6020a882807665812a27e2525">export.php</a>
+, <a class="el" href="extremes__longterm_8php.html#a5f2aa1d95199e835f226381e3dd665f6">extremes_longterm.php</a>
+, <a class="el" href="day_8php.html#a047170d6020a882807665812a27e2525">day.php</a>
+, <a class="el" href="mysql__connect_8php.html#a047170d6020a882807665812a27e2525">mysql_connect.php</a>
+, <a class="el" href="average_8php.html#a047170d6020a882807665812a27e2525">average.php</a>
+, <a class="el" href="days__select_8php.html#a047170d6020a882807665812a27e2525">days_select.php</a>
+, <a class="el" href="average__longterm_8php.html#a047170d6020a882807665812a27e2525">average_longterm.php</a>
+, <a class="el" href="extremes_8php.html#a5f2aa1d95199e835f226381e3dd665f6">extremes.php</a>
 </li>
-<li>mo
-: <a class="el" href="_w_s_8ino.html#ae87a77f51d231ab5614fdc0cc9734ae9">WS.ino</a>
+<li>$table
+: <a class="el" href="variables_8php.html#ae8876a14058f368335baccf35af4a22b">variables.php</a>
 </li>
-<li>monthName
-: <a class="el" href="_w_s_8ino.html#a9fce7af8b9842b4ab3b85327b1af13fc">WS.ino</a>
+<li>$temp
+: <a class="el" href="import_8php.html#a0d57fb0317e19ec798aa625381ebf342">import.php</a>
+, <a class="el" href="import__test_8php.html#a0d57fb0317e19ec798aa625381ebf342">import_test.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_o"></a>- o -</h3><ul>
-<li>oldtim
-: <a class="el" href="_w_s_8ino.html#a8455abbfc4590d0bf845dcd30505e1ce">WS.ino</a>
+<li>$tempa
+: <a class="el" href="average_8php.html#a8923948fae95ff6dc6ed7e7df3446854">average.php</a>
+, <a class="el" href="average__longterm_8php.html#a8923948fae95ff6dc6ed7e7df3446854">average_longterm.php</a>
 </li>
-<li>oldtim_lcd
-: <a class="el" href="_w_s_8ino.html#a1e3b4218dc8a4352253c9648cf72433d">WS.ino</a>
+<li>$time
+: <a class="el" href="import__test_8php.html#a78db1a0602e3b6ac1d9a1b5ec103c160">import_test.php</a>
+, <a class="el" href="import_8php.html#a78db1a0602e3b6ac1d9a1b5ec103c160">import.php</a>
 </li>
-</ul>
-
-
-<h3><a id="index_p"></a>- p -</h3><ul>
-<li>pass
-: <a class="el" href="_w_s_8ino.html#a9f2587d1070b8924b276ba83988d3667">WS.ino</a>
+<li>$today
+: <a class="el" href="stats_8php.html#af1b7fb9d06cdc6d22c14741fc3cc185a">stats.php</a>
+, <a class="el" href="averages_8php.html#af1b7fb9d06cdc6d22c14741fc3cc185a">averages.php</a>
+, <a class="el" href="graphs_8php.html#af1b7fb9d06cdc6d22c14741fc3cc185a">graphs.php</a>
 </li>
-<li>password
-: <a class="el" href="_w_s_8ino.html#ae59dfb8ffddb9128834034516c45e7ce">WS.ino</a>
+<li>$username
+: <a class="el" href="variables_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">variables.php</a>
 </li>
-<li>pressure
-: <a class="el" href="_w_s_8ino.html#ac870e1249bab4a2a68cc4126761d24ef">WS.ino</a>
-</li>
-</ul>
-
-
-<h3><a id="index_s"></a>- s -</h3><ul>
-<li>s
-: <a class="el" href="_w_s_8ino.html#a5109c1e8d8d5228b4290813adb0be47b">WS.ino</a>
-</li>
-<li>SDread()
-: <a class="el" href="_w_s_8ino.html#ae25c95c757003a1f2daacee7dae07105">WS.ino</a>
-</li>
-<li>SDwrite()
-: <a class="el" href="_w_s_8ino.html#a5abc7cb0136096487b90a0a7001f1da6">WS.ino</a>
-</li>
-<li>sendData()
-: <a class="el" href="_w_s_8ino.html#aa9f1e5f04588dc7c432816e2faac1c2a">WS.ino</a>
-</li>
-<li>sendSD()
-: <a class="el" href="_w_s_8ino.html#acca4eb89d9cb2ffb1d5d9fa19d429f9c">WS.ino</a>
-</li>
-<li>setup()
-: <a class="el" href="_w_s_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">WS.ino</a>
-</li>
-<li>sign
-: <a class="el" href="_w_s_8ino.html#a9d8dc79272f5859f2c509c88f073dbde">WS.ino</a>
-</li>
-<li>ssid
-: <a class="el" href="_w_s_8ino.html#abd15b8fcd3b82c2827693b9fd882a206">WS.ino</a>
-</li>
-</ul>
-
-
-<h3><a id="index_t"></a>- t -</h3><ul>
-<li>temperature
-: <a class="el" href="_w_s_8ino.html#afc1d28cfbce795d6ea954ebe725241f5">WS.ino</a>
-</li>
-<li>tim
-: <a class="el" href="_w_s_8ino.html#a9ca8357cbbbe8be3c127f66bcc4082f7">WS.ino</a>
-</li>
-<li>tim_lcd
-: <a class="el" href="_w_s_8ino.html#aafe10273424e4ce6028423ddf348cd58">WS.ino</a>
-</li>
-<li>tm
-: <a class="el" href="_w_s_8ino.html#a52357cbf68af66972047f7aed7a45218">WS.ino</a>
-</li>
-</ul>
-
-
-<h3><a id="index_x"></a>- x -</h3><ul>
-<li>x
-: <a class="el" href="_w_s_8ino.html#ab06e9aa782b61ccfb42f7c48996f6ed4">WS.ino</a>
-</li>
-</ul>
-
-
-<h3><a id="index_y"></a>- y -</h3><ul>
-<li>y
-: <a class="el" href="_w_s_8ino.html#a671dd85f94413cb1d3f4fa1877dded70">WS.ino</a>
+<li>$year
+: <a class="el" href="import__test_8php.html#a8e992d901ac2312b3be2021ddbb7d11e">import_test.php</a>
+, <a class="el" href="import_8php.html#a8e992d901ac2312b3be2021ddbb7d11e">import.php</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>
