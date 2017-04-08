@@ -1,0 +1,49 @@
+WS is a proof-\/of-\/concept student project. It was aimed at creating an indoor weather station based on Arduino that sends measured values to a web database.
+
+\section*{Components, wiring}
+
+ The complete scheme in Fritzing is available in the Documentation file.
+
+\subsection*{Components\+:}
+
+
+\begin{DoxyItemize}
+\item Arduino Mega 2560 R3 -\/ microprocessor
+\item E\+S\+P8266 -\/ wifi module
+\item B\+M\+E280 -\/ temperature, humidity and pressure senosr
+\item R\+T\+C1307 -\/ real time clock module (+ C\+R2025 battery)
+\item Catalex Micro\+SD card reader (+ Micro\+SD card)
+\item 20x4 L\+CD display
+\end{DoxyItemize}
+
+\subsection*{Libraries\+:}
+
+
+\begin{DoxyItemize}
+\item cactus\+\_\+io\+\_\+\+B\+M\+E280\+\_\+\+I2C (B\+ME, R\+TC)
+\item D\+S1307\+R\+TC (R\+TC)
+\item Liquid\+Crystal (L\+CD)
+\item SD (SD module)
+\item S\+PI (B\+ME, SD module)
+\item Time\+Lib (R\+TC)
+\item Wire (I2C -\/$>$ B\+ME, R\+TC)
+\end{DoxyItemize}
+
+\section*{Installation}
+
+Code for the station was written and uploaded with help of Arduino I\+DE. Atom was used for the P\+HP server side programming. To start this station, there are needed a few steps to complete\+:
+\begin{DoxyEnumerate}
+\item Establish hosting, database and web page.
+\item Fill in the Server/variables.\+php with your right credentials.
+\item Upload the content of Server folder on your hosting server.
+\item Run mysql\+\_\+connect.\+php to create table in the database.
+\item Wire up the Arduino according to the wiring diagram included in this file.
+\item Fill in all the constants in the Arduino file with server, wifi and other wished credentials.
+\item Upload the sketch to Arduino and afterwards ensure the power supply is plugged in. It is good to provide the R\+TC with battery. In case of blackout, the right time will be sustained.
+\item Adjust both potentiometers to fit your desired brightness and contrast levels.
+\item Rejoice the beautiful statistics and graphs made from your data.
+\end{DoxyEnumerate}
+
+\section*{How does it work?}
+
+By setting the interval in the Arduino file a cycle for recording data begins. Every x hours the internet connection is checked. If E\+SP is connected, the presence of W\+S.\+txt file is checked. Data from B\+ME and R\+TC together with possible data from the SD card is transferred directly to the server. In case of a lost connection, data is stored on an SD card inserted into Catalex module. Both B\+ME and R\+TC work via I2C interface. A communication between Arduino and E\+SP runs on the serial line. SD card module is connected via S\+PI. The L\+CD display renews data every x minutes. 
