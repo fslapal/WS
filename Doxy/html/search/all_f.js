@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../_w_s_8ino.html#a671dd85f94413cb1d3f4fa1877dded70',1,'WS.ino']]]
+  ['x',['x',['../_w_s_8ino.html#ab06e9aa782b61ccfb42f7c48996f6ed4',1,'WS.ino']]]
 ];
