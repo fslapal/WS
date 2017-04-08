@@ -21,22 +21,7 @@
 
        if (!empty($temp)){
 
-  echo "<style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      text-align: center;
-      }
-    table{
-        width: 95%;
-        margin:auto;
-         }
-    caption{
-      font-size: 20px;
-      margin-bottom: 0.5em;
-      }
-        </style>";
-
+  
   echo "<div id='average'>";
   echo "<table>";
   echo "<caption>Průměrné hodnoty<caption>";
