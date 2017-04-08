@@ -1,0 +1,45 @@
+\hypertarget{extremes__longterm_8php}{}\section{Server/extremes\+\_\+longterm.php File Reference}
+\label{extremes__longterm_8php}\index{Server/extremes\+\_\+longterm.\+php@{Server/extremes\+\_\+longterm.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{extremes__longterm_8php_a5f2aa1d95199e835f226381e3dd665f6}{\$sql} = \char`\"{}S\+E\+L\+E\+CT M\+AX(temp), M\+AX(pres), M\+AX(hum) F\+R\+OM \$table W\+H\+E\+RE date $>$= \textquotesingle{}\$dayfrom\textquotesingle{} A\+ND date $<$= \textquotesingle{}\$dayto\textquotesingle{}\char`\"{}
+\item 
+\hyperlink{extremes__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$conn-\/$>$query(\$sql)
+\item 
+\hyperlink{extremes__longterm_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} ( \$result!==F\+A\+L\+SE)
+\item 
+\hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if}(!empty(\$temp)) \hyperlink{extremes__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}{else}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{extremes__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{extremes__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$conn-\/$>$query(\$sql)}
+
+\mbox{\Hypertarget{extremes__longterm_8php_a5f2aa1d95199e835f226381e3dd665f6}\label{extremes__longterm_8php_a5f2aa1d95199e835f226381e3dd665f6}} 
+\index{extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} ( \$result!==F\+A\+L\+SE) \$sql = \char`\"{}S\+E\+L\+E\+CT M\+AX(temp), M\+AX(pres), M\+AX(hum) F\+R\+OM \$table W\+H\+E\+RE date $>$= \textquotesingle{}\$dayfrom\textquotesingle{} A\+ND date $<$= \textquotesingle{}\$dayto\textquotesingle{}\char`\"{}}
+
+\mbox{\Hypertarget{extremes__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}\label{extremes__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}} 
+\index{extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}!else@{else}}
+\index{else@{else}!extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} (!empty( \$temp)) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+  echo \textcolor{stringliteral}{"Od "}.$dayfrom.\textcolor{stringliteral}{" do "}.\hyperlink{averages_8php_adbeca6419514ae8ddb61e4f841ece4b2}{$dayto}.\textcolor{stringliteral}{" nejsou v databázi žádné záznamy!"}
+\end{DoxyCode}
+\mbox{\Hypertarget{extremes__longterm_8php_a5bd83a7a52ff3be468b16a8c82e43673}\label{extremes__longterm_8php_a5bd83a7a52ff3be468b16a8c82e43673}} 
+\index{extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}!if@{if}}
+\index{if@{if}!extremes\+\_\+longterm.\+php@{extremes\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if(\$result!==F\+A\+L\+SE)}
+

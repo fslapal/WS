@@ -1,0 +1,9 @@
+digraph "Arduino/Libraries/Wire/examples/digital_potentiometer" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_645b4aab1957ceb4557ae254e9319172 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_645b4aab1957ceb4557ae254e9319172.html"]
+  dir_e2c042ef3ff45b1b8be488ec17eab96d [shape=box, label="digital_potentiometer", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e2c042ef3ff45b1b8be488ec17eab96d.html"];
+  }
+}

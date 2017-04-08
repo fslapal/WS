@@ -1,0 +1,139 @@
+\hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino}{}\section{Arduino/\+Libraries/\+Time/examples/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.ino File Reference}
+\label{_time_n_t_p___e_s_p8266_wi_fi_8ino}\index{Arduino/\+Libraries/\+Time/examples/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Arduino/\+Libraries/\+Time/examples/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi/\+Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+{\ttfamily \#include $<$Time\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$E\+S\+P8266\+Wi\+Fi.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Udp.\+h$>$}\newline
+Include dependency graph for Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+P\+Address \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a692f19597ee783ed4d1c0b2ad126d20e}{time\+Server} (132, 163, 4, 101)
+\item 
+void \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a01f3a72442d58926459c48afce4746e7}{digital\+Clock\+Display} ()
+\item 
+void \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a772afab0396032477ec7b01d14c774b2}{print\+Digits} (int digits)
+\item 
+time\+\_\+t \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a42ab384e77148282f4730ec6c68ac2a3}{get\+Ntp\+Time} ()
+\item 
+void \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a8ae1129fe8eab322ead67eaa83384ebc}{send\+N\+T\+Ppacket} (I\+P\+Address \&address)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a2961a3ee6daab3612c6258629032802d}{ssid} \mbox{[}$\,$\mbox{]} = \char`\"{}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\char`\"{}
+\item 
+const char \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a5a1325b7c2160dc5aebb1259a2fd1094}{pass} \mbox{[}$\,$\mbox{]} = \char`\"{}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\char`\"{}
+\item 
+const int \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a14e0b2c2e0a918b5dd0706f6cad48191}{time\+Zone} = 1
+\item 
+Wi\+Fi\+U\+DP \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2719168871b1327c58259f1d4c68577}{Udp}
+\item 
+unsigned int \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_ac240824c9b35035b41bc24ee200565a2}{local\+Port} = 8888
+\item 
+time\+\_\+t \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a32a8e1cc3c668b1328fd21df4649182f}{prev\+Display} = 0
+\item 
+const int \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2843b6487d71a38433763495c106346}{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE} = 48
+\item 
+byte \hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_a64bc3d70081888ef346f466f8cffcaa9}{packet\+Buffer} \mbox{[}\hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2843b6487d71a38433763495c106346}{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a01f3a72442d58926459c48afce4746e7}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a01f3a72442d58926459c48afce4746e7}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!digital\+Clock\+Display@{digital\+Clock\+Display}}
+\index{digital\+Clock\+Display@{digital\+Clock\+Display}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{digital\+Clock\+Display()}{digitalClockDisplay()}}
+{\footnotesize\ttfamily void digital\+Clock\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a42ab384e77148282f4730ec6c68ac2a3}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a42ab384e77148282f4730ec6c68ac2a3}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!get\+Ntp\+Time@{get\+Ntp\+Time}}
+\index{get\+Ntp\+Time@{get\+Ntp\+Time}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{get\+Ntp\+Time()}{getNtpTime()}}
+{\footnotesize\ttfamily time\+\_\+t get\+Ntp\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!loop@{loop}}
+\index{loop@{loop}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a772afab0396032477ec7b01d14c774b2}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a772afab0396032477ec7b01d14c774b2}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!print\+Digits@{print\+Digits}}
+\index{print\+Digits@{print\+Digits}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{print\+Digits()}{printDigits()}}
+{\footnotesize\ttfamily void print\+Digits (\begin{DoxyParamCaption}\item[{int}]{digits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a8ae1129fe8eab322ead67eaa83384ebc}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a8ae1129fe8eab322ead67eaa83384ebc}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!send\+N\+T\+Ppacket@{send\+N\+T\+Ppacket}}
+\index{send\+N\+T\+Ppacket@{send\+N\+T\+Ppacket}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{send\+N\+T\+Ppacket()}{sendNTPpacket()}}
+{\footnotesize\ttfamily void send\+N\+T\+Ppacket (\begin{DoxyParamCaption}\item[{I\+P\+Address \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!setup@{setup}}
+\index{setup@{setup}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a692f19597ee783ed4d1c0b2ad126d20e}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a692f19597ee783ed4d1c0b2ad126d20e}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!time\+Server@{time\+Server}}
+\index{time\+Server@{time\+Server}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{time\+Server()}{timeServer()}}
+{\footnotesize\ttfamily I\+P\+Address time\+Server (\begin{DoxyParamCaption}\item[{132}]{,  }\item[{163}]{,  }\item[{4}]{,  }\item[{101}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_ac240824c9b35035b41bc24ee200565a2}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_ac240824c9b35035b41bc24ee200565a2}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!local\+Port@{local\+Port}}
+\index{local\+Port@{local\+Port}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{local\+Port}{localPort}}
+{\footnotesize\ttfamily unsigned int local\+Port = 8888}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2843b6487d71a38433763495c106346}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2843b6487d71a38433763495c106346}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}}
+\index{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE@{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}{NTP\_PACKET\_SIZE}}
+{\footnotesize\ttfamily const int N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE = 48}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a64bc3d70081888ef346f466f8cffcaa9}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a64bc3d70081888ef346f466f8cffcaa9}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!packet\+Buffer@{packet\+Buffer}}
+\index{packet\+Buffer@{packet\+Buffer}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{packet\+Buffer}{packetBuffer}}
+{\footnotesize\ttfamily byte packet\+Buffer\mbox{[}\hyperlink{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2843b6487d71a38433763495c106346}{N\+T\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a5a1325b7c2160dc5aebb1259a2fd1094}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a5a1325b7c2160dc5aebb1259a2fd1094}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!pass@{pass}}
+\index{pass@{pass}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{pass}{pass}}
+{\footnotesize\ttfamily const char pass\mbox{[}$\,$\mbox{]} = \char`\"{}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\char`\"{}}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a32a8e1cc3c668b1328fd21df4649182f}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a32a8e1cc3c668b1328fd21df4649182f}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!prev\+Display@{prev\+Display}}
+\index{prev\+Display@{prev\+Display}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{prev\+Display}{prevDisplay}}
+{\footnotesize\ttfamily time\+\_\+t prev\+Display = 0}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a2961a3ee6daab3612c6258629032802d}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a2961a3ee6daab3612c6258629032802d}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!ssid@{ssid}}
+\index{ssid@{ssid}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{ssid}{ssid}}
+{\footnotesize\ttfamily const char ssid\mbox{[}$\,$\mbox{]} = \char`\"{}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\char`\"{}}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_a14e0b2c2e0a918b5dd0706f6cad48191}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_a14e0b2c2e0a918b5dd0706f6cad48191}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!time\+Zone@{time\+Zone}}
+\index{time\+Zone@{time\+Zone}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{time\+Zone}{timeZone}}
+{\footnotesize\ttfamily const int time\+Zone = 1}
+
+\mbox{\Hypertarget{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2719168871b1327c58259f1d4c68577}\label{_time_n_t_p___e_s_p8266_wi_fi_8ino_ae2719168871b1327c58259f1d4c68577}} 
+\index{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}!Udp@{Udp}}
+\index{Udp@{Udp}!Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino@{Time\+N\+T\+P\+\_\+\+E\+S\+P8266\+Wi\+Fi.\+ino}}
+\subsubsection{\texorpdfstring{Udp}{Udp}}
+{\footnotesize\ttfamily Wi\+Fi\+U\+DP Udp}
+

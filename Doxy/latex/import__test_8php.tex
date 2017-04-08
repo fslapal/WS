@@ -1,0 +1,124 @@
+\hypertarget{import__test_8php}{}\section{Server/import\+\_\+test.php File Reference}
+\label{import__test_8php}\index{Server/import\+\_\+test.\+php@{Server/import\+\_\+test.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{import__test_8php_a8e992d901ac2312b3be2021ddbb7d11e}{\$year} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a671dd85f94413cb1d3f4fa1877dded70}{y}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a671dd85f94413cb1d3f4fa1877dded70}{y}\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a6ba6e82c39e80d5d00afeb6f4383a549}{\$month} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}m\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}m\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a4db742f2faa33cdbae6722a11051f3bd}{\$day} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a7e3f4a5179b8e7fc0d3cee2a12bb3f44}{d}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a7e3f4a5179b8e7fc0d3cee2a12bb3f44}{d}\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a54248578d000a0f9808d29c20ed18b38}{\$hour} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a5977e838367785a7176dc7d4106df5e3}{h}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a5977e838367785a7176dc7d4106df5e3}{h}\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a08355553540e06b50acd4138d6254fd0}{\$minute} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_aa4c2a5552e9bc49b1816ff532f558c74}{a}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_aa4c2a5552e9bc49b1816ff532f558c74}{a}\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a0d57fb0317e19ec798aa625381ebf342}{\$temp} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}t\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}t\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a829cc53a4b993d7a7eefdcc9ae1d2e10}{\$pres} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}p\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}p\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a0c87ad8226d1badaa73904d159666bd3}{\$hum} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}hu\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}hu\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{import__test_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}{\$time} = \$hour.\char`\"{}\+:\char`\"{}.\$\hyperlink{_time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{minute}
+\item 
+\hyperlink{import__test_8php_a481c918f8d853749e00b5942cabf599a}{\$date} = \$year.\char`\"{}-\/\char`\"{}.\$month.\char`\"{}-\/\char`\"{}.\$\hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day}
+\item 
+\hyperlink{import__test_8php_abe4cc9788f52e49485473dc699537388}{try}
+\item 
+\hyperlink{import__test_8php_a047170d6020a882807665812a27e2525}{\$sql}
+\item 
+catch(P\+D\+O\+Exception \$e) \hyperlink{import__test_8php_a3d69d43ccb27ec6b4f0cf5b68c1bc558}{\$conn} = null
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{import__test_8php_a3d69d43ccb27ec6b4f0cf5b68c1bc558}\label{import__test_8php_a3d69d43ccb27ec6b4f0cf5b68c1bc558}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily catch (P\+D\+O\+Exception \$e) \$conn = null}
+
+\mbox{\Hypertarget{import__test_8php_a481c918f8d853749e00b5942cabf599a}\label{import__test_8php_a481c918f8d853749e00b5942cabf599a}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$date@{\$date}}
+\index{\$date@{\$date}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$date}{$date}}
+{\footnotesize\ttfamily \$date = \$year.\char`\"{}-\/\char`\"{}.\$month.\char`\"{}-\/\char`\"{}.\$\hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day}}
+
+\mbox{\Hypertarget{import__test_8php_a4db742f2faa33cdbae6722a11051f3bd}\label{import__test_8php_a4db742f2faa33cdbae6722a11051f3bd}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$day@{\$day}}
+\index{\$day@{\$day}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$day}{$day}}
+{\footnotesize\ttfamily \$\hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a7e3f4a5179b8e7fc0d3cee2a12bb3f44}{d}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a7e3f4a5179b8e7fc0d3cee2a12bb3f44}{d}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a54248578d000a0f9808d29c20ed18b38}\label{import__test_8php_a54248578d000a0f9808d29c20ed18b38}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$hour@{\$hour}}
+\index{\$hour@{\$hour}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$hour}{$hour}}
+{\footnotesize\ttfamily \$\hyperlink{_time_8cpp_ac4706d0cffc9e111a6c6a757b462e88e}{hour} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a5977e838367785a7176dc7d4106df5e3}{h}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a5977e838367785a7176dc7d4106df5e3}{h}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a0c87ad8226d1badaa73904d159666bd3}\label{import__test_8php_a0c87ad8226d1badaa73904d159666bd3}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$hum@{\$hum}}
+\index{\$hum@{\$hum}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$hum}{$hum}}
+{\footnotesize\ttfamily \$hum = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}hu\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}hu\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a08355553540e06b50acd4138d6254fd0}\label{import__test_8php_a08355553540e06b50acd4138d6254fd0}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$minute@{\$minute}}
+\index{\$minute@{\$minute}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$minute}{$minute}}
+{\footnotesize\ttfamily \$\hyperlink{_time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{minute} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_aa4c2a5552e9bc49b1816ff532f558c74}{a}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_aa4c2a5552e9bc49b1816ff532f558c74}{a}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a6ba6e82c39e80d5d00afeb6f4383a549}\label{import__test_8php_a6ba6e82c39e80d5d00afeb6f4383a549}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$month@{\$month}}
+\index{\$month@{\$month}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$month}{$month}}
+{\footnotesize\ttfamily \$\hyperlink{_time_8cpp_a726c707dded9d78cf076554eceb956ec}{month} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}m\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}m\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a829cc53a4b993d7a7eefdcc9ae1d2e10}\label{import__test_8php_a829cc53a4b993d7a7eefdcc9ae1d2e10}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$pres@{\$pres}}
+\index{\$pres@{\$pres}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$pres}{$pres}}
+{\footnotesize\ttfamily \$pres = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}p\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}p\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a047170d6020a882807665812a27e2525}\label{import__test_8php_a047170d6020a882807665812a27e2525}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{stringliteral}{"INSERT INTO $table (date, time, temp, pres, hum)}
+\textcolor{stringliteral}{    VALUES ('$date', '$time', '$temp', '$pres', '$hum')}
+\textcolor{stringliteral}{    "}
+\end{DoxyCode}
+\mbox{\Hypertarget{import__test_8php_a0d57fb0317e19ec798aa625381ebf342}\label{import__test_8php_a0d57fb0317e19ec798aa625381ebf342}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$temp@{\$temp}}
+\index{\$temp@{\$temp}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$temp}{$temp}}
+{\footnotesize\ttfamily \$temp = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}t\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}t\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}\label{import__test_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$time@{\$time}}
+\index{\$time@{\$time}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$time}{$time}}
+{\footnotesize\ttfamily \$time = \$hour.\char`\"{}\+:\char`\"{}.\$\hyperlink{_time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{minute}}
+
+\mbox{\Hypertarget{import__test_8php_a8e992d901ac2312b3be2021ddbb7d11e}\label{import__test_8php_a8e992d901ac2312b3be2021ddbb7d11e}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!\$year@{\$year}}
+\index{\$year@{\$year}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{\$year}{$year}}
+{\footnotesize\ttfamily \$\hyperlink{_time_8cpp_a8608865f8292c0505e02b67fd1cf39e8}{year} = empty(\$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a671dd85f94413cb1d3f4fa1877dded70}{y}\textquotesingle{}\mbox{]}) ? \textquotesingle{}\textquotesingle{} \+: \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}\hyperlink{_w_s_8ino_a671dd85f94413cb1d3f4fa1877dded70}{y}\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{import__test_8php_abe4cc9788f52e49485473dc699537388}\label{import__test_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{import\+\_\+test.\+php@{import\+\_\+test.\+php}!try@{try}}
+\index{try@{try}!import\+\_\+test.\+php@{import\+\_\+test.\+php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    \hyperlink{import__test_8php_a3d69d43ccb27ec6b4f0cf5b68c1bc558}{$conn} = \textcolor{keyword}{new} PDO(\textcolor{stringliteral}{"mysql:host=$servername;dbname=$db"}, \hyperlink{variables_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{$username}, 
+      \hyperlink{import_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{$password})
+\end{DoxyCode}

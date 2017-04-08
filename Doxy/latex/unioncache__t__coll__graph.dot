@@ -1,0 +1,16 @@
+digraph "cache_t"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="cache_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dir" ];
+  Node2 [label="directoryEntry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdirectory_entry.html",tooltip="FAT short directory entry. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fbs" ];
+  Node3 [label="fat32BootSector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfat32_boot_sector.html",tooltip="Boot sector for a FAT16 or FAT32 volume. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bpb" ];
+  Node4 [label="biosParmBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbios_parm_block.html",tooltip="BIOS parameter block. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mbr" ];
+  Node5 [label="masterBootRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmaster_boot_record.html",tooltip="Master Boot Record. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" part" ];
+  Node6 [label="partitionTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpartition_table.html",tooltip="MBR partition table entry. "];
+}

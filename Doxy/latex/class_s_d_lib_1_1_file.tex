@@ -1,0 +1,174 @@
+\hypertarget{class_s_d_lib_1_1_file}{}\section{S\+D\+Lib\+:\+:File Class Reference}
+\label{class_s_d_lib_1_1_file}\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+
+
+{\ttfamily \#include $<$S\+D.\+h$>$}
+
+
+
+Inheritance diagram for S\+D\+Lib\+:\+:File\+:
+% FIG 0
+
+
+Collaboration diagram for S\+D\+Lib\+:\+:File\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_d_lib_1_1_file_ad34490d697d9e56859f566534b360c54}{File} (\hyperlink{class_sd_file}{Sd\+File} f, const char $\ast$\hyperlink{class_s_d_lib_1_1_file_a7dc80cb96e6062652690a42b584f230e}{name})
+\item 
+\hyperlink{class_s_d_lib_1_1_file_a7dcb21db9e1623e84b9c3dee81c12617}{File} (void)
+\item 
+virtual size\+\_\+t \hyperlink{class_s_d_lib_1_1_file_acee911dcb9057b964fd5b3ce888a934b}{write} (uint8\+\_\+t)
+\item 
+virtual size\+\_\+t \hyperlink{class_s_d_lib_1_1_file_aa531c1641a2363e1f6b9d103f37433da}{write} (const uint8\+\_\+t $\ast$buf, size\+\_\+t \hyperlink{class_s_d_lib_1_1_file_a603d3cd3319142d00a7ebd434970b017}{size})
+\item 
+virtual int \hyperlink{class_s_d_lib_1_1_file_a4c46a1975e66c37977bf07c58ec10b4e}{read} ()
+\item 
+virtual int \hyperlink{class_s_d_lib_1_1_file_a0e5025f39bd584563bfe4b05fc1db268}{peek} ()
+\item 
+virtual int \hyperlink{class_s_d_lib_1_1_file_acf613c4e75bae85f543b30e701ebcc44}{available} ()
+\item 
+virtual void \hyperlink{class_s_d_lib_1_1_file_af87fa862de707575b8badd044a5af80e}{flush} ()
+\item 
+int \hyperlink{class_s_d_lib_1_1_file_a30539792f063f24ee5ee7c11dfa564b2}{read} (void $\ast$buf, uint16\+\_\+t nbyte)
+\item 
+boolean \hyperlink{class_s_d_lib_1_1_file_a2a46cc148ddc53fe5170164227a695ae}{seek} (uint32\+\_\+t pos)
+\item 
+uint32\+\_\+t \hyperlink{class_s_d_lib_1_1_file_aae991c597c0bc4c5eb44c1f3b06a21ec}{position} ()
+\item 
+uint32\+\_\+t \hyperlink{class_s_d_lib_1_1_file_a603d3cd3319142d00a7ebd434970b017}{size} ()
+\item 
+void \hyperlink{class_s_d_lib_1_1_file_a83cbce54d6c3b8c2f417b51f6b3f488c}{close} ()
+\item 
+\hyperlink{class_s_d_lib_1_1_file_af171fbf441c899cf71d88b8b0b83d38b}{operator bool} ()
+\item 
+char $\ast$ \hyperlink{class_s_d_lib_1_1_file_a7dc80cb96e6062652690a42b584f230e}{name} ()
+\item 
+boolean \hyperlink{class_s_d_lib_1_1_file_a532cb01e66c863f0a0c70bad3acbcdfe}{is\+Directory} (void)
+\item 
+\hyperlink{class_s_d_lib_1_1_file}{File} \hyperlink{class_s_d_lib_1_1_file_a89d7761b6a1de4ce8e82accc6e687264}{open\+Next\+File} (uint8\+\_\+t mode=\hyperlink{_sd_fat_8h_ac13ca62d7e6f8f6d657d4607474652bf}{O\+\_\+\+R\+D\+O\+N\+LY})
+\item 
+void \hyperlink{class_s_d_lib_1_1_file_ad4af7c5cd14c201f2cf05353dc854ed5}{rewind\+Directory} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_ad34490d697d9e56859f566534b360c54}\label{class_s_d_lib_1_1_file_ad34490d697d9e56859f566534b360c54}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!File@{File}}
+\index{File@{File}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{File()}{File()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily File\+::\+File (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File}}]{f,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a7dcb21db9e1623e84b9c3dee81c12617}\label{class_s_d_lib_1_1_file_a7dcb21db9e1623e84b9c3dee81c12617}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!File@{File}}
+\index{File@{File}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{File()}{File()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily File\+::\+File (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_acf613c4e75bae85f543b30e701ebcc44}\label{class_s_d_lib_1_1_file_acf613c4e75bae85f543b30e701ebcc44}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!available@{available}}
+\index{available@{available}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int File\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a83cbce54d6c3b8c2f417b51f6b3f488c}\label{class_s_d_lib_1_1_file_a83cbce54d6c3b8c2f417b51f6b3f488c}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!close@{close}}
+\index{close@{close}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void File\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_af87fa862de707575b8badd044a5af80e}\label{class_s_d_lib_1_1_file_af87fa862de707575b8badd044a5af80e}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!flush@{flush}}
+\index{flush@{flush}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void File\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a532cb01e66c863f0a0c70bad3acbcdfe}\label{class_s_d_lib_1_1_file_a532cb01e66c863f0a0c70bad3acbcdfe}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!is\+Directory@{is\+Directory}}
+\index{is\+Directory@{is\+Directory}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{is\+Directory()}{isDirectory()}}
+{\footnotesize\ttfamily boolean File\+::is\+Directory (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a7dc80cb96e6062652690a42b584f230e}\label{class_s_d_lib_1_1_file_a7dc80cb96e6062652690a42b584f230e}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!name@{name}}
+\index{name@{name}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily char $\ast$ File\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a89d7761b6a1de4ce8e82accc6e687264}\label{class_s_d_lib_1_1_file_a89d7761b6a1de4ce8e82accc6e687264}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!open\+Next\+File@{open\+Next\+File}}
+\index{open\+Next\+File@{open\+Next\+File}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{open\+Next\+File()}{openNextFile()}}
+{\footnotesize\ttfamily \hyperlink{class_s_d_lib_1_1_file}{File} S\+D\+Lib\+::\+File\+::open\+Next\+File (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode = {\ttfamily \hyperlink{_sd_fat_8h_ac13ca62d7e6f8f6d657d4607474652bf}{O\+\_\+\+R\+D\+O\+N\+LY}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_af171fbf441c899cf71d88b8b0b83d38b}\label{class_s_d_lib_1_1_file_af171fbf441c899cf71d88b8b0b83d38b}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily File\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a0e5025f39bd584563bfe4b05fc1db268}\label{class_s_d_lib_1_1_file_a0e5025f39bd584563bfe4b05fc1db268}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!peek@{peek}}
+\index{peek@{peek}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily int File\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_aae991c597c0bc4c5eb44c1f3b06a21ec}\label{class_s_d_lib_1_1_file_aae991c597c0bc4c5eb44c1f3b06a21ec}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!position@{position}}
+\index{position@{position}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily uint32\+\_\+t File\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a4c46a1975e66c37977bf07c58ec10b4e}\label{class_s_d_lib_1_1_file_a4c46a1975e66c37977bf07c58ec10b4e}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!read@{read}}
+\index{read@{read}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int File\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a30539792f063f24ee5ee7c11dfa564b2}\label{class_s_d_lib_1_1_file_a30539792f063f24ee5ee7c11dfa564b2}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!read@{read}}
+\index{read@{read}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int File\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{nbyte }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_ad4af7c5cd14c201f2cf05353dc854ed5}\label{class_s_d_lib_1_1_file_ad4af7c5cd14c201f2cf05353dc854ed5}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!rewind\+Directory@{rewind\+Directory}}
+\index{rewind\+Directory@{rewind\+Directory}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{rewind\+Directory()}{rewindDirectory()}}
+{\footnotesize\ttfamily void S\+D\+Lib\+::\+File\+::rewind\+Directory (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a2a46cc148ddc53fe5170164227a695ae}\label{class_s_d_lib_1_1_file_a2a46cc148ddc53fe5170164227a695ae}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!seek@{seek}}
+\index{seek@{seek}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily boolean File\+::seek (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_a603d3cd3319142d00a7ebd434970b017}\label{class_s_d_lib_1_1_file_a603d3cd3319142d00a7ebd434970b017}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!size@{size}}
+\index{size@{size}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint32\+\_\+t File\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_acee911dcb9057b964fd5b3ce888a934b}\label{class_s_d_lib_1_1_file_acee911dcb9057b964fd5b3ce888a934b}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!write@{write}}
+\index{write@{write}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t File\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_s_d_lib_1_1_file_aa531c1641a2363e1f6b9d103f37433da}\label{class_s_d_lib_1_1_file_aa531c1641a2363e1f6b9d103f37433da}} 
+\index{S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}!write@{write}}
+\index{write@{write}!S\+D\+Lib\+::\+File@{S\+D\+Lib\+::\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t File\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Arduino/\+Libraries/\+S\+D/src/\hyperlink{_s_d_8h}{S\+D.\+h}\item 
+Arduino/\+Libraries/\+S\+D/src/\hyperlink{_file_8cpp}{File.\+cpp}\item 
+Arduino/\+Libraries/\+S\+D/src/\hyperlink{_s_d_8cpp}{S\+D.\+cpp}\end{DoxyCompactItemize}

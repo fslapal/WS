@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="fat32BootSector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfat32_boot_sector.html",tooltip="Boot sector for a FAT16 or FAT32 volume. "];
+}

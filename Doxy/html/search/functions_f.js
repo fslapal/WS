@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['read',['read',['../class_d_s1307_r_t_c.html#a92a19c31652e3bb203d187e49ab68469',1,'DS1307RTC::read()'],['../class_s_d_lib_1_1_file.html#a4c46a1975e66c37977bf07c58ec10b4e',1,'SDLib::File::read()'],['../class_s_d_lib_1_1_file.html#a30539792f063f24ee5ee7c11dfa564b2',1,'SDLib::File::read(void *buf, uint16_t nbyte)'],['../class_sd_file.html#a6c389f0180b4a86fb6d7464f50d3b0dd',1,'SdFile::read(void)'],['../class_sd_file.html#a77ad85c5c80b34f8ebc57b5b89730554',1,'SdFile::read(void *buf, uint16_t nbyte)'],['../class_two_wire.html#aa361b83500d00dfb93bb25b6473b33e9',1,'TwoWire::read()']]],
+  ['readblock',['readBlock',['../class_sd2_card.html#ae26d840449a42d45af464fb81b92e2ab',1,'Sd2Card']]],
+  ['readcid',['readCID',['../class_sd2_card.html#aee2be03d649548e2ab26033f18638d19',1,'Sd2Card']]],
+  ['readcsd',['readCSD',['../class_sd2_card.html#a79845d8d4593cb3b1b7641ba27edddfb',1,'Sd2Card']]],
+  ['readdata',['readData',['../class_sd2_card.html#ae2d1396ad30081b4201cd372358ef699',1,'Sd2Card']]],
+  ['readdir',['readDir',['../class_sd_file.html#ab240540b099cedcfe8b93b5e853d0628',1,'SdFile::readDir(dir_t *dir)'],['../class_sd_file.html#ad107b73c6edfa489b76366edfef2eeae',1,'SdFile::readDir(dir_t &amp;dir)']]],
+  ['readend',['readEnd',['../class_sd2_card.html#a0de961537d051bbcafd87ed9fff5fe48',1,'Sd2Card']]],
+  ['readsensor',['readSensor',['../class_b_m_e280___i2_c.html#a2baea1941d361762283547f2ff646bc3',1,'BME280_I2C']]],
+  ['receiveevent',['receiveEvent',['../slave__receiver_8ino.html#a9a52aa0319b0d3bea95eff4528baee98',1,'slave_receiver.ino']]],
+  ['refreshcache',['refreshCache',['../_time_8cpp.html#a1f13327e0831cde49d525fe035d55fd8',1,'Time.cpp']]],
+  ['remove',['remove',['../class_s_d_lib_1_1_s_d_class.html#a000810a65b7b7eec2681879f4dfd8ea7',1,'SDLib::SDClass::remove(const char *filepath)'],['../class_s_d_lib_1_1_s_d_class.html#a525788a5a63c82ed54383be03fcd2ec7',1,'SDLib::SDClass::remove(const String &amp;filepath)'],['../class_sd_file.html#ab932b7896dce90a29031f3a9039807a2',1,'SdFile::remove(SdFile *dirFile, const char *fileName)'],['../class_sd_file.html#a66c5fb5f651a1ac319bab68fda1d3cc2',1,'SdFile::remove(void)'],['../class_sd_file.html#aaea53aa58f7577dfafd0da3cb084f6d1',1,'SdFile::remove(SdFile &amp;dirFile, const char *fileName)']]],
+  ['requestevent',['requestEvent',['../slave__sender_8ino.html#ac10b80b8aaeaf66cecbf0bb5eff5ae33',1,'slave_sender.ino']]],
+  ['requestfrom',['requestFrom',['../class_two_wire.html#ae27d0936487551a05a1e9901bc456599',1,'TwoWire::requestFrom(uint8_t, uint8_t)'],['../class_two_wire.html#a4b4b618531a04d5488a52583a3dfb173',1,'TwoWire::requestFrom(uint8_t, uint8_t, uint8_t)'],['../class_two_wire.html#acd59cc9570fd49b1cf9044cbefef85ac',1,'TwoWire::requestFrom(uint8_t, uint8_t, uint32_t, uint8_t, uint8_t)'],['../class_two_wire.html#ad40a27213d0bb32f7b819aa8962fccd3',1,'TwoWire::requestFrom(int, int)'],['../class_two_wire.html#a3d76da36fb8571e0b5e8310e9f86f6fe',1,'TwoWire::requestFrom(int, int, int)']]],
+  ['requestsync',['requestSync',['../_time_serial_8ino.html#a0ec9458a3ed4ddac072047471be25b1b',1,'requestSync():&#160;TimeSerial.ino'],['../_time_serial_date_strings_8ino.html#a0ec9458a3ed4ddac072047471be25b1b',1,'requestSync():&#160;TimeSerialDateStrings.ino']]],
+  ['rewind',['rewind',['../class_sd_file.html#afa8aaa7bdeb97b4e691ea01adf99f654',1,'SdFile']]],
+  ['rewinddirectory',['rewindDirectory',['../class_s_d_lib_1_1_file.html#ad4af7c5cd14c201f2cf05353dc854ed5',1,'SDLib::File']]],
+  ['righttoleft',['rightToLeft',['../class_liquid_crystal.html#a19018898bae01eb687442258cc60ffc9',1,'LiquidCrystal']]],
+  ['rmdir',['rmDir',['../class_sd_file.html#a0d9e0c280b3469bb15e7258f6339746b',1,'SdFile::rmDir()'],['../class_s_d_lib_1_1_s_d_class.html#af50e54e0707bdf4ad74d197508d4382b',1,'SDLib::SDClass::rmdir(const char *filepath)'],['../class_s_d_lib_1_1_s_d_class.html#a8caabe5ca27eda8c747015b085fd3f94',1,'SDLib::SDClass::rmdir(const String &amp;filepath)']]],
+  ['rmrfstar',['rmRfStar',['../class_sd_file.html#a44c26fddfe2b42e7db3bc80290c77503',1,'SdFile']]],
+  ['rootdirentrycount',['rootDirEntryCount',['../class_sd_volume.html#addfdd68b9d9f728ac29d38f78c3fbead',1,'SdVolume']]],
+  ['rootdirstart',['rootDirStart',['../class_sd_volume.html#aeb10811341acc97f7ccda2394c777072',1,'SdVolume']]],
+  ['rtc_5fclock',['rtc_clock',['../_time_arduino_due_8ino.html#a4601f486d7787e36f06a427edb98e608',1,'TimeArduinoDue.ino']]]
+];

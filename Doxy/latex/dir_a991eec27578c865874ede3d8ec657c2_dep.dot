@@ -1,0 +1,12 @@
+digraph "Arduino" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a991eec27578c865874ede3d8ec657c2 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a991eec27578c865874ede3d8ec657c2.html"];
+    dir_a991eec27578c865874ede3d8ec657c2 [shape=plaintext label="Arduino"];
+    dir_7a9391ffd4e903eec356dfa807f43b8d [shape=box label="Libraries" color="red" fillcolor="white" style="filled" URL="dir_7a9391ffd4e903eec356dfa807f43b8d.html"];
+    dir_056c2cef680cf441bde35535f511cf25 [shape=box label="WS" color="black" fillcolor="white" style="filled" URL="dir_056c2cef680cf441bde35535f511cf25.html"];
+  }
+  dir_056c2cef680cf441bde35535f511cf25->dir_7a9391ffd4e903eec356dfa807f43b8d [headlabel="7", labeldistance=1.5 headhref="dir_000052_000001.html"];
+}

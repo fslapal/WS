@@ -1,0 +1,9 @@
+digraph "Arduino/Libraries/Wire/examples/master_reader" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_645b4aab1957ceb4557ae254e9319172 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_645b4aab1957ceb4557ae254e9319172.html"]
+  dir_52298cb9b8054fd280b01f0c337bf713 [shape=box, label="master_reader", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_52298cb9b8054fd280b01f0c337bf713.html"];
+  }
+}

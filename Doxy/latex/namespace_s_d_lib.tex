@@ -1,0 +1,77 @@
+\hypertarget{namespace_s_d_lib}{}\section{S\+D\+Lib Namespace Reference}
+\label{namespace_s_d_lib}\index{S\+D\+Lib@{S\+D\+Lib}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_s_d_lib_1_1_file}{File}
+\item 
+class \hyperlink{class_s_d_lib_1_1_s_d_class}{S\+D\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_s_d_lib_a104e127390a656ec68fb11b782acb7c1}{get\+Next\+Path\+Component} (const char $\ast$path, unsigned int $\ast$p\+\_\+offset, char $\ast$buffer)
+\item 
+boolean \hyperlink{namespace_s_d_lib_a319c3e0473e7947f3fb18a9d90b50f08}{walk\+Path} (const char $\ast$filepath, \hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, boolean($\ast$callback)(\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object), void $\ast$object=N\+U\+LL)
+\item 
+boolean \hyperlink{namespace_s_d_lib_ae3054a78e49dbc86c7a165cb88c9a3d5}{callback\+\_\+path\+Exists} (\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object)
+\item 
+boolean \hyperlink{namespace_s_d_lib_a415aeca91de622c5cfa94b4061cd171f}{callback\+\_\+make\+Dir\+Path} (\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object)
+\item 
+boolean \hyperlink{namespace_s_d_lib_a63cc4943fe20b320fa612b62d8f154bd}{callback\+\_\+remove} (\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object)
+\item 
+boolean \hyperlink{namespace_s_d_lib_ac81c649845a87cad2dcfd20f67f7c5aa}{callback\+\_\+rmdir} (\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_d_lib_1_1_s_d_class}{S\+D\+Class} \hyperlink{namespace_s_d_lib_a311ba8ede71ad9e1775f79a8f07a3728}{SD}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_s_d_lib_a415aeca91de622c5cfa94b4061cd171f}\label{namespace_s_d_lib_a415aeca91de622c5cfa94b4061cd171f}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!callback\+\_\+make\+Dir\+Path@{callback\+\_\+make\+Dir\+Path}}
+\index{callback\+\_\+make\+Dir\+Path@{callback\+\_\+make\+Dir\+Path}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{callback\+\_\+make\+Dir\+Path()}{callback\_makeDirPath()}}
+{\footnotesize\ttfamily boolean S\+D\+Lib\+::callback\+\_\+make\+Dir\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{parent\+Dir,  }\item[{const char $\ast$}]{file\+Path\+Component,  }\item[{boolean}]{is\+Last\+Component,  }\item[{void $\ast$}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_s_d_lib_ae3054a78e49dbc86c7a165cb88c9a3d5}\label{namespace_s_d_lib_ae3054a78e49dbc86c7a165cb88c9a3d5}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!callback\+\_\+path\+Exists@{callback\+\_\+path\+Exists}}
+\index{callback\+\_\+path\+Exists@{callback\+\_\+path\+Exists}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{callback\+\_\+path\+Exists()}{callback\_pathExists()}}
+{\footnotesize\ttfamily boolean S\+D\+Lib\+::callback\+\_\+path\+Exists (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{parent\+Dir,  }\item[{const char $\ast$}]{file\+Path\+Component,  }\item[{boolean}]{is\+Last\+Component,  }\item[{void $\ast$}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_s_d_lib_a63cc4943fe20b320fa612b62d8f154bd}\label{namespace_s_d_lib_a63cc4943fe20b320fa612b62d8f154bd}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!callback\+\_\+remove@{callback\+\_\+remove}}
+\index{callback\+\_\+remove@{callback\+\_\+remove}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{callback\+\_\+remove()}{callback\_remove()}}
+{\footnotesize\ttfamily boolean S\+D\+Lib\+::callback\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{parent\+Dir,  }\item[{const char $\ast$}]{file\+Path\+Component,  }\item[{boolean}]{is\+Last\+Component,  }\item[{void $\ast$}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_s_d_lib_ac81c649845a87cad2dcfd20f67f7c5aa}\label{namespace_s_d_lib_ac81c649845a87cad2dcfd20f67f7c5aa}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!callback\+\_\+rmdir@{callback\+\_\+rmdir}}
+\index{callback\+\_\+rmdir@{callback\+\_\+rmdir}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{callback\+\_\+rmdir()}{callback\_rmdir()}}
+{\footnotesize\ttfamily boolean S\+D\+Lib\+::callback\+\_\+rmdir (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{parent\+Dir,  }\item[{const char $\ast$}]{file\+Path\+Component,  }\item[{boolean}]{is\+Last\+Component,  }\item[{void $\ast$}]{object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_s_d_lib_a104e127390a656ec68fb11b782acb7c1}\label{namespace_s_d_lib_a104e127390a656ec68fb11b782acb7c1}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!get\+Next\+Path\+Component@{get\+Next\+Path\+Component}}
+\index{get\+Next\+Path\+Component@{get\+Next\+Path\+Component}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{get\+Next\+Path\+Component()}{getNextPathComponent()}}
+{\footnotesize\ttfamily bool S\+D\+Lib\+::get\+Next\+Path\+Component (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{unsigned int $\ast$}]{p\+\_\+offset,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_s_d_lib_a319c3e0473e7947f3fb18a9d90b50f08}\label{namespace_s_d_lib_a319c3e0473e7947f3fb18a9d90b50f08}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!walk\+Path@{walk\+Path}}
+\index{walk\+Path@{walk\+Path}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{walk\+Path()}{walkPath()}}
+{\footnotesize\ttfamily boolean S\+D\+Lib\+::walk\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath,  }\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{parent\+Dir,  }\item[{boolean($\ast$)(\hyperlink{class_sd_file}{Sd\+File} \&parent\+Dir, const char $\ast$file\+Path\+Component, boolean is\+Last\+Component, void $\ast$object)}]{callback,  }\item[{void $\ast$}]{object = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_s_d_lib_a311ba8ede71ad9e1775f79a8f07a3728}\label{namespace_s_d_lib_a311ba8ede71ad9e1775f79a8f07a3728}} 
+\index{S\+D\+Lib@{S\+D\+Lib}!SD@{SD}}
+\index{SD@{SD}!S\+D\+Lib@{S\+D\+Lib}}
+\subsubsection{\texorpdfstring{SD}{SD}}
+{\footnotesize\ttfamily \hyperlink{class_s_d_lib_1_1_s_d_class}{S\+D\+Class} S\+D\+Lib\+::\+SD}
+

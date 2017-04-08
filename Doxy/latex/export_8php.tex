@@ -1,0 +1,32 @@
+\hypertarget{export_8php}{}\section{Server/export.php File Reference}
+\label{export_8php}\index{Server/export.\+php@{Server/export.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{export_8php_a210cde6eb27b4e674643358d6976b9fd}{\$conn} = \hyperlink{connect_8php_a346f4774f29e17e14e9b39fa9e2165e3}{Connection}()
+\item 
+\hyperlink{export_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT date, time, pres, temp, hum F\+R\+OM \$table O\+R\+D\+ER BY date D\+E\+SC L\+I\+M\+IT 20\char`\"{}
+\item 
+\hyperlink{export_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$conn-\/$>$query(\$sql)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{export_8php_a210cde6eb27b4e674643358d6976b9fd}\label{export_8php_a210cde6eb27b4e674643358d6976b9fd}} 
+\index{export.\+php@{export.\+php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!export.\+php@{export.\+php}}
+\subsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} ( \$result!==F\+A\+L\+SE) \$conn = \hyperlink{connect_8php_a346f4774f29e17e14e9b39fa9e2165e3}{Connection}()}
+
+\mbox{\Hypertarget{export_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{export_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{export.\+php@{export.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!export.\+php@{export.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$conn-\/$>$query(\$sql)}
+
+\mbox{\Hypertarget{export_8php_a047170d6020a882807665812a27e2525}\label{export_8php_a047170d6020a882807665812a27e2525}} 
+\index{export.\+php@{export.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!export.\+php@{export.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT date, time, pres, temp, hum F\+R\+OM \$table O\+R\+D\+ER BY date D\+E\+SC L\+I\+M\+IT 20\char`\"{}}
+

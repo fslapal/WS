@@ -1,0 +1,27 @@
+var spi_8c =
+[
+    [ "u_avr32_spi_cr_t", "unionu__avr32__spi__cr__t.html", "unionu__avr32__spi__cr__t" ],
+    [ "u_avr32_spi_mr_t", "unionu__avr32__spi__mr__t.html", "unionu__avr32__spi__mr__t" ],
+    [ "u_avr32_spi_tdr_t", "unionu__avr32__spi__tdr__t.html", "unionu__avr32__spi__tdr__t" ],
+    [ "u_avr32_spi_ier_t", "unionu__avr32__spi__ier__t.html", "unionu__avr32__spi__ier__t" ],
+    [ "u_avr32_spi_idr_t", "unionu__avr32__spi__idr__t.html", "unionu__avr32__spi__idr__t" ],
+    [ "u_avr32_spi_csr_t", "unionu__avr32__spi__csr__t.html", "unionu__avr32__spi__csr__t" ],
+    [ "spi_disable", "spi_8c.html#a5cc4ac60e6ecf3cdc442265aaa0a63e0", null ],
+    [ "spi_enable", "spi_8c.html#ac93e5990e8abc811f4ba2fb65e10e94d", null ],
+    [ "spi_getStatus", "spi_8c.html#a354beb51d8e5e95665c089832f3a8631", null ],
+    [ "spi_initMaster", "spi_8c.html#a93b09f2d5b41fe71291968cd2658cba2", null ],
+    [ "spi_initSlave", "spi_8c.html#a1fc77d26387ef26a9b5020e4e04b3b2e", null ],
+    [ "spi_initTest", "spi_8c.html#a04a1d45030965c52dc63b205166c61c1", null ],
+    [ "spi_is_enabled", "spi_8c.html#aa945d35a658c234e2cb650a53dcdaa37", null ],
+    [ "spi_read", "spi_8c.html#a37b77c1847803528025bd60897cc18e8", null ],
+    [ "spi_readRegisterFullCheck", "spi_8c.html#a86f2b56ec7eeb0712ef0c5f43e9ae604", null ],
+    [ "spi_reset", "spi_8c.html#ae79ec729af0c69a648195985d70bc26b", null ],
+    [ "spi_selectChip", "spi_8c.html#af9d47e62b6b92aa3d786229c24584ae1", null ],
+    [ "spi_selectionMode", "spi_8c.html#ad76b44e99966bb6a66b122b44f64b928", null ],
+    [ "spi_setupChipReg", "spi_8c.html#ab045d0326f18f12e846c6e54945c3c43", null ],
+    [ "spi_unselectChip", "spi_8c.html#a6c7f9eff8ca5319ae5b998255d925a6a", null ],
+    [ "spi_variableSlaveWrite", "spi_8c.html#afe820471bb3dd26fdd0f52cde696cf15", null ],
+    [ "spi_write", "spi_8c.html#ab6ee194293396b8f0e47b914ff6a59a5", null ],
+    [ "spi_writeEndCheck", "spi_8c.html#a3675facf1bb501f769ce8e9a3c2fc23f", null ],
+    [ "spi_writeRegisterEmptyCheck", "spi_8c.html#a4e0840fa276e1e4bfe182769d458f9d6", null ]
+];

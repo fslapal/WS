@@ -1,0 +1,163 @@
+\hypertarget{twi_8h}{}\section{Arduino/\+Libraries/\+Wire/utility/twi.h File Reference}
+\label{twi_8h}\index{Arduino/\+Libraries/\+Wire/utility/twi.\+h@{Arduino/\+Libraries/\+Wire/utility/twi.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for twi.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}{T\+W\+I\+\_\+\+F\+R\+EQ}~100000L
+\item 
+\#define \hyperlink{twi_8h_a18f2336f01cb5b7f479e65ee78020c76}{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}~32
+\item 
+\#define \hyperlink{twi_8h_a78f8e40420d26b512b064b1902f5d559}{T\+W\+I\+\_\+\+R\+E\+A\+DY}~0
+\item 
+\#define \hyperlink{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}{T\+W\+I\+\_\+\+M\+RX}~1
+\item 
+\#define \hyperlink{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}{T\+W\+I\+\_\+\+M\+TX}~2
+\item 
+\#define \hyperlink{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}{T\+W\+I\+\_\+\+S\+RX}~3
+\item 
+\#define \hyperlink{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}{T\+W\+I\+\_\+\+S\+TX}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}{twi\+\_\+init} (void)
+\item 
+void \hyperlink{twi_8h_a730512b772605e6836d8a16b0052d3bd}{twi\+\_\+disable} (void)
+\item 
+void \hyperlink{twi_8h_a77c13a875e935f91b58c3b8596aae88d}{twi\+\_\+set\+Address} (uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}{twi\+\_\+read\+From} (uint8\+\_\+t, uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}{twi\+\_\+write\+To} (uint8\+\_\+t, uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{twi_8h_a4fbb74866c71979506ac52d758cfdeac}{twi\+\_\+transmit} (const uint8\+\_\+t $\ast$, uint8\+\_\+t)
+\item 
+void \hyperlink{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}{twi\+\_\+attach\+Slave\+Rx\+Event} (void($\ast$)(uint8\+\_\+t $\ast$, int))
+\item 
+void \hyperlink{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}{twi\+\_\+attach\+Slave\+Tx\+Event} (void($\ast$)(void))
+\item 
+void \hyperlink{twi_8h_a54e17133aa927c4c76725f1f55e37531}{twi\+\_\+reply} (uint8\+\_\+t)
+\item 
+void \hyperlink{twi_8h_acf52d6c93df110dee6d402b389e5042e}{twi\+\_\+stop} (void)
+\item 
+void \hyperlink{twi_8h_a7f830793058786f5597ddd1d80b885ae}{twi\+\_\+release\+Bus} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{twi_8h_a18f2336f01cb5b7f479e65ee78020c76}\label{twi_8h_a18f2336f01cb5b7f479e65ee78020c76}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}{TWI\_BUFFER\_LENGTH}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH~32}
+
+\mbox{\Hypertarget{twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}\label{twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+F\+R\+EQ@{T\+W\+I\+\_\+\+F\+R\+EQ}}
+\index{T\+W\+I\+\_\+\+F\+R\+EQ@{T\+W\+I\+\_\+\+F\+R\+EQ}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+F\+R\+EQ}{TWI\_FREQ}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+F\+R\+EQ~100000L}
+
+\mbox{\Hypertarget{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}\label{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+M\+RX@{T\+W\+I\+\_\+\+M\+RX}}
+\index{T\+W\+I\+\_\+\+M\+RX@{T\+W\+I\+\_\+\+M\+RX}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+M\+RX}{TWI\_MRX}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+M\+RX~1}
+
+\mbox{\Hypertarget{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}\label{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+M\+TX@{T\+W\+I\+\_\+\+M\+TX}}
+\index{T\+W\+I\+\_\+\+M\+TX@{T\+W\+I\+\_\+\+M\+TX}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+M\+TX}{TWI\_MTX}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+M\+TX~2}
+
+\mbox{\Hypertarget{twi_8h_a78f8e40420d26b512b064b1902f5d559}\label{twi_8h_a78f8e40420d26b512b064b1902f5d559}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+R\+E\+A\+DY@{T\+W\+I\+\_\+\+R\+E\+A\+DY}}
+\index{T\+W\+I\+\_\+\+R\+E\+A\+DY@{T\+W\+I\+\_\+\+R\+E\+A\+DY}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+R\+E\+A\+DY}{TWI\_READY}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+R\+E\+A\+DY~0}
+
+\mbox{\Hypertarget{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}\label{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+S\+RX@{T\+W\+I\+\_\+\+S\+RX}}
+\index{T\+W\+I\+\_\+\+S\+RX@{T\+W\+I\+\_\+\+S\+RX}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+S\+RX}{TWI\_SRX}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+S\+RX~3}
+
+\mbox{\Hypertarget{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}\label{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}} 
+\index{twi.\+h@{twi.\+h}!T\+W\+I\+\_\+\+S\+TX@{T\+W\+I\+\_\+\+S\+TX}}
+\index{T\+W\+I\+\_\+\+S\+TX@{T\+W\+I\+\_\+\+S\+TX}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{T\+W\+I\+\_\+\+S\+TX}{TWI\_STX}}
+{\footnotesize\ttfamily \#define T\+W\+I\+\_\+\+S\+TX~4}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}\label{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+attach\+Slave\+Rx\+Event@{twi\+\_\+attach\+Slave\+Rx\+Event}}
+\index{twi\+\_\+attach\+Slave\+Rx\+Event@{twi\+\_\+attach\+Slave\+Rx\+Event}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+attach\+Slave\+Rx\+Event()}{twi\_attachSlaveRxEvent()}}
+{\footnotesize\ttfamily void twi\+\_\+attach\+Slave\+Rx\+Event (\begin{DoxyParamCaption}\item[{void($\ast$)(uint8\+\_\+t $\ast$, int)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}\label{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+attach\+Slave\+Tx\+Event@{twi\+\_\+attach\+Slave\+Tx\+Event}}
+\index{twi\+\_\+attach\+Slave\+Tx\+Event@{twi\+\_\+attach\+Slave\+Tx\+Event}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+attach\+Slave\+Tx\+Event()}{twi\_attachSlaveTxEvent()}}
+{\footnotesize\ttfamily void twi\+\_\+attach\+Slave\+Tx\+Event (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a730512b772605e6836d8a16b0052d3bd}\label{twi_8h_a730512b772605e6836d8a16b0052d3bd}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+disable@{twi\+\_\+disable}}
+\index{twi\+\_\+disable@{twi\+\_\+disable}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+disable()}{twi\_disable()}}
+{\footnotesize\ttfamily void twi\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}\label{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+init@{twi\+\_\+init}}
+\index{twi\+\_\+init@{twi\+\_\+init}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+init()}{twi\_init()}}
+{\footnotesize\ttfamily void twi\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}\label{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+read\+From@{twi\+\_\+read\+From}}
+\index{twi\+\_\+read\+From@{twi\+\_\+read\+From}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+read\+From()}{twi\_readFrom()}}
+{\footnotesize\ttfamily uint8\+\_\+t twi\+\_\+read\+From (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a7f830793058786f5597ddd1d80b885ae}\label{twi_8h_a7f830793058786f5597ddd1d80b885ae}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+release\+Bus@{twi\+\_\+release\+Bus}}
+\index{twi\+\_\+release\+Bus@{twi\+\_\+release\+Bus}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+release\+Bus()}{twi\_releaseBus()}}
+{\footnotesize\ttfamily void twi\+\_\+release\+Bus (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a54e17133aa927c4c76725f1f55e37531}\label{twi_8h_a54e17133aa927c4c76725f1f55e37531}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+reply@{twi\+\_\+reply}}
+\index{twi\+\_\+reply@{twi\+\_\+reply}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+reply()}{twi\_reply()}}
+{\footnotesize\ttfamily void twi\+\_\+reply (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a77c13a875e935f91b58c3b8596aae88d}\label{twi_8h_a77c13a875e935f91b58c3b8596aae88d}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+set\+Address@{twi\+\_\+set\+Address}}
+\index{twi\+\_\+set\+Address@{twi\+\_\+set\+Address}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+set\+Address()}{twi\_setAddress()}}
+{\footnotesize\ttfamily void twi\+\_\+set\+Address (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_acf52d6c93df110dee6d402b389e5042e}\label{twi_8h_acf52d6c93df110dee6d402b389e5042e}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+stop@{twi\+\_\+stop}}
+\index{twi\+\_\+stop@{twi\+\_\+stop}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+stop()}{twi\_stop()}}
+{\footnotesize\ttfamily void twi\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a4fbb74866c71979506ac52d758cfdeac}\label{twi_8h_a4fbb74866c71979506ac52d758cfdeac}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+transmit@{twi\+\_\+transmit}}
+\index{twi\+\_\+transmit@{twi\+\_\+transmit}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+transmit()}{twi\_transmit()}}
+{\footnotesize\ttfamily uint8\+\_\+t twi\+\_\+transmit (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}\label{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}} 
+\index{twi.\+h@{twi.\+h}!twi\+\_\+write\+To@{twi\+\_\+write\+To}}
+\index{twi\+\_\+write\+To@{twi\+\_\+write\+To}!twi.\+h@{twi.\+h}}
+\subsubsection{\texorpdfstring{twi\+\_\+write\+To()}{twi\_writeTo()}}
+{\footnotesize\ttfamily uint8\+\_\+t twi\+\_\+write\+To (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+

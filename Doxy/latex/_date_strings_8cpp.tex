@@ -1,0 +1,143 @@
+\hypertarget{_date_strings_8cpp}{}\section{Arduino/\+Libraries/\+Time/\+Date\+Strings.cpp File Reference}
+\label{_date_strings_8cpp}\index{Arduino/\+Libraries/\+Time/\+Date\+Strings.\+cpp@{Arduino/\+Libraries/\+Time/\+Date\+Strings.\+cpp}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Time.\+h\char`\"{}}\newline
+Include dependency graph for Date\+Strings.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_date_strings_8cpp_a75acaba9e781937468d0911423bc0c35}{P\+R\+O\+G\+M\+EM}
+\item 
+\#define \hyperlink{_date_strings_8cpp_a963f816fc88a5d8479c285ed4c630229}{P\+G\+M\+\_\+P}~const char $\ast$
+\item 
+\#define \hyperlink{_date_strings_8cpp_a48c60b057902adf805797f183286728d}{pgm\+\_\+read\+\_\+byte}(addr)~($\ast$(const unsigned char $\ast$)(addr))
+\item 
+\#define \hyperlink{_date_strings_8cpp_a910fb5f01313d339d3b835d45e1e5ad0}{pgm\+\_\+read\+\_\+word}(addr)~($\ast$(const unsigned char $\ast$$\ast$)(addr))
+\item 
+\#define \hyperlink{_date_strings_8cpp_ae74941b597bdd8ffb5c35f45b636946b}{strcpy\+\_\+P}(dest,  src)~strcpy((dest), (src))
+\item 
+\#define \hyperlink{_date_strings_8cpp_aae971366e9527ab67fe2a6460b188a1c}{dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{_date_strings_8cpp_a88860cdff7c88c1f5b96b2f2b68858db}{month\+Str} (uint8\+\_\+t \hyperlink{_time_8cpp_a726c707dded9d78cf076554eceb956ec}{month})
+\item 
+char $\ast$ \hyperlink{_date_strings_8cpp_ae2b5f025e8c6fef73d4bc5795e9ad4a3}{month\+Short\+Str} (uint8\+\_\+t \hyperlink{_time_8cpp_a726c707dded9d78cf076554eceb956ec}{month})
+\item 
+char $\ast$ \hyperlink{_date_strings_8cpp_a94236cfc15d1b0f09571766402a8e471}{day\+Str} (uint8\+\_\+t \hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day})
+\item 
+char $\ast$ \hyperlink{_date_strings_8cpp_a5172f67ce7b074768a7e31877c665931}{day\+Short\+Str} (uint8\+\_\+t \hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char month\+Str0 \mbox{[}$\,$\mbox{]} \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} = \char`\"{}\char`\"{}
+\item 
+const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} char $\ast$const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} \hyperlink{_date_strings_8cpp_a2e9a697e4ff5879643a60750b2255bc3}{month\+Names\+\_\+P} \mbox{[}$\,$\mbox{]}
+\item 
+const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} char $\ast$const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} \hyperlink{_date_strings_8cpp_a5a2ad2cc68061317f557b8bb76163a53}{day\+Names\+\_\+P} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_date_strings_8cpp_aae971366e9527ab67fe2a6460b188a1c}\label{_date_strings_8cpp_aae971366e9527ab67fe2a6460b188a1c}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN@{dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN}}
+\index{dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN@{dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN}{dt\_SHORT\_STR\_LEN}}
+{\footnotesize\ttfamily \#define dt\+\_\+\+S\+H\+O\+R\+T\+\_\+\+S\+T\+R\+\_\+\+L\+EN~3}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a963f816fc88a5d8479c285ed4c630229}\label{_date_strings_8cpp_a963f816fc88a5d8479c285ed4c630229}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!P\+G\+M\+\_\+P@{P\+G\+M\+\_\+P}}
+\index{P\+G\+M\+\_\+P@{P\+G\+M\+\_\+P}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{P\+G\+M\+\_\+P}{PGM\_P}}
+{\footnotesize\ttfamily \#define P\+G\+M\+\_\+P~const char $\ast$}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a48c60b057902adf805797f183286728d}\label{_date_strings_8cpp_a48c60b057902adf805797f183286728d}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!pgm\+\_\+read\+\_\+byte@{pgm\+\_\+read\+\_\+byte}}
+\index{pgm\+\_\+read\+\_\+byte@{pgm\+\_\+read\+\_\+byte}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{pgm\+\_\+read\+\_\+byte}{pgm\_read\_byte}}
+{\footnotesize\ttfamily \#define pgm\+\_\+read\+\_\+byte(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~($\ast$(const unsigned char $\ast$)(addr))}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a910fb5f01313d339d3b835d45e1e5ad0}\label{_date_strings_8cpp_a910fb5f01313d339d3b835d45e1e5ad0}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!pgm\+\_\+read\+\_\+word@{pgm\+\_\+read\+\_\+word}}
+\index{pgm\+\_\+read\+\_\+word@{pgm\+\_\+read\+\_\+word}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{pgm\+\_\+read\+\_\+word}{pgm\_read\_word}}
+{\footnotesize\ttfamily \#define pgm\+\_\+read\+\_\+word(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~($\ast$(const unsigned char $\ast$$\ast$)(addr))}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a75acaba9e781937468d0911423bc0c35}\label{_date_strings_8cpp_a75acaba9e781937468d0911423bc0c35}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}}
+\index{P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{P\+R\+O\+G\+M\+EM}{PROGMEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+G\+M\+EM}
+
+\mbox{\Hypertarget{_date_strings_8cpp_ae74941b597bdd8ffb5c35f45b636946b}\label{_date_strings_8cpp_ae74941b597bdd8ffb5c35f45b636946b}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!strcpy\+\_\+P@{strcpy\+\_\+P}}
+\index{strcpy\+\_\+P@{strcpy\+\_\+P}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{strcpy\+\_\+P}{strcpy\_P}}
+{\footnotesize\ttfamily \#define strcpy\+\_\+P(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~strcpy((dest), (src))}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_date_strings_8cpp_a5172f67ce7b074768a7e31877c665931}\label{_date_strings_8cpp_a5172f67ce7b074768a7e31877c665931}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!day\+Short\+Str@{day\+Short\+Str}}
+\index{day\+Short\+Str@{day\+Short\+Str}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{day\+Short\+Str()}{dayShortStr()}}
+{\footnotesize\ttfamily char$\ast$ day\+Short\+Str (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a94236cfc15d1b0f09571766402a8e471}\label{_date_strings_8cpp_a94236cfc15d1b0f09571766402a8e471}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!day\+Str@{day\+Str}}
+\index{day\+Str@{day\+Str}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{day\+Str()}{dayStr()}}
+{\footnotesize\ttfamily char$\ast$ day\+Str (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_date_strings_8cpp_ae2b5f025e8c6fef73d4bc5795e9ad4a3}\label{_date_strings_8cpp_ae2b5f025e8c6fef73d4bc5795e9ad4a3}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!month\+Short\+Str@{month\+Short\+Str}}
+\index{month\+Short\+Str@{month\+Short\+Str}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{month\+Short\+Str()}{monthShortStr()}}
+{\footnotesize\ttfamily char$\ast$ month\+Short\+Str (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{month }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_date_strings_8cpp_a88860cdff7c88c1f5b96b2f2b68858db}\label{_date_strings_8cpp_a88860cdff7c88c1f5b96b2f2b68858db}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!month\+Str@{month\+Str}}
+\index{month\+Str@{month\+Str}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{month\+Str()}{monthStr()}}
+{\footnotesize\ttfamily char$\ast$ month\+Str (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{month }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_date_strings_8cpp_a5a2ad2cc68061317f557b8bb76163a53}\label{_date_strings_8cpp_a5a2ad2cc68061317f557b8bb76163a53}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!day\+Names\+\_\+P@{day\+Names\+\_\+P}}
+\index{day\+Names\+\_\+P@{day\+Names\+\_\+P}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{day\+Names\+\_\+P}{dayNames\_P}}
+{\footnotesize\ttfamily const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} char$\ast$ const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} day\+Names\+\_\+P\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+   dayStr0,dayStr1,dayStr2,dayStr3,dayStr4,dayStr5,dayStr6,dayStr7
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{_date_strings_8cpp_a2e9a697e4ff5879643a60750b2255bc3}\label{_date_strings_8cpp_a2e9a697e4ff5879643a60750b2255bc3}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!month\+Names\+\_\+P@{month\+Names\+\_\+P}}
+\index{month\+Names\+\_\+P@{month\+Names\+\_\+P}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{month\+Names\+\_\+P}{monthNames\_P}}
+{\footnotesize\ttfamily const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} char$\ast$ const \hyperlink{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}{P\+R\+O\+G\+M\+EM} month\+Names\+\_\+P\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    monthStr0,monthStr1,monthStr2,monthStr3,monthStr4,monthStr5,monthStr6,
+    monthStr7,monthStr8,monthStr9,monthStr10,monthStr11,monthStr12
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}\label{_date_strings_8cpp_adaddaf9d528a42c4831b98637ae9e59d}} 
+\index{Date\+Strings.\+cpp@{Date\+Strings.\+cpp}!P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}}
+\index{P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}!Date\+Strings.\+cpp@{Date\+Strings.\+cpp}}
+\subsubsection{\texorpdfstring{P\+R\+O\+G\+M\+EM}{PROGMEM}}
+{\footnotesize\ttfamily const char day\+Short\+Names\+\_\+P \mbox{[}$\,$\mbox{]} P\+R\+O\+G\+M\+EM = \char`\"{}\char`\"{}}
+

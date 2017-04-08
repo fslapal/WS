@@ -1,0 +1,61 @@
+\hypertarget{average__longterm_8php}{}\section{Server/average\+\_\+longterm.php File Reference}
+\label{average__longterm_8php}\index{Server/average\+\_\+longterm.\+php@{Server/average\+\_\+longterm.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{average__longterm_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}S\+E\+L\+E\+CT pres, temp, hum F\+R\+OM \$table W\+H\+E\+RE date $>$= \textquotesingle{}\$dayfrom\textquotesingle{} A\+ND date $<$= \textquotesingle{}\$dayto\textquotesingle{}\char`\"{}
+\item 
+\hyperlink{average__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$conn-\/$>$query(\$sql)
+\item 
+\hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if}(\$result!==F\+A\+L\+SE) \hyperlink{average__longterm_8php_a8923948fae95ff6dc6ed7e7df3446854}{\$tempa} = empty(\$temp) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$temp) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$temp)
+\item 
+\hyperlink{average__longterm_8php_a2b0df464a962196e7245f2c46057ba1a}{\$presa} = empty(\$pres) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$pres) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$pres)
+\item 
+\hyperlink{average__longterm_8php_a29dc8b646ccc31d3f81aa1a74581e018}{\$huma} = empty(\$hum) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$hum) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$hum)
+\item 
+\hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if}(!empty(\$temp)) \hyperlink{average__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}{else}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{average__longterm_8php_a29dc8b646ccc31d3f81aa1a74581e018}\label{average__longterm_8php_a29dc8b646ccc31d3f81aa1a74581e018}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!\$huma@{\$huma}}
+\index{\$huma@{\$huma}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$huma}{$huma}}
+{\footnotesize\ttfamily \$huma = empty(\$hum) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$hum) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$hum)}
+
+\mbox{\Hypertarget{average__longterm_8php_a2b0df464a962196e7245f2c46057ba1a}\label{average__longterm_8php_a2b0df464a962196e7245f2c46057ba1a}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!\$presa@{\$presa}}
+\index{\$presa@{\$presa}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$presa}{$presa}}
+{\footnotesize\ttfamily \$presa = empty(\$pres) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$pres) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$pres)}
+
+\mbox{\Hypertarget{average__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{average__longterm_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!\$result@{\$result}}
+\index{\$result@{\$result}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$conn-\/$>$query(\$sql)}
+
+\mbox{\Hypertarget{average__longterm_8php_a047170d6020a882807665812a27e2525}\label{average__longterm_8php_a047170d6020a882807665812a27e2525}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}S\+E\+L\+E\+CT pres, temp, hum F\+R\+OM \$table W\+H\+E\+RE date $>$= \textquotesingle{}\$dayfrom\textquotesingle{} A\+ND date $<$= \textquotesingle{}\$dayto\textquotesingle{}\char`\"{}}
+
+\mbox{\Hypertarget{average__longterm_8php_a8923948fae95ff6dc6ed7e7df3446854}\label{average__longterm_8php_a8923948fae95ff6dc6ed7e7df3446854}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!\$tempa@{\$tempa}}
+\index{\$tempa@{\$tempa}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{\$tempa}{$tempa}}
+{\footnotesize\ttfamily \hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} ( \$result!==F\+A\+L\+SE) \$tempa = empty(\$temp) ? \textquotesingle{}\textquotesingle{} \+: array\+\_\+sum(\$temp) / \hyperlink{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}(\$temp)}
+
+\mbox{\Hypertarget{average__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}\label{average__longterm_8php_a5e911e6d95c6980d50f6cba065d73dc1}} 
+\index{average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}!else@{else}}
+\index{else@{else}!average\+\_\+longterm.\+php@{average\+\_\+longterm.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \hyperlink{index_8php_a5bd83a7a52ff3be468b16a8c82e43673}{if} (!empty( \$temp)) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+  echo \textcolor{stringliteral}{""}
+\end{DoxyCode}

@@ -1,0 +1,113 @@
+\hypertarget{_time_serial_date_strings_8ino}{}\section{Arduino/\+Libraries/\+Time/examples/\+Time\+Serial\+Date\+Strings/\+Time\+Serial\+Date\+Strings.ino File Reference}
+\label{_time_serial_date_strings_8ino}\index{Arduino/\+Libraries/\+Time/examples/\+Time\+Serial\+Date\+Strings/\+Time\+Serial\+Date\+Strings.\+ino@{Arduino/\+Libraries/\+Time/examples/\+Time\+Serial\+Date\+Strings/\+Time\+Serial\+Date\+Strings.\+ino}}
+{\ttfamily \#include $<$Time\+Lib.\+h$>$}\newline
+Include dependency graph for Time\+Serial\+Date\+Strings.\+ino\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_time_serial_date_strings_8ino_aa9f2cbf2a35ec653aff12241a63ca864}{T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER}~\textquotesingle{}T\textquotesingle{}
+\item 
+\#define \hyperlink{_time_serial_date_strings_8ino_a0d13e168e30875fc39d1da1966c5ddc8}{F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER}~\textquotesingle{}F\textquotesingle{}
+\item 
+\#define \hyperlink{_time_serial_date_strings_8ino_aa1dc30eb9958bd483c7de9ea575acf49}{F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT}~\textquotesingle{}\hyperlink{_w_s_8ino_a5109c1e8d8d5228b4290813adb0be47b}{s}\textquotesingle{}
+\item 
+\#define \hyperlink{_time_serial_date_strings_8ino_acf04ec5bf2d3f42a055c143fd7d3e031}{F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG}~\textquotesingle{}\hyperlink{_w_s_8ino_a3d755e761d498d63ec8ff4ba107f9b37}{l}\textquotesingle{}
+\item 
+\#define \hyperlink{_time_serial_date_strings_8ino_a355248075031107c0438456dd7357b63}{T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}~7
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_a01f3a72442d58926459c48afce4746e7}{digital\+Clock\+Display} ()
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_a772afab0396032477ec7b01d14c774b2}{print\+Digits} (int digits)
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_a72bf283777cd5baa3fe800a9a6c22d77}{process\+Format\+Message} ()
+\item 
+void \hyperlink{_time_serial_date_strings_8ino_a49f4bff50a6119cf44f9793a02ad634c}{process\+Sync\+Message} ()
+\item 
+time\+\_\+t \hyperlink{_time_serial_date_strings_8ino_a0ec9458a3ed4ddac072047471be25b1b}{request\+Sync} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a0d13e168e30875fc39d1da1966c5ddc8}\label{_time_serial_date_strings_8ino_a0d13e168e30875fc39d1da1966c5ddc8}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER@{F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER}}
+\index{F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER@{F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER}{FORMAT\_HEADER}}
+{\footnotesize\ttfamily \#define F\+O\+R\+M\+A\+T\+\_\+\+H\+E\+A\+D\+ER~\textquotesingle{}F\textquotesingle{}}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_acf04ec5bf2d3f42a055c143fd7d3e031}\label{_time_serial_date_strings_8ino_acf04ec5bf2d3f42a055c143fd7d3e031}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG@{F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG}}
+\index{F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG@{F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG}{FORMAT\_LONG}}
+{\footnotesize\ttfamily \#define F\+O\+R\+M\+A\+T\+\_\+\+L\+O\+NG~\textquotesingle{}\hyperlink{_w_s_8ino_a3d755e761d498d63ec8ff4ba107f9b37}{l}\textquotesingle{}}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_aa1dc30eb9958bd483c7de9ea575acf49}\label{_time_serial_date_strings_8ino_aa1dc30eb9958bd483c7de9ea575acf49}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT@{F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT}}
+\index{F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT@{F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT}{FORMAT\_SHORT}}
+{\footnotesize\ttfamily \#define F\+O\+R\+M\+A\+T\+\_\+\+S\+H\+O\+RT~\textquotesingle{}\hyperlink{_w_s_8ino_a5109c1e8d8d5228b4290813adb0be47b}{s}\textquotesingle{}}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_aa9f2cbf2a35ec653aff12241a63ca864}\label{_time_serial_date_strings_8ino_aa9f2cbf2a35ec653aff12241a63ca864}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER@{T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER}}
+\index{T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER@{T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER}{TIME\_HEADER}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+H\+E\+A\+D\+ER~\textquotesingle{}T\textquotesingle{}}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a355248075031107c0438456dd7357b63}\label{_time_serial_date_strings_8ino_a355248075031107c0438456dd7357b63}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST@{T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}}
+\index{T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST@{T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}{TIME\_REQUEST}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+R\+E\+Q\+U\+E\+ST~7}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a01f3a72442d58926459c48afce4746e7}\label{_time_serial_date_strings_8ino_a01f3a72442d58926459c48afce4746e7}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!digital\+Clock\+Display@{digital\+Clock\+Display}}
+\index{digital\+Clock\+Display@{digital\+Clock\+Display}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{digital\+Clock\+Display()}{digitalClockDisplay()}}
+{\footnotesize\ttfamily void digital\+Clock\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_time_serial_date_strings_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!loop@{loop}}
+\index{loop@{loop}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a772afab0396032477ec7b01d14c774b2}\label{_time_serial_date_strings_8ino_a772afab0396032477ec7b01d14c774b2}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!print\+Digits@{print\+Digits}}
+\index{print\+Digits@{print\+Digits}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{print\+Digits()}{printDigits()}}
+{\footnotesize\ttfamily void print\+Digits (\begin{DoxyParamCaption}\item[{int}]{digits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a72bf283777cd5baa3fe800a9a6c22d77}\label{_time_serial_date_strings_8ino_a72bf283777cd5baa3fe800a9a6c22d77}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!process\+Format\+Message@{process\+Format\+Message}}
+\index{process\+Format\+Message@{process\+Format\+Message}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{process\+Format\+Message()}{processFormatMessage()}}
+{\footnotesize\ttfamily void process\+Format\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a49f4bff50a6119cf44f9793a02ad634c}\label{_time_serial_date_strings_8ino_a49f4bff50a6119cf44f9793a02ad634c}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!process\+Sync\+Message@{process\+Sync\+Message}}
+\index{process\+Sync\+Message@{process\+Sync\+Message}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{process\+Sync\+Message()}{processSyncMessage()}}
+{\footnotesize\ttfamily void process\+Sync\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a0ec9458a3ed4ddac072047471be25b1b}\label{_time_serial_date_strings_8ino_a0ec9458a3ed4ddac072047471be25b1b}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!request\+Sync@{request\+Sync}}
+\index{request\+Sync@{request\+Sync}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{request\+Sync()}{requestSync()}}
+{\footnotesize\ttfamily time\+\_\+t request\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_serial_date_strings_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_time_serial_date_strings_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}!setup@{setup}}
+\index{setup@{setup}!Time\+Serial\+Date\+Strings.\+ino@{Time\+Serial\+Date\+Strings.\+ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

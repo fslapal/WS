@@ -1,0 +1,953 @@
+\hypertarget{class_sd_file}{}\section{Sd\+File Class Reference}
+\label{class_sd_file}\index{Sd\+File@{Sd\+File}}
+
+
+Access F\+A\+T16 and F\+A\+T32 files on SD and S\+D\+HC cards.  
+
+
+
+
+{\ttfamily \#include $<$Sd\+Fat.\+h$>$}
+
+
+
+Inheritance diagram for Sd\+File\+:
+% FIG 0
+
+
+Collaboration diagram for Sd\+File\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sd_file_a9e08675e64a4ef847700876d4291bbef}{Sd\+File} (void)
+\item 
+void \hyperlink{class_sd_file_a44c3d6ef602e84b8160a4d215faef7d4}{clear\+Unbuffered\+Read} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a6b24350c89cc41ff644a343231a3983c}{close} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a3b07fc09dbcb28ae7c89c060af6a1810}{contiguous\+Range} (uint32\+\_\+t $\ast$bgn\+Block, uint32\+\_\+t $\ast$end\+Block)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a07fc5c82318f073848e706f95830e5b5}{create\+Contiguous} (\hyperlink{class_sd_file}{Sd\+File} $\ast$dir\+File, const char $\ast$file\+Name, uint32\+\_\+t size)
+\item 
+uint32\+\_\+t \hyperlink{class_sd_file_a970ef8d6cbb09ccb104fe1156d4a0a9e}{cur\+Cluster} (void) const
+\item 
+uint32\+\_\+t \hyperlink{class_sd_file_a6105ae2f1c23e99fdea17bc64571ea8c}{cur\+Position} (void) const
+\item 
+uint32\+\_\+t \hyperlink{class_sd_file_af62898865cfe9a97ce75468efc0d2409}{dir\+Block} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_abaf9b1dc12d53cdeb937065edf68927d}{dir\+Entry} (\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} $\ast$dir)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_ad4381e541a53a7e5cf51a866c1c8f79e}{dir\+Index} (void) const
+\item 
+uint32\+\_\+t \hyperlink{class_sd_file_add58372b89c922511bc425d84b07dc5f}{file\+Size} (void) const
+\item 
+uint32\+\_\+t \hyperlink{class_sd_file_a854b7555bd774ff668558bf919636edd}{first\+Cluster} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a564e69a08c11f20e66eb18c38e24b748}{is\+Dir} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_ad9ca9b2b519a933c25e8f893ee0201b6}{is\+File} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a54e1b9385c43c33dc83eaad6de0d33be}{is\+Open} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a22fb79f645f5a92baf699d547395667b}{is\+Sub\+Dir} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a29fd6e80e6cbd3c67724988f9fe02290}{is\+Root} (void) const
+\item 
+void \hyperlink{class_sd_file_afd9965ed8dee8bdd4d86dd14032edbc0}{ls} (uint8\+\_\+t flags=0, uint8\+\_\+t indent=0)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a62984bedf614a8de96b48bf9c5e7159f}{make\+Dir} (\hyperlink{class_sd_file}{Sd\+File} $\ast$dir, const char $\ast$\hyperlink{class_sd_file_ad7bbb106aa4c96c795c88b33def677bc}{dir\+Name})
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a9e211ac14784f48aebb213194336f8cc}{open} (\hyperlink{class_sd_file}{Sd\+File} $\ast$dir\+File, uint16\+\_\+t index, uint8\+\_\+t oflag)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a3cf2167ad5ba6d84942ede8d2d07dcc6}{open} (\hyperlink{class_sd_file}{Sd\+File} $\ast$dir\+File, const char $\ast$file\+Name, uint8\+\_\+t oflag)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_ac3612bc27eaf52a23d8cb85c8d96ad38}{open\+Root} (\hyperlink{class_sd_volume}{Sd\+Volume} $\ast$vol)
+\item 
+int16\+\_\+t \hyperlink{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}{read} (void)
+\item 
+int16\+\_\+t \hyperlink{class_sd_file_a77ad85c5c80b34f8ebc57b5b89730554}{read} (void $\ast$buf, uint16\+\_\+t nbyte)
+\item 
+int8\+\_\+t \hyperlink{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}{read\+Dir} (\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} $\ast$dir)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a66c5fb5f651a1ac319bab68fda1d3cc2}{remove} (void)
+\item 
+void \hyperlink{class_sd_file_afa8aaa7bdeb97b4e691ea01adf99f654}{rewind} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a0d9e0c280b3469bb15e7258f6339746b}{rm\+Dir} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a44c26fddfe2b42e7db3bc80290c77503}{rm\+Rf\+Star} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_aa95121ff038538e671f125160b280e9a}{seek\+Cur} (uint32\+\_\+t pos)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_afa70bc7ba5eb789aee1b62fc5fafaa5b}{seek\+End} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a5b8ea0ba6a9fec1ee8f1b11e90edb0c6}{seek\+Set} (uint32\+\_\+t pos)
+\item 
+void \hyperlink{class_sd_file_a08c9e76a4a7bb43fccf1dd5c72c66a16}{set\+Unbuffered\+Read} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a249632ba9580c556c0b041d6b2aaf224}{timestamp} (uint8\+\_\+t flag, uint16\+\_\+t \hyperlink{_time_8cpp_a8608865f8292c0505e02b67fd1cf39e8}{year}, uint8\+\_\+t \hyperlink{_time_8cpp_a726c707dded9d78cf076554eceb956ec}{month}, uint8\+\_\+t \hyperlink{_time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day}, uint8\+\_\+t \hyperlink{_time_8cpp_ac4706d0cffc9e111a6c6a757b462e88e}{hour}, uint8\+\_\+t \hyperlink{_time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{minute}, uint8\+\_\+t \hyperlink{_time_8cpp_a10a4dd811353baa12dadadee7c7e5099}{second})
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync} (void)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a2da736b480e64ec2142687fb49871ada}{type} (void) const
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_ade1e2b72f89b24f500502518fd678abd}{truncate} (uint32\+\_\+t size)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a151bbc9fa7787b67f3d4a3574f9bc9e3}{unbuffered\+Read} (void) const
+\item 
+\hyperlink{class_sd_volume}{Sd\+Volume} $\ast$ \hyperlink{class_sd_file_a85578a1addda7cdba336a5b10deafcf5}{volume} (void) const
+\item 
+size\+\_\+t \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write} (uint8\+\_\+t b)
+\item 
+size\+\_\+t \hyperlink{class_sd_file_a94d4541fda63b5390c8e97ebe815115a}{write} (const void $\ast$buf, uint16\+\_\+t nbyte)
+\item 
+size\+\_\+t \hyperlink{class_sd_file_ad74aaa9115724d663ee39e6dd2d808f8}{write} (const char $\ast$str)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a872927812be6c48a894bdfc72f1701a1}{contiguous\+Range} (uint32\+\_\+t \&bgn\+Block, uint32\+\_\+t \&end\+Block)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a231dd495e5c5997aea2a842481a68f40}{create\+Contiguous} (\hyperlink{class_sd_file}{Sd\+File} \&dir\+File, const char $\ast$file\+Name, uint32\+\_\+t size)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_ae7b4b1057a1ee17f673c116771636156}{dir\+Entry} (\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&dir)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_af87e166d0059d392d7038f68fca68529}{make\+Dir} (\hyperlink{class_sd_file}{Sd\+File} \&dir, const char $\ast$\hyperlink{class_sd_file_ad7bbb106aa4c96c795c88b33def677bc}{dir\+Name})
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_afe1d8ce70ef58ee5967005047064167c}{open} (\hyperlink{class_sd_file}{Sd\+File} \&dir\+File, const char $\ast$file\+Name, uint8\+\_\+t oflag)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a71e1c08dc4fb58b95554925a25435721}{open} (\hyperlink{class_sd_file}{Sd\+File} \&dir\+File, const char $\ast$file\+Name)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_a8bc20433f081a6e9f1546601b7a1d712}{open} (\hyperlink{class_sd_file}{Sd\+File} \&dir\+File, uint16\+\_\+t index, uint8\+\_\+t oflag)
+\item 
+uint8\+\_\+t \hyperlink{class_sd_file_abc60bbbb747c58319cfcfc11deb34d53}{open\+Root} (\hyperlink{class_sd_volume}{Sd\+Volume} \&vol)
+\item 
+int8\+\_\+t \hyperlink{class_sd_file_ad107b73c6edfa489b76366edfef2eeae}{read\+Dir} (\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&dir)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_sd_file_a2d78e6a8cedbf8ce545af68457b43bf1}{date\+Time\+Callback} (void($\ast$date\+Time)(uint16\+\_\+t $\ast$date, uint16\+\_\+t $\ast$time))
+\item 
+static void \hyperlink{class_sd_file_adaec83fdbd8473a8e336e27b8622f673}{date\+Time\+Callback\+Cancel} (void)
+\item 
+static void \hyperlink{class_sd_file_ad7bbb106aa4c96c795c88b33def677bc}{dir\+Name} (const \hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&dir, char $\ast$\hyperlink{_fat_structs_8h_a30308c9b983377042fd2cc8900454fb1}{name})
+\item 
+static void \hyperlink{class_sd_file_a7267e3def5cba51149ff98baf5d3f2c8}{print\+Dir\+Name} (const \hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&dir, uint8\+\_\+t width)
+\item 
+static void \hyperlink{class_sd_file_a77022a204f3e5148e78e1b7ae7b6865a}{print\+Fat\+Date} (uint16\+\_\+t fat\+Date)
+\item 
+static void \hyperlink{class_sd_file_ab981ea789ec76d1a44e4b3c8a84ccd35}{print\+Fat\+Time} (uint16\+\_\+t fat\+Time)
+\item 
+static void \hyperlink{class_sd_file_a0af47048953a2d1526db9336c39a8919}{print\+Two\+Digits} (uint8\+\_\+t v)
+\item 
+static uint8\+\_\+t \hyperlink{class_sd_file_ab932b7896dce90a29031f3a9039807a2}{remove} (\hyperlink{class_sd_file}{Sd\+File} $\ast$dir\+File, const char $\ast$file\+Name)
+\item 
+static void \hyperlink{class_sd_file_a88a9b32bfec07c8c5cfdf8a36b7faf26}{date\+Time\+Callback} (void($\ast$date\+Time)(uint16\+\_\+t \&date, uint16\+\_\+t \&time))
+\item 
+static uint8\+\_\+t \hyperlink{class_sd_file_aaea53aa58f7577dfafd0da3cb084f6d1}{remove} (\hyperlink{class_sd_file}{Sd\+File} \&dir\+File, const char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Access F\+A\+T16 and F\+A\+T32 files on SD and S\+D\+HC cards. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sd_file_a9e08675e64a4ef847700876d4291bbef}\label{class_sd_file_a9e08675e64a4ef847700876d4291bbef}} 
+\index{Sd\+File@{Sd\+File}!Sd\+File@{Sd\+File}}
+\index{Sd\+File@{Sd\+File}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{Sd\+File()}{SdFile()}}
+{\footnotesize\ttfamily Sd\+File\+::\+Sd\+File (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create an instance of \hyperlink{class_sd_file}{Sd\+File}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sd_file_a44c3d6ef602e84b8160a4d215faef7d4}\label{class_sd_file_a44c3d6ef602e84b8160a4d215faef7d4}} 
+\index{Sd\+File@{Sd\+File}!clear\+Unbuffered\+Read@{clear\+Unbuffered\+Read}}
+\index{clear\+Unbuffered\+Read@{clear\+Unbuffered\+Read}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{clear\+Unbuffered\+Read()}{clearUnbufferedRead()}}
+{\footnotesize\ttfamily void Sd\+File\+::clear\+Unbuffered\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write\+Error is set to true if an error occurs during a \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()}. Set write\+Error to false before calling print() and/or \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()} and check for true after calls to print() and/or \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()}. Cancel unbuffered reads for this file. See \hyperlink{class_sd_file_a08c9e76a4a7bb43fccf1dd5c72c66a16}{set\+Unbuffered\+Read()} \mbox{\Hypertarget{class_sd_file_a6b24350c89cc41ff644a343231a3983c}\label{class_sd_file_a6b24350c89cc41ff644a343231a3983c}} 
+\index{Sd\+File@{Sd\+File}!close@{close}}
+\index{close@{close}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Close a file and force cached data and directory information to be written to the storage device.
+
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include no file is open or an I/O error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a3b07fc09dbcb28ae7c89c060af6a1810}\label{class_sd_file_a3b07fc09dbcb28ae7c89c060af6a1810}} 
+\index{Sd\+File@{Sd\+File}!contiguous\+Range@{contiguous\+Range}}
+\index{contiguous\+Range@{contiguous\+Range}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{contiguous\+Range()}{contiguousRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::contiguous\+Range (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{bgn\+Block,  }\item[{uint32\+\_\+t $\ast$}]{end\+Block }\end{DoxyParamCaption})}
+
+Check for contiguous file and return its raw block range.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em bgn\+Block} & the first block address for the file. \\
+\hline
+\mbox{\tt out}  & {\em end\+Block} & the last block address for the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include file is not contiguous, file has zero length or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a872927812be6c48a894bdfc72f1701a1}\label{class_sd_file_a872927812be6c48a894bdfc72f1701a1}} 
+\index{Sd\+File@{Sd\+File}!contiguous\+Range@{contiguous\+Range}}
+\index{contiguous\+Range@{contiguous\+Range}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{contiguous\+Range()}{contiguousRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::contiguous\+Range (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \&}]{bgn\+Block,  }\item[{uint32\+\_\+t \&}]{end\+Block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_a3b07fc09dbcb28ae7c89c060af6a1810}{Sd\+File\+::contiguous\+Range(uint32\+\_\+t$\ast$ bgn\+Block, uint32\+\_\+t$\ast$ end\+Block)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a07fc5c82318f073848e706f95830e5b5}\label{class_sd_file_a07fc5c82318f073848e706f95830e5b5}} 
+\index{Sd\+File@{Sd\+File}!create\+Contiguous@{create\+Contiguous}}
+\index{create\+Contiguous@{create\+Contiguous}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{create\+Contiguous()}{createContiguous()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::create\+Contiguous (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} $\ast$}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Create and open a new contiguous file of a specified size.
+
+\begin{DoxyNote}{Note}
+This function only supports short D\+OS 8.\+3 names. See \hyperlink{class_sd_file_a9e211ac14784f48aebb213194336f8cc}{open()} for more information.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir\+File} & The directory where the file will be created. \\
+\hline
+\mbox{\tt in}  & {\em file\+Name} & A valid D\+OS 8.\+3 file name. \\
+\hline
+\mbox{\tt in}  & {\em size} & The desired file size.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include {\itshape file\+Name} contains an invalid D\+OS 8.\+3 file name, the F\+AT volume has not been initialized, a file is already open, the file already exists, the root directory is full or an I/O error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a231dd495e5c5997aea2a842481a68f40}\label{class_sd_file_a231dd495e5c5997aea2a842481a68f40}} 
+\index{Sd\+File@{Sd\+File}!create\+Contiguous@{create\+Contiguous}}
+\index{create\+Contiguous@{create\+Contiguous}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{create\+Contiguous()}{createContiguous()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::create\+Contiguous (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_a07fc5c82318f073848e706f95830e5b5}{Sd\+File\+::create\+Contiguous}(Sd\+File$\ast$ dir\+File, const char$\ast$ file\+Name, uint32\+\_\+t size) \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a970ef8d6cbb09ccb104fe1156d4a0a9e}\label{class_sd_file_a970ef8d6cbb09ccb104fe1156d4a0a9e}} 
+\index{Sd\+File@{Sd\+File}!cur\+Cluster@{cur\+Cluster}}
+\index{cur\+Cluster@{cur\+Cluster}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{cur\+Cluster()}{curCluster()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sd\+File\+::cur\+Cluster (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The current cluster number for a file or directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a6105ae2f1c23e99fdea17bc64571ea8c}\label{class_sd_file_a6105ae2f1c23e99fdea17bc64571ea8c}} 
+\index{Sd\+File@{Sd\+File}!cur\+Position@{cur\+Position}}
+\index{cur\+Position@{cur\+Position}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{cur\+Position()}{curPosition()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sd\+File\+::cur\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The current position for a file or directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a2d78e6a8cedbf8ce545af68457b43bf1}\label{class_sd_file_a2d78e6a8cedbf8ce545af68457b43bf1}} 
+\index{Sd\+File@{Sd\+File}!date\+Time\+Callback@{date\+Time\+Callback}}
+\index{date\+Time\+Callback@{date\+Time\+Callback}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{date\+Time\+Callback()}{dateTimeCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Sd\+File\+::date\+Time\+Callback (\begin{DoxyParamCaption}\item[{void($\ast$)(uint16\+\_\+t $\ast$date, uint16\+\_\+t $\ast$time)}]{date\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set the date/time callback function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em date\+Time} & The user\textquotesingle{}s call back function. The callback function is of the form\+:\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} dateTime(uint16\_t* date, uint16\_t* time) \{
+  uint16\_t \hyperlink{_time_8cpp_a98bf680dbfa28f79514ba50d33fee63f}{year};
+  uint8\_t \hyperlink{_time_8cpp_a3f3be7ce4301fc1896efac6f0952f772}{month}, \hyperlink{_time_8cpp_a075786e0a525a2bba638889efcc42385}{day}, \hyperlink{_time_8cpp_a721ff0d06e8367ee5d2c5cf1a2c40ab5}{hour}, \hyperlink{_time_8cpp_adf618b3bac7dcfac69d4e1f5a68159b7}{minute}, \hyperlink{_time_8cpp_aed5657208944fe098e4e5f3380e0a1f9}{second};
+
+  \textcolor{comment}{// User gets date and time from GPS or real-time clock here}
+
+  \textcolor{comment}{// return date using FAT\_DATE macro to format fields}
+  *date = FAT\_DATE(year, month, day);
+
+  \textcolor{comment}{// return time using FAT\_TIME macro to format fields}
+  *time = FAT\_TIME(hour, minute, second);
+\}
+\end{DoxyCode}
+
+
+Sets the function that is called when a file is created or when a file\textquotesingle{}s directory entry is modified by \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()}. All timestamps, access, creation, and modify, are set when a file is created. \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} maintains the last access date and last modify date/time.
+
+See the \hyperlink{class_sd_file_a249632ba9580c556c0b041d6b2aaf224}{timestamp()} function. \mbox{\Hypertarget{class_sd_file_a88a9b32bfec07c8c5cfdf8a36b7faf26}\label{class_sd_file_a88a9b32bfec07c8c5cfdf8a36b7faf26}} 
+\index{Sd\+File@{Sd\+File}!date\+Time\+Callback@{date\+Time\+Callback}}
+\index{date\+Time\+Callback@{date\+Time\+Callback}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{date\+Time\+Callback()}{dateTimeCallback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Sd\+File\+::date\+Time\+Callback (\begin{DoxyParamCaption}\item[{void($\ast$)(uint16\+\_\+t \&date, uint16\+\_\+t \&time)}]{date\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000003}{Deprecated}]Use\+: static void \hyperlink{class_sd_file_a2d78e6a8cedbf8ce545af68457b43bf1}{Sd\+File\+::date\+Time\+Callback}( void ({\itshape date\+Time)(uint16\+\_\+t} date, uint16\+\_\+t$\ast$ time)); \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_adaec83fdbd8473a8e336e27b8622f673}\label{class_sd_file_adaec83fdbd8473a8e336e27b8622f673}} 
+\index{Sd\+File@{Sd\+File}!date\+Time\+Callback\+Cancel@{date\+Time\+Callback\+Cancel}}
+\index{date\+Time\+Callback\+Cancel@{date\+Time\+Callback\+Cancel}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{date\+Time\+Callback\+Cancel()}{dateTimeCallbackCancel()}}
+{\footnotesize\ttfamily static void Sd\+File\+::date\+Time\+Callback\+Cancel (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Cancel the date/time callback function. \mbox{\Hypertarget{class_sd_file_af62898865cfe9a97ce75468efc0d2409}\label{class_sd_file_af62898865cfe9a97ce75468efc0d2409}} 
+\index{Sd\+File@{Sd\+File}!dir\+Block@{dir\+Block}}
+\index{dir\+Block@{dir\+Block}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{dir\+Block()}{dirBlock()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sd\+File\+::dir\+Block (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Address of the block that contains this file\textquotesingle{}s directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_abaf9b1dc12d53cdeb937065edf68927d}\label{class_sd_file_abaf9b1dc12d53cdeb937065edf68927d}} 
+\index{Sd\+File@{Sd\+File}!dir\+Entry@{dir\+Entry}}
+\index{dir\+Entry@{dir\+Entry}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{dir\+Entry()}{dirEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::dir\+Entry (\begin{DoxyParamCaption}\item[{\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} $\ast$}]{dir }\end{DoxyParamCaption})}
+
+Return a files directory entry
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em dir} & Location for return of the files directory entry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ae7b4b1057a1ee17f673c116771636156}\label{class_sd_file_ae7b4b1057a1ee17f673c116771636156}} 
+\index{Sd\+File@{Sd\+File}!dir\+Entry@{dir\+Entry}}
+\index{dir\+Entry@{dir\+Entry}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{dir\+Entry()}{dirEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::dir\+Entry (\begin{DoxyParamCaption}\item[{\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000004}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_abaf9b1dc12d53cdeb937065edf68927d}{Sd\+File\+::dir\+Entry(dir\+\_\+t$\ast$ dir)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_ad4381e541a53a7e5cf51a866c1c8f79e}\label{class_sd_file_ad4381e541a53a7e5cf51a866c1c8f79e}} 
+\index{Sd\+File@{Sd\+File}!dir\+Index@{dir\+Index}}
+\index{dir\+Index@{dir\+Index}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{dir\+Index()}{dirIndex()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::dir\+Index (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Index of this file\textquotesingle{}s directory in the block dir\+Block. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ad7bbb106aa4c96c795c88b33def677bc}\label{class_sd_file_ad7bbb106aa4c96c795c88b33def677bc}} 
+\index{Sd\+File@{Sd\+File}!dir\+Name@{dir\+Name}}
+\index{dir\+Name@{dir\+Name}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{dir\+Name()}{dirName()}}
+{\footnotesize\ttfamily void Sd\+File\+::dir\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&}]{dir,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Format the name field of {\itshape dir} into the 13 byte array {\itshape name} in standard 8.\+3 short name format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir} & The directory structure containing the name. \\
+\hline
+\mbox{\tt out}  & {\em name} & A 13 byte char array for the formatted name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_add58372b89c922511bc425d84b07dc5f}\label{class_sd_file_add58372b89c922511bc425d84b07dc5f}} 
+\index{Sd\+File@{Sd\+File}!file\+Size@{file\+Size}}
+\index{file\+Size@{file\+Size}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{file\+Size()}{fileSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sd\+File\+::file\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes in a file or directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a854b7555bd774ff668558bf919636edd}\label{class_sd_file_a854b7555bd774ff668558bf919636edd}} 
+\index{Sd\+File@{Sd\+File}!first\+Cluster@{first\+Cluster}}
+\index{first\+Cluster@{first\+Cluster}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{first\+Cluster()}{firstCluster()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sd\+File\+::first\+Cluster (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The first cluster number for a file or directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a564e69a08c11f20e66eb18c38e24b748}\label{class_sd_file_a564e69a08c11f20e66eb18c38e24b748}} 
+\index{Sd\+File@{Sd\+File}!is\+Dir@{is\+Dir}}
+\index{is\+Dir@{is\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{is\+Dir()}{isDir()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::is\+Dir (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this is a \hyperlink{class_sd_file}{Sd\+File} for a directory else false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ad9ca9b2b519a933c25e8f893ee0201b6}\label{class_sd_file_ad9ca9b2b519a933c25e8f893ee0201b6}} 
+\index{Sd\+File@{Sd\+File}!is\+File@{is\+File}}
+\index{is\+File@{is\+File}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{is\+File()}{isFile()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::is\+File (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this is a \hyperlink{class_sd_file}{Sd\+File} for a file else false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a54e1b9385c43c33dc83eaad6de0d33be}\label{class_sd_file_a54e1b9385c43c33dc83eaad6de0d33be}} 
+\index{Sd\+File@{Sd\+File}!is\+Open@{is\+Open}}
+\index{is\+Open@{is\+Open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{is\+Open()}{isOpen()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::is\+Open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this is a \hyperlink{class_sd_file}{Sd\+File} for an open file/directory else false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a29fd6e80e6cbd3c67724988f9fe02290}\label{class_sd_file_a29fd6e80e6cbd3c67724988f9fe02290}} 
+\index{Sd\+File@{Sd\+File}!is\+Root@{is\+Root}}
+\index{is\+Root@{is\+Root}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{is\+Root()}{isRoot()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::is\+Root (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this is a \hyperlink{class_sd_file}{Sd\+File} for the root directory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a22fb79f645f5a92baf699d547395667b}\label{class_sd_file_a22fb79f645f5a92baf699d547395667b}} 
+\index{Sd\+File@{Sd\+File}!is\+Sub\+Dir@{is\+Sub\+Dir}}
+\index{is\+Sub\+Dir@{is\+Sub\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{is\+Sub\+Dir()}{isSubDir()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::is\+Sub\+Dir (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if this is a \hyperlink{class_sd_file}{Sd\+File} for a subdirectory else false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_afd9965ed8dee8bdd4d86dd14032edbc0}\label{class_sd_file_afd9965ed8dee8bdd4d86dd14032edbc0}} 
+\index{Sd\+File@{Sd\+File}!ls@{ls}}
+\index{ls@{ls}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{ls()}{ls()}}
+{\footnotesize\ttfamily void Sd\+File\+::ls (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{flags = {\ttfamily 0},  }\item[{uint8\+\_\+t}]{indent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+List directory contents to Serial.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em flags} & The inclusive OR of\\
+\hline
+\end{DoxyParams}
+L\+S\+\_\+\+D\+A\+TE -\/ Print file modification date
+
+L\+S\+\_\+\+S\+I\+ZE -\/ Print file size.
+
+L\+S\+\_\+R -\/ Recursive list of subdirectories.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em indent} & Amount of space before file name. Used for recursive list to indicate subdirectory level. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_a62984bedf614a8de96b48bf9c5e7159f}\label{class_sd_file_a62984bedf614a8de96b48bf9c5e7159f}} 
+\index{Sd\+File@{Sd\+File}!make\+Dir@{make\+Dir}}
+\index{make\+Dir@{make\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{make\+Dir()}{makeDir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::make\+Dir (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} $\ast$}]{dir,  }\item[{const char $\ast$}]{dir\+Name }\end{DoxyParamCaption})}
+
+Make a new directory.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir} & An open Sd\+Fat instance for the directory that will containing the new directory.\\
+\hline
+\mbox{\tt in}  & {\em dir\+Name} & A valid 8.\+3 D\+OS name for the new directory.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include this \hyperlink{class_sd_file}{Sd\+File} is already open, {\itshape dir} is not a directory, {\itshape dir\+Name} is invalid or already exists in {\itshape dir}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_af87e166d0059d392d7038f68fca68529}\label{class_sd_file_af87e166d0059d392d7038f68fca68529}} 
+\index{Sd\+File@{Sd\+File}!make\+Dir@{make\+Dir}}
+\index{make\+Dir@{make\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{make\+Dir()}{makeDir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::make\+Dir (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir,  }\item[{const char $\ast$}]{dir\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000005}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_a62984bedf614a8de96b48bf9c5e7159f}{Sd\+File\+::make\+Dir(\+Sd\+File$\ast$ dir, const char$\ast$ dir\+Name)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a9e211ac14784f48aebb213194336f8cc}\label{class_sd_file_a9e211ac14784f48aebb213194336f8cc}} 
+\index{Sd\+File@{Sd\+File}!open@{open}}
+\index{open@{open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} $\ast$}]{dir\+File,  }\item[{uint16\+\_\+t}]{index,  }\item[{uint8\+\_\+t}]{oflag }\end{DoxyParamCaption})}
+
+Open a file by index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir\+File} & An open Sd\+Fat instance for the directory.\\
+\hline
+\mbox{\tt in}  & {\em index} & The {\itshape index} of the directory entry for the file to be opened. The value for {\itshape index} is (directory file position)/32.\\
+\hline
+\mbox{\tt in}  & {\em oflag} & Values for {\itshape oflag} are constructed by a bitwise-\/inclusive OR of flags O\+\_\+\+R\+E\+AD, O\+\_\+\+W\+R\+I\+TE, O\+\_\+\+T\+R\+U\+NC, and O\+\_\+\+S\+Y\+NC.\\
+\hline
+\end{DoxyParams}
+See \hyperlink{class_sd_file_a9e211ac14784f48aebb213194336f8cc}{open()} by file\+Name for definition of flags and return values. \mbox{\Hypertarget{class_sd_file_a3cf2167ad5ba6d84942ede8d2d07dcc6}\label{class_sd_file_a3cf2167ad5ba6d84942ede8d2d07dcc6}} 
+\index{Sd\+File@{Sd\+File}!open@{open}}
+\index{open@{open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} $\ast$}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name,  }\item[{uint8\+\_\+t}]{oflag }\end{DoxyParamCaption})}
+
+Open a file or directory by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir\+File} & An open Sd\+Fat instance for the directory containing the file to be opened.\\
+\hline
+\mbox{\tt in}  & {\em file\+Name} & A valid 8.\+3 D\+OS name for a file to be opened.\\
+\hline
+\mbox{\tt in}  & {\em oflag} & Values for {\itshape oflag} are constructed by a bitwise-\/inclusive OR of flags from the following list\\
+\hline
+\end{DoxyParams}
+O\+\_\+\+R\+E\+AD -\/ Open for reading.
+
+O\+\_\+\+R\+D\+O\+N\+LY -\/ Same as O\+\_\+\+R\+E\+AD.
+
+O\+\_\+\+W\+R\+I\+TE -\/ Open for writing.
+
+O\+\_\+\+W\+R\+O\+N\+LY -\/ Same as O\+\_\+\+W\+R\+I\+TE.
+
+O\+\_\+\+R\+D\+WR -\/ Open for reading and writing.
+
+O\+\_\+\+A\+P\+P\+E\+ND -\/ If set, the file offset shall be set to the end of the file prior to each write.
+
+O\+\_\+\+C\+R\+E\+AT -\/ If the file exists, this flag has no effect except as noted under O\+\_\+\+E\+X\+CL below. Otherwise, the file shall be created
+
+O\+\_\+\+E\+X\+CL -\/ If O\+\_\+\+C\+R\+E\+AT and O\+\_\+\+E\+X\+CL are set, \hyperlink{class_sd_file_a9e211ac14784f48aebb213194336f8cc}{open()} shall fail if the file exists.
+
+O\+\_\+\+S\+Y\+NC -\/ Call \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} after each write. This flag should not be used with \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write(uint8\+\_\+t)}, write\+\_\+\+P(\+P\+G\+M\+\_\+\+P), writeln\+\_\+\+P(\+P\+G\+M\+\_\+\+P), or the Arduino Print class. These functions do character at a time writes so \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} will be called after each byte.
+
+O\+\_\+\+T\+R\+U\+NC -\/ If the file exists and is a regular file, and the file is successfully opened and is not read only, its length shall be truncated to 0.
+
+\begin{DoxyNote}{Note}
+Directory files must be opened read only. Write and truncation is not allowed for directory files.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include this \hyperlink{class_sd_file}{Sd\+File} is already open, {\itshape dif\+File} is not a directory, {\itshape file\+Name} is invalid, the file does not exist or can\textquotesingle{}t be opened in the access mode specified by oflag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_afe1d8ce70ef58ee5967005047064167c}\label{class_sd_file_afe1d8ce70ef58ee5967005047064167c}} 
+\index{Sd\+File@{Sd\+File}!open@{open}}
+\index{open@{open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name,  }\item[{uint8\+\_\+t}]{oflag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000006}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_a3cf2167ad5ba6d84942ede8d2d07dcc6}{Sd\+File\+::open(\+Sd\+File$\ast$ dir\+File, const char$\ast$ file\+Name, uint8\+\_\+t oflag)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a71e1c08dc4fb58b95554925a25435721}\label{class_sd_file_a71e1c08dc4fb58b95554925a25435721}} 
+\index{Sd\+File@{Sd\+File}!open@{open}}
+\index{open@{open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000007}{Deprecated}]Do not use in new apps \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a8bc20433f081a6e9f1546601b7a1d712}\label{class_sd_file_a8bc20433f081a6e9f1546601b7a1d712}} 
+\index{Sd\+File@{Sd\+File}!open@{open}}
+\index{open@{open}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir\+File,  }\item[{uint16\+\_\+t}]{index,  }\item[{uint8\+\_\+t}]{oflag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000008}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_a9e211ac14784f48aebb213194336f8cc}{Sd\+File\+::open(\+Sd\+File$\ast$ dir\+File, uint16\+\_\+t index, uint8\+\_\+t oflag)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_ac3612bc27eaf52a23d8cb85c8d96ad38}\label{class_sd_file_ac3612bc27eaf52a23d8cb85c8d96ad38}} 
+\index{Sd\+File@{Sd\+File}!open\+Root@{open\+Root}}
+\index{open\+Root@{open\+Root}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open\+Root()}{openRoot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open\+Root (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_volume}{Sd\+Volume} $\ast$}]{vol }\end{DoxyParamCaption})}
+
+Open a volume\textquotesingle{}s root directory.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vol} & The F\+AT volume containing the root directory to be opened.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the F\+AT volume has not been initialized or it a F\+A\+T12 volume. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_abc60bbbb747c58319cfcfc11deb34d53}\label{class_sd_file_abc60bbbb747c58319cfcfc11deb34d53}} 
+\index{Sd\+File@{Sd\+File}!open\+Root@{open\+Root}}
+\index{open\+Root@{open\+Root}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{open\+Root()}{openRoot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::open\+Root (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_volume}{Sd\+Volume} \&}]{vol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000009}{Deprecated}]Use\+: uint8\+\_\+t \hyperlink{class_sd_file_ac3612bc27eaf52a23d8cb85c8d96ad38}{Sd\+File\+::open\+Root(\+Sd\+Volume$\ast$ vol)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_a7267e3def5cba51149ff98baf5d3f2c8}\label{class_sd_file_a7267e3def5cba51149ff98baf5d3f2c8}} 
+\index{Sd\+File@{Sd\+File}!print\+Dir\+Name@{print\+Dir\+Name}}
+\index{print\+Dir\+Name@{print\+Dir\+Name}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{print\+Dir\+Name()}{printDirName()}}
+{\footnotesize\ttfamily void Sd\+File\+::print\+Dir\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&}]{dir,  }\item[{uint8\+\_\+t}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print the name field of a directory entry in 8.\+3 format to Serial.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir} & The directory structure containing the name. \\
+\hline
+\mbox{\tt in}  & {\em width} & Blank fill name if length is less than {\itshape width}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_a77022a204f3e5148e78e1b7ae7b6865a}\label{class_sd_file_a77022a204f3e5148e78e1b7ae7b6865a}} 
+\index{Sd\+File@{Sd\+File}!print\+Fat\+Date@{print\+Fat\+Date}}
+\index{print\+Fat\+Date@{print\+Fat\+Date}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{print\+Fat\+Date()}{printFatDate()}}
+{\footnotesize\ttfamily void Sd\+File\+::print\+Fat\+Date (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{fat\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a directory date field to Serial.
+
+Format is yyyy-\/mm-\/dd.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fat\+Date} & The date field from a directory entry. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_ab981ea789ec76d1a44e4b3c8a84ccd35}\label{class_sd_file_ab981ea789ec76d1a44e4b3c8a84ccd35}} 
+\index{Sd\+File@{Sd\+File}!print\+Fat\+Time@{print\+Fat\+Time}}
+\index{print\+Fat\+Time@{print\+Fat\+Time}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{print\+Fat\+Time()}{printFatTime()}}
+{\footnotesize\ttfamily void Sd\+File\+::print\+Fat\+Time (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{fat\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a directory time field to Serial.
+
+Format is hh\+:mm\+:ss.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fat\+Time} & The time field from a directory entry. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_a0af47048953a2d1526db9336c39a8919}\label{class_sd_file_a0af47048953a2d1526db9336c39a8919}} 
+\index{Sd\+File@{Sd\+File}!print\+Two\+Digits@{print\+Two\+Digits}}
+\index{print\+Two\+Digits@{print\+Two\+Digits}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{print\+Two\+Digits()}{printTwoDigits()}}
+{\footnotesize\ttfamily void Sd\+File\+::print\+Two\+Digits (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Print a value as two digits to Serial.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em v} & Value to be printed, 0 $<$= {\itshape v} $<$= 99 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}\label{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}} 
+\index{Sd\+File@{Sd\+File}!read@{read}}
+\index{read@{read}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int16\+\_\+t Sd\+File\+::read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Read the next byte from a file.
+
+\begin{DoxyReturn}{Returns}
+For success read returns the next byte in the file as an int. If an error occurs or end of file is reached -\/1 is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a77ad85c5c80b34f8ebc57b5b89730554}\label{class_sd_file_a77ad85c5c80b34f8ebc57b5b89730554}} 
+\index{Sd\+File@{Sd\+File}!read@{read}}
+\index{read@{read}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int16\+\_\+t Sd\+File\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{nbyte }\end{DoxyParamCaption})}
+
+Read data from a file starting at the current position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buf} & Pointer to the location that will receive the data.\\
+\hline
+\mbox{\tt in}  & {\em nbyte} & Maximum number of bytes to read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+For success \hyperlink{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}{read()} returns the number of bytes read. A value less than {\itshape nbyte}, including zero, will be returned if end of file is reached. If an error occurs, \hyperlink{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}{read()} returns -\/1. Possible errors include \hyperlink{class_sd_file_a6c389f0180b4a86fb6d7464f50d3b0dd}{read()} called before a file has been opened, corrupt file system or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}\label{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}} 
+\index{Sd\+File@{Sd\+File}!read\+Dir@{read\+Dir}}
+\index{read\+Dir@{read\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{read\+Dir()}{readDir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int8\+\_\+t Sd\+File\+::read\+Dir (\begin{DoxyParamCaption}\item[{\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} $\ast$}]{dir }\end{DoxyParamCaption})}
+
+Read the next directory entry from a directory file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em dir} & The dir\+\_\+t struct that will receive the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+For success \hyperlink{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}{read\+Dir()} returns the number of bytes read. A value of zero will be returned if end of file is reached. If an error occurs, \hyperlink{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}{read\+Dir()} returns -\/1. Possible errors include \hyperlink{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}{read\+Dir()} called before a directory has been opened, this is not a directory file or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ad107b73c6edfa489b76366edfef2eeae}\label{class_sd_file_ad107b73c6edfa489b76366edfef2eeae}} 
+\index{Sd\+File@{Sd\+File}!read\+Dir@{read\+Dir}}
+\index{read\+Dir@{read\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{read\+Dir()}{readDir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int8\+\_\+t Sd\+File\+::read\+Dir (\begin{DoxyParamCaption}\item[{\hyperlink{_fat_structs_8h_a803db59d4e16a0c54a647afc6a7954e3}{dir\+\_\+t} \&}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000010}{Deprecated}]Use\+: int8\+\_\+t \hyperlink{class_sd_file_ab240540b099cedcfe8b93b5e853d0628}{Sd\+File\+::read\+Dir(dir\+\_\+t$\ast$ dir)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_ab932b7896dce90a29031f3a9039807a2}\label{class_sd_file_ab932b7896dce90a29031f3a9039807a2}} 
+\index{Sd\+File@{Sd\+File}!remove@{remove}}
+\index{remove@{remove}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} $\ast$}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Remove a file.
+
+The directory entry and all data for the file are deleted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dir\+File} & The directory that contains the file. \\
+\hline
+\mbox{\tt in}  & {\em file\+Name} & The name of the file to be removed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function should not be used to delete the 8.\+3 version of a file that has a long name. For example if a file has the long name \char`\"{}\+New Text Document.\+txt\char`\"{} you should not delete the 8.\+3 name \char`\"{}\+N\+E\+W\+T\+E\+X$\sim$1.\+T\+X\+T\char`\"{}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file is a directory, is read only, {\itshape dir\+File} is not a directory, {\itshape file\+Name} is not found or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a66c5fb5f651a1ac319bab68fda1d3cc2}\label{class_sd_file_a66c5fb5f651a1ac319bab68fda1d3cc2}} 
+\index{Sd\+File@{Sd\+File}!remove@{remove}}
+\index{remove@{remove}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::remove (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Remove a file.
+
+The directory entry and all data for the file are deleted.
+
+\begin{DoxyNote}{Note}
+This function should not be used to delete the 8.\+3 version of a file that has a long name. For example if a file has the long name \char`\"{}\+New Text Document.\+txt\char`\"{} you should not delete the 8.\+3 name \char`\"{}\+N\+E\+W\+T\+E\+X$\sim$1.\+T\+X\+T\char`\"{}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file read-\/only, is a directory, or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_aaea53aa58f7577dfafd0da3cb084f6d1}\label{class_sd_file_aaea53aa58f7577dfafd0da3cb084f6d1}} 
+\index{Sd\+File@{Sd\+File}!remove@{remove}}
+\index{remove@{remove}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static uint8\+\_\+t Sd\+File\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{class_sd_file}{Sd\+File} \&}]{dir\+File,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000011}{Deprecated}]Use\+: static uint8\+\_\+t \hyperlink{class_sd_file_ab932b7896dce90a29031f3a9039807a2}{Sd\+File\+::remove(\+Sd\+File$\ast$ dir\+File, const char$\ast$ file\+Name)}; \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_sd_file_afa8aaa7bdeb97b4e691ea01adf99f654}\label{class_sd_file_afa8aaa7bdeb97b4e691ea01adf99f654}} 
+\index{Sd\+File@{Sd\+File}!rewind@{rewind}}
+\index{rewind@{rewind}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{rewind()}{rewind()}}
+{\footnotesize\ttfamily void Sd\+File\+::rewind (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the file\textquotesingle{}s current position to zero. \mbox{\Hypertarget{class_sd_file_a0d9e0c280b3469bb15e7258f6339746b}\label{class_sd_file_a0d9e0c280b3469bb15e7258f6339746b}} 
+\index{Sd\+File@{Sd\+File}!rm\+Dir@{rm\+Dir}}
+\index{rm\+Dir@{rm\+Dir}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{rm\+Dir()}{rmDir()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::rm\+Dir (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Remove a directory file.
+
+The directory file will be removed only if it is empty and is not the root directory. \hyperlink{class_sd_file_a0d9e0c280b3469bb15e7258f6339746b}{rm\+Dir()} follows D\+OS and Windows and ignores the read-\/only attribute for the directory.
+
+\begin{DoxyNote}{Note}
+This function should not be used to delete the 8.\+3 version of a directory that has a long name. For example if a directory has the long name \char`\"{}\+New folder\char`\"{} you should not delete the 8.\+3 name \char`\"{}\+N\+E\+W\+F\+O\+L$\sim$1\char`\"{}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file is not a directory, is the root directory, is not empty, or an I/O error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a44c26fddfe2b42e7db3bc80290c77503}\label{class_sd_file_a44c26fddfe2b42e7db3bc80290c77503}} 
+\index{Sd\+File@{Sd\+File}!rm\+Rf\+Star@{rm\+Rf\+Star}}
+\index{rm\+Rf\+Star@{rm\+Rf\+Star}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{rm\+Rf\+Star()}{rmRfStar()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::rm\+Rf\+Star (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Recursively delete a directory and all contained files.
+
+This is like the Unix/\+Linux \textquotesingle{}rm -\/rf $\ast$\textquotesingle{} if called with the root directory hence the name.
+
+Warning -\/ This will remove all contents of the directory including subdirectories. The directory will then be removed if it is not root. The read-\/only attribute for files will be ignored.
+
+\begin{DoxyNote}{Note}
+This function should not be used to delete the 8.\+3 version of a directory that has a long name. See \hyperlink{class_sd_file_a66c5fb5f651a1ac319bab68fda1d3cc2}{remove()} and \hyperlink{class_sd_file_a0d9e0c280b3469bb15e7258f6339746b}{rm\+Dir()}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_aa95121ff038538e671f125160b280e9a}\label{class_sd_file_aa95121ff038538e671f125160b280e9a}} 
+\index{Sd\+File@{Sd\+File}!seek\+Cur@{seek\+Cur}}
+\index{seek\+Cur@{seek\+Cur}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{seek\+Cur()}{seekCur()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::seek\+Cur (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the files position to current position + {\itshape pos}. See \hyperlink{class_sd_file_a5b8ea0ba6a9fec1ee8f1b11e90edb0c6}{seek\+Set()}. \mbox{\Hypertarget{class_sd_file_afa70bc7ba5eb789aee1b62fc5fafaa5b}\label{class_sd_file_afa70bc7ba5eb789aee1b62fc5fafaa5b}} 
+\index{Sd\+File@{Sd\+File}!seek\+End@{seek\+End}}
+\index{seek\+End@{seek\+End}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{seek\+End()}{seekEnd()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::seek\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the files current position to end of file. Useful to position a file for append. See \hyperlink{class_sd_file_a5b8ea0ba6a9fec1ee8f1b11e90edb0c6}{seek\+Set()}. \mbox{\Hypertarget{class_sd_file_a5b8ea0ba6a9fec1ee8f1b11e90edb0c6}\label{class_sd_file_a5b8ea0ba6a9fec1ee8f1b11e90edb0c6}} 
+\index{Sd\+File@{Sd\+File}!seek\+Set@{seek\+Set}}
+\index{seek\+Set@{seek\+Set}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{seek\+Set()}{seekSet()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::seek\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+Sets a file\textquotesingle{}s position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pos} & The new position in bytes from the beginning of the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a08c9e76a4a7bb43fccf1dd5c72c66a16}\label{class_sd_file_a08c9e76a4a7bb43fccf1dd5c72c66a16}} 
+\index{Sd\+File@{Sd\+File}!set\+Unbuffered\+Read@{set\+Unbuffered\+Read}}
+\index{set\+Unbuffered\+Read@{set\+Unbuffered\+Read}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{set\+Unbuffered\+Read()}{setUnbufferedRead()}}
+{\footnotesize\ttfamily void Sd\+File\+::set\+Unbuffered\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Use unbuffered reads to access this file. Used with Wave Shield I\+SR. Used with \hyperlink{class_sd2_card_af3de0f1fdfc86816f45b555841ff291b}{Sd2\+Card\+::partial\+Block\+Read()} in Wave\+RP.
+
+Not recommended for normal applications. \mbox{\Hypertarget{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}\label{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}} 
+\index{Sd\+File@{Sd\+File}!sync@{sync}}
+\index{sync@{sync}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{sync()}{sync()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::sync (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+The \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} call causes all modified data and directory fields to be written to the storage device.
+
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include a call to \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} before a file has been opened or an I/O error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a249632ba9580c556c0b041d6b2aaf224}\label{class_sd_file_a249632ba9580c556c0b041d6b2aaf224}} 
+\index{Sd\+File@{Sd\+File}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{timestamp()}{timestamp()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::timestamp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{flags,  }\item[{uint16\+\_\+t}]{year,  }\item[{uint8\+\_\+t}]{month,  }\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute,  }\item[{uint8\+\_\+t}]{second }\end{DoxyParamCaption})}
+
+Set a file\textquotesingle{}s timestamps in its directory entry.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em flags} & Values for {\itshape flags} are constructed by a bitwise-\/inclusive OR of flags from the following list\\
+\hline
+\end{DoxyParams}
+T\+\_\+\+A\+C\+C\+E\+SS -\/ Set the file\textquotesingle{}s last access date.
+
+T\+\_\+\+C\+R\+E\+A\+TE -\/ Set the file\textquotesingle{}s creation date and time.
+
+T\+\_\+\+W\+R\+I\+TE -\/ Set the file\textquotesingle{}s last write/modification date and time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em year} & Valid range 1980 -\/ 2107 inclusive.\\
+\hline
+\mbox{\tt in}  & {\em month} & Valid range 1 -\/ 12 inclusive.\\
+\hline
+\mbox{\tt in}  & {\em day} & Valid range 1 -\/ 31 inclusive.\\
+\hline
+\mbox{\tt in}  & {\em hour} & Valid range 0 -\/ 23 inclusive.\\
+\hline
+\mbox{\tt in}  & {\em minute} & Valid range 0 -\/ 59 inclusive.\\
+\hline
+\mbox{\tt in}  & {\em second} & Valid range 0 -\/ 59 inclusive\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is possible to set an invalid date since there is no check for the number of days in a month.
+
+Modify and access timestamps may be overwritten if a date time callback function has been set by \hyperlink{class_sd_file_a2d78e6a8cedbf8ce545af68457b43bf1}{date\+Time\+Callback()}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ade1e2b72f89b24f500502518fd678abd}\label{class_sd_file_ade1e2b72f89b24f500502518fd678abd}} 
+\index{Sd\+File@{Sd\+File}!truncate@{truncate}}
+\index{truncate@{truncate}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{truncate()}{truncate()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::truncate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Truncate a file to a specified length. The current file position will be maintained if it is less than or equal to {\itshape length} otherwise it will be set to end of file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em length} & The desired length for the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include file is read only, file is a directory, {\itshape length} is greater than the current file size or an I/O error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a2da736b480e64ec2142687fb49871ada}\label{class_sd_file_a2da736b480e64ec2142687fb49871ada}} 
+\index{Sd\+File@{Sd\+File}!type@{type}}
+\index{type@{type}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Type of this \hyperlink{class_sd_file}{Sd\+File}. You should use \hyperlink{class_sd_file_ad9ca9b2b519a933c25e8f893ee0201b6}{is\+File()} or \hyperlink{class_sd_file_a564e69a08c11f20e66eb18c38e24b748}{is\+Dir()} instead of \hyperlink{class_sd_file_a2da736b480e64ec2142687fb49871ada}{type()} if possible.
+
+\begin{DoxyReturn}{Returns}
+The file or directory type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a151bbc9fa7787b67f3d4a3574f9bc9e3}\label{class_sd_file_a151bbc9fa7787b67f3d4a3574f9bc9e3}} 
+\index{Sd\+File@{Sd\+File}!unbuffered\+Read@{unbuffered\+Read}}
+\index{unbuffered\+Read@{unbuffered\+Read}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{unbuffered\+Read()}{unbufferedRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sd\+File\+::unbuffered\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Unbuffered read flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a85578a1addda7cdba336a5b10deafcf5}\label{class_sd_file_a85578a1addda7cdba336a5b10deafcf5}} 
+\index{Sd\+File@{Sd\+File}!volume@{volume}}
+\index{volume@{volume}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{volume()}{volume()}}
+{\footnotesize\ttfamily \hyperlink{class_sd_volume}{Sd\+Volume}$\ast$ Sd\+File\+::volume (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_sd_volume}{Sd\+Volume} that contains this file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_a67267a4b63d03a16e099195935613006}\label{class_sd_file_a67267a4b63d03a16e099195935613006}} 
+\index{Sd\+File@{Sd\+File}!write@{write}}
+\index{write@{write}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily size\+\_\+t Sd\+File\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+Write a byte to a file. Required by the Arduino Print class.
+
+Use Sd\+File\+::write\+Error to check for errors. \mbox{\Hypertarget{class_sd_file_a94d4541fda63b5390c8e97ebe815115a}\label{class_sd_file_a94d4541fda63b5390c8e97ebe815115a}} 
+\index{Sd\+File@{Sd\+File}!write@{write}}
+\index{write@{write}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily size\+\_\+t Sd\+File\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buf,  }\item[{uint16\+\_\+t}]{nbyte }\end{DoxyParamCaption})}
+
+Write data to an open file.
+
+\begin{DoxyNote}{Note}
+Data is moved to the cache but may not be written to the storage device until \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync()} is called.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buf} & Pointer to the location of the data to be written.\\
+\hline
+\mbox{\tt in}  & {\em nbyte} & Number of bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+For success \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()} returns the number of bytes written, always {\itshape nbyte}. If an error occurs, \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()} returns -\/1. Possible errors include \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write()} is called before a file has been opened, write is called for a read-\/only file, device is full, a corrupt file system or an I/O error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sd_file_ad74aaa9115724d663ee39e6dd2d808f8}\label{class_sd_file_ad74aaa9115724d663ee39e6dd2d808f8}} 
+\index{Sd\+File@{Sd\+File}!write@{write}}
+\index{write@{write}!Sd\+File@{Sd\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily size\+\_\+t Sd\+File\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Write a string to a file. Used by the Arduino Print class.
+
+Use Sd\+File\+::write\+Error to check for errors. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Arduino/\+Libraries/\+S\+D/src/utility/\hyperlink{_sd_fat_8h}{Sd\+Fat.\+h}\item 
+Arduino/\+Libraries/\+S\+D/src/utility/\hyperlink{_sd_file_8cpp}{Sd\+File.\+cpp}\end{DoxyCompactItemize}

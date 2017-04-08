@@ -1,0 +1,14 @@
+digraph "Arduino/Libraries/SD/examples/Files" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0ab44e49aba5e58ef3e3a2134a99529c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_0ab44e49aba5e58ef3e3a2134a99529c.html"]
+  dir_c53519e2939ab1cc92ae529fa7818567 [shape=box, label="Files", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_c53519e2939ab1cc92ae529fa7818567.html"];
+  }
+  dir_6d0df9b42be73f9bd3e8c964ce36df30 [shape=box label="SPI" URL="dir_6d0df9b42be73f9bd3e8c964ce36df30.html"];
+  dir_43f50f74b87b3ecfbdd6c3a4f79e3d45 [shape=box label="src" fillcolor="white" style="filled" color="red" URL="dir_43f50f74b87b3ecfbdd6c3a4f79e3d45.html"];
+  dir_c53519e2939ab1cc92ae529fa7818567->dir_6d0df9b42be73f9bd3e8c964ce36df30 [headlabel="1", labeldistance=1.5 headhref="dir_000025_000030.html"];
+  dir_c53519e2939ab1cc92ae529fa7818567->dir_43f50f74b87b3ecfbdd6c3a4f79e3d45 [headlabel="1", labeldistance=1.5 headhref="dir_000025_000028.html"];
+  dir_43f50f74b87b3ecfbdd6c3a4f79e3d45->dir_6d0df9b42be73f9bd3e8c964ce36df30 [headlabel="1", labeldistance=1.5 headhref="dir_000028_000030.html"];
+}

@@ -1,0 +1,11 @@
+digraph "Arduino/Libraries/SD/src/utility" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_43f50f74b87b3ecfbdd6c3a4f79e3d45 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_43f50f74b87b3ecfbdd6c3a4f79e3d45.html"]
+  dir_a5d79d57ade7edf0b9c7ff694622de5e [shape=box, label="utility", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a5d79d57ade7edf0b9c7ff694622de5e.html"];
+  }
+  dir_6d0df9b42be73f9bd3e8c964ce36df30 [shape=box label="SPI" URL="dir_6d0df9b42be73f9bd3e8c964ce36df30.html"];
+  dir_a5d79d57ade7edf0b9c7ff694622de5e->dir_6d0df9b42be73f9bd3e8c964ce36df30 [headlabel="1", labeldistance=1.5 headhref="dir_000029_000030.html"];
+}

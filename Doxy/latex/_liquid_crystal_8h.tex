@@ -1,0 +1,243 @@
+\hypertarget{_liquid_crystal_8h}{}\section{Arduino/\+Libraries/\+Liquid\+Crystal/src/\+Liquid\+Crystal.h File Reference}
+\label{_liquid_crystal_8h}\index{Arduino/\+Libraries/\+Liquid\+Crystal/src/\+Liquid\+Crystal.\+h@{Arduino/\+Libraries/\+Liquid\+Crystal/src/\+Liquid\+Crystal.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Print.\+h\char`\"{}}\newline
+Include dependency graph for Liquid\+Crystal.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_liquid_crystal}{Liquid\+Crystal}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_liquid_crystal_8h_acc3509bc0442b41e2b816555de473ed2}{L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}~0x01
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a154c86a887633d0f6d9988e4dbb1f419}{L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}~0x02
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a5597e1d5819ea2f0734ad4313abf6703}{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}~0x04
+\item 
+\#define \hyperlink{_liquid_crystal_8h_adfb8b2b8b8a08d7313504d7a4f89d99f}{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}~0x08
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a61f16a2b7550e4700f7898a7587c5594}{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}~0x10
+\item 
+\#define \hyperlink{_liquid_crystal_8h_aaef882ae70d1f485cd132815d9716111}{L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}~0x20
+\item 
+\#define \hyperlink{_liquid_crystal_8h_aae6ea856879c11dee58493184582a52f}{L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}~0x40
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a15008b832807a208d9d88c74e6751ebf}{L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}~0x80
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a43c26ba2e66880fac95ef640b56873ad}{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ae7c6309fce6200bd7526d090a4a84dd0}{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}~0x02
+\item 
+\#define \hyperlink{_liquid_crystal_8h_aa2cf1d0f4a319e53c009cffe1184466c}{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}~0x01
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a049ee97e98d04788c1da9a55590fbe42}{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a76236ae8317b34bbc98ea56bc0a2639c}{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}~0x04
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a257ebe775cac7140cf82aa40d8ce545a}{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ab67f0adccde68de88eee0513fdfc4574}{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}~0x02
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a32b194a3adaa0a0bb69acee2e6a754fa}{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ac3b19d4e6553b9bbf18a23387e439206}{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}~0x01
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a4b28243034cec656b0ed490ba6979752}{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ab2f7b67abfac33f610acfd5d7a971f40}{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}~0x08
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ac21f0302ac4136775877d5f4759e4f74}{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_acf5999180233790bb2c9902efde58f7f}{L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}~0x04
+\item 
+\#define \hyperlink{_liquid_crystal_8h_aafb86adb0dfca1e65d65b2cd1946a009}{L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}{L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}~0x10
+\item 
+\#define \hyperlink{_liquid_crystal_8h_ab8c35d355d2372090c7a347e961c9224}{L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a7987e93538df2819583ba43b81ddbb25}{L\+C\+D\+\_\+2\+L\+I\+NE}~0x08
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a8c85cf88d8af66a47c42249d81c94641}{L\+C\+D\+\_\+1\+L\+I\+NE}~0x00
+\item 
+\#define \hyperlink{_liquid_crystal_8h_abb3210156d88d3fe18c9352eb161fe42}{L\+C\+D\+\_\+5x10\+D\+O\+TS}~0x04
+\item 
+\#define \hyperlink{_liquid_crystal_8h_a9ef57e724c1b846dae0f531aff6fb464}{L\+C\+D\+\_\+5x8\+D\+O\+TS}~0x00
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_liquid_crystal_8h_a8c85cf88d8af66a47c42249d81c94641}\label{_liquid_crystal_8h_a8c85cf88d8af66a47c42249d81c94641}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+1\+L\+I\+NE@{L\+C\+D\+\_\+1\+L\+I\+NE}}
+\index{L\+C\+D\+\_\+1\+L\+I\+NE@{L\+C\+D\+\_\+1\+L\+I\+NE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+1\+L\+I\+NE}{LCD\_1LINE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+1\+L\+I\+NE~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a7987e93538df2819583ba43b81ddbb25}\label{_liquid_crystal_8h_a7987e93538df2819583ba43b81ddbb25}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+2\+L\+I\+NE@{L\+C\+D\+\_\+2\+L\+I\+NE}}
+\index{L\+C\+D\+\_\+2\+L\+I\+NE@{L\+C\+D\+\_\+2\+L\+I\+NE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+2\+L\+I\+NE}{LCD\_2LINE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+2\+L\+I\+NE~0x08}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ab8c35d355d2372090c7a347e961c9224}\label{_liquid_crystal_8h_ab8c35d355d2372090c7a347e961c9224}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE@{L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}}
+\index{L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE@{L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}{LCD\_4BITMODE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_abb3210156d88d3fe18c9352eb161fe42}\label{_liquid_crystal_8h_abb3210156d88d3fe18c9352eb161fe42}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+5x10\+D\+O\+TS@{L\+C\+D\+\_\+5x10\+D\+O\+TS}}
+\index{L\+C\+D\+\_\+5x10\+D\+O\+TS@{L\+C\+D\+\_\+5x10\+D\+O\+TS}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+5x10\+D\+O\+TS}{LCD\_5x10DOTS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+5x10\+D\+O\+TS~0x04}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a9ef57e724c1b846dae0f531aff6fb464}\label{_liquid_crystal_8h_a9ef57e724c1b846dae0f531aff6fb464}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+5x8\+D\+O\+TS@{L\+C\+D\+\_\+5x8\+D\+O\+TS}}
+\index{L\+C\+D\+\_\+5x8\+D\+O\+TS@{L\+C\+D\+\_\+5x8\+D\+O\+TS}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+5x8\+D\+O\+TS}{LCD\_5x8DOTS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+5x8\+D\+O\+TS~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}\label{_liquid_crystal_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE@{L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}}
+\index{L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE@{L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}{LCD\_8BITMODE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE~0x10}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a4b28243034cec656b0ed490ba6979752}\label{_liquid_crystal_8h_a4b28243034cec656b0ed490ba6979752}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF@{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}}
+\index{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF@{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}{LCD\_BLINKOFF}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ac3b19d4e6553b9bbf18a23387e439206}\label{_liquid_crystal_8h_ac3b19d4e6553b9bbf18a23387e439206}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON@{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}}
+\index{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON@{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}{LCD\_BLINKON}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON~0x01}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_acc3509bc0442b41e2b816555de473ed2}\label{_liquid_crystal_8h_acc3509bc0442b41e2b816555de473ed2}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY@{L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}}
+\index{L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY@{L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}{LCD\_CLEARDISPLAY}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY~0x01}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ac21f0302ac4136775877d5f4759e4f74}\label{_liquid_crystal_8h_ac21f0302ac4136775877d5f4759e4f74}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}}
+\index{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}{LCD\_CURSORMOVE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a32b194a3adaa0a0bb69acee2e6a754fa}\label{_liquid_crystal_8h_a32b194a3adaa0a0bb69acee2e6a754fa}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}}
+\index{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}{LCD\_CURSOROFF}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ab67f0adccde68de88eee0513fdfc4574}\label{_liquid_crystal_8h_ab67f0adccde68de88eee0513fdfc4574}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}}
+\index{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}{LCD\_CURSORON}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON~0x02}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a61f16a2b7550e4700f7898a7587c5594}\label{_liquid_crystal_8h_a61f16a2b7550e4700f7898a7587c5594}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}}
+\index{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT@{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}{LCD\_CURSORSHIFT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT~0x10}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_adfb8b2b8b8a08d7313504d7a4f89d99f}\label{_liquid_crystal_8h_adfb8b2b8b8a08d7313504d7a4f89d99f}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}}
+\index{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}{LCD\_DISPLAYCONTROL}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL~0x08}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ab2f7b67abfac33f610acfd5d7a971f40}\label{_liquid_crystal_8h_ab2f7b67abfac33f610acfd5d7a971f40}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}}
+\index{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}{LCD\_DISPLAYMOVE}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE~0x08}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a257ebe775cac7140cf82aa40d8ce545a}\label{_liquid_crystal_8h_a257ebe775cac7140cf82aa40d8ce545a}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}}
+\index{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}{LCD\_DISPLAYOFF}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a76236ae8317b34bbc98ea56bc0a2639c}\label{_liquid_crystal_8h_a76236ae8317b34bbc98ea56bc0a2639c}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}}
+\index{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON@{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}{LCD\_DISPLAYON}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON~0x04}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_ae7c6309fce6200bd7526d090a4a84dd0}\label{_liquid_crystal_8h_ae7c6309fce6200bd7526d090a4a84dd0}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}}
+\index{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}{LCD\_ENTRYLEFT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT~0x02}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a5597e1d5819ea2f0734ad4313abf6703}\label{_liquid_crystal_8h_a5597e1d5819ea2f0734ad4313abf6703}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}}
+\index{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}{LCD\_ENTRYMODESET}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET~0x04}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a43c26ba2e66880fac95ef640b56873ad}\label{_liquid_crystal_8h_a43c26ba2e66880fac95ef640b56873ad}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}}
+\index{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}{LCD\_ENTRYRIGHT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a049ee97e98d04788c1da9a55590fbe42}\label{_liquid_crystal_8h_a049ee97e98d04788c1da9a55590fbe42}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}}
+\index{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}{LCD\_ENTRYSHIFTDECREMENT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_aa2cf1d0f4a319e53c009cffe1184466c}\label{_liquid_crystal_8h_aa2cf1d0f4a319e53c009cffe1184466c}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}}
+\index{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT@{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}{LCD\_ENTRYSHIFTINCREMENT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT~0x01}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_aaef882ae70d1f485cd132815d9716111}\label{_liquid_crystal_8h_aaef882ae70d1f485cd132815d9716111}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET@{L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}}
+\index{L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET@{L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}{LCD\_FUNCTIONSET}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET~0x20}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_aafb86adb0dfca1e65d65b2cd1946a009}\label{_liquid_crystal_8h_aafb86adb0dfca1e65d65b2cd1946a009}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT@{L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}}
+\index{L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT@{L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}{LCD\_MOVELEFT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT~0x00}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_acf5999180233790bb2c9902efde58f7f}\label{_liquid_crystal_8h_acf5999180233790bb2c9902efde58f7f}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}}
+\index{L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}{LCD\_MOVERIGHT}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT~0x04}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a154c86a887633d0f6d9988e4dbb1f419}\label{_liquid_crystal_8h_a154c86a887633d0f6d9988e4dbb1f419}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME@{L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}}
+\index{L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME@{L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}{LCD\_RETURNHOME}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME~0x02}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_aae6ea856879c11dee58493184582a52f}\label{_liquid_crystal_8h_aae6ea856879c11dee58493184582a52f}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR@{L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}}
+\index{L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR@{L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}{LCD\_SETCGRAMADDR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR~0x40}
+
+\mbox{\Hypertarget{_liquid_crystal_8h_a15008b832807a208d9d88c74e6751ebf}\label{_liquid_crystal_8h_a15008b832807a208d9d88c74e6751ebf}} 
+\index{Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}!L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR@{L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}}
+\index{L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR@{L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}!Liquid\+Crystal.\+h@{Liquid\+Crystal.\+h}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}{LCD\_SETDDRAMADDR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR~0x80}
+

@@ -1,0 +1,48 @@
+digraph "Arduino/Libraries/Time/TimeLib.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Arduino/Libraries/Time\l/TimeLib.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Arduino/Libraries/DS1307\lRTC-master/DS1307RTC.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_s1307_r_t_c_8h.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Arduino/Libraries/DS1307\lRTC-master/DS1307RTC.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_s1307_r_t_c_8cpp.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Arduino/Libraries/DS1307\lRTC-master/examples/ReadTest\l/ReadTest.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_read_test_8ino.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Arduino/Libraries/DS1307\lRTC-master/examples/SetTime\l/SetTime.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_set_time_8ino.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Arduino/Libraries/Time\l/examples/TimeRTC/TimeRTC.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_r_t_c_8ino.html"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Arduino/Libraries/Time\l/examples/TimeRTCLog/TimeRTCLog.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_r_t_c_log_8ino.html"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Arduino/Libraries/Time\l/examples/TimeRTCSet/TimeRTCSet.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_r_t_c_set_8ino.html"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Arduino/WS/WS.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_s_8ino.html",tooltip="Weather station power by Arduino. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Arduino/Libraries/Time\l/Time.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_8h.html"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Arduino/Libraries/Time\l/DateStrings.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_date_strings_8cpp.html"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Arduino/Libraries/Time\l/Time.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_8cpp.html"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Arduino/Libraries/Time\l/examples/TimeArduinoDue\l/TimeArduinoDue.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_arduino_due_8ino.html"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Arduino/Libraries/Time\l/examples/TimeGPS/TimeGPS.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_g_p_s_8ino.html"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Arduino/Libraries/Time\l/examples/TimeNTP/TimeNTP.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_n_t_p_8ino.html"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Arduino/Libraries/Time\l/examples/TimeNTP_ESP8266WiFi\l/TimeNTP_ESP8266WiFi.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_n_t_p___e_s_p8266_wi_fi_8ino.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Arduino/Libraries/Time\l/examples/TimeSerial/TimeSerial.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_serial_8ino.html"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Arduino/Libraries/Time\l/examples/TimeSerialDateStrings\l/TimeSerialDateStrings.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_serial_date_strings_8ino.html"];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Arduino/Libraries/Time\l/examples/TimeTeensy3\l/TimeTeensy3.ino",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_time_teensy3_8ino.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

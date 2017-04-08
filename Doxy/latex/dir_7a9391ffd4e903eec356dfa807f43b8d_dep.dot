@@ -1,0 +1,26 @@
+digraph "Arduino/Libraries" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a991eec27578c865874ede3d8ec657c2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Arduino" fontname="Helvetica", fontsize="10", URL="dir_a991eec27578c865874ede3d8ec657c2.html"]
+  subgraph clusterdir_7a9391ffd4e903eec356dfa807f43b8d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7a9391ffd4e903eec356dfa807f43b8d.html"];
+    dir_7a9391ffd4e903eec356dfa807f43b8d [shape=plaintext label="Libraries"];
+    dir_105615df9dbbada452b624d2691ae011 [shape=box label="cactus_io_BME280_I2C" color="black" fillcolor="white" style="filled" URL="dir_105615df9dbbada452b624d2691ae011.html"];
+    dir_7dc352bebdb9e1d278a7651c3c2ec07a [shape=box label="DS1307RTC-master" color="red" fillcolor="white" style="filled" URL="dir_7dc352bebdb9e1d278a7651c3c2ec07a.html"];
+    dir_b3b41c5c8cbd0ef63841e7842f49d44f [shape=box label="LiquidCrystal" color="red" fillcolor="white" style="filled" URL="dir_b3b41c5c8cbd0ef63841e7842f49d44f.html"];
+    dir_32a37927bcd052f6be5bb7b255305081 [shape=box label="SD" color="red" fillcolor="white" style="filled" URL="dir_32a37927bcd052f6be5bb7b255305081.html"];
+    dir_6d0df9b42be73f9bd3e8c964ce36df30 [shape=box label="SPI" color="black" fillcolor="white" style="filled" URL="dir_6d0df9b42be73f9bd3e8c964ce36df30.html"];
+    dir_2f8f338250f1215b01dec7a05db5d606 [shape=box label="Time" color="red" fillcolor="white" style="filled" URL="dir_2f8f338250f1215b01dec7a05db5d606.html"];
+    dir_1b0f1419218e07baff219bd9e7452645 [shape=box label="Wire" color="red" fillcolor="white" style="filled" URL="dir_1b0f1419218e07baff219bd9e7452645.html"];
+  }
+  }
+  dir_7dc352bebdb9e1d278a7651c3c2ec07a->dir_2f8f338250f1215b01dec7a05db5d606 [headlabel="3", labeldistance=1.5 headhref="dir_000003_000031.html"];
+  dir_7dc352bebdb9e1d278a7651c3c2ec07a->dir_1b0f1419218e07baff219bd9e7452645 [headlabel="3", labeldistance=1.5 headhref="dir_000003_000043.html"];
+  dir_2f8f338250f1215b01dec7a05db5d606->dir_7dc352bebdb9e1d278a7651c3c2ec07a [headlabel="3", labeldistance=1.5 headhref="dir_000031_000003.html"];
+  dir_2f8f338250f1215b01dec7a05db5d606->dir_6d0df9b42be73f9bd3e8c964ce36df30 [headlabel="1", labeldistance=1.5 headhref="dir_000031_000030.html"];
+  dir_2f8f338250f1215b01dec7a05db5d606->dir_1b0f1419218e07baff219bd9e7452645 [headlabel="3", labeldistance=1.5 headhref="dir_000031_000043.html"];
+  dir_105615df9dbbada452b624d2691ae011->dir_1b0f1419218e07baff219bd9e7452645 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000043.html"];
+  dir_32a37927bcd052f6be5bb7b255305081->dir_6d0df9b42be73f9bd3e8c964ce36df30 [headlabel="7", labeldistance=1.5 headhref="dir_000020_000030.html"];
+}

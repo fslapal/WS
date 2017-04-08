@@ -1,0 +1,99 @@
+\hypertarget{_time_r_t_c_log_8ino}{}\section{Arduino/\+Libraries/\+Time/examples/\+Time\+R\+T\+C\+Log/\+Time\+R\+T\+C\+Log.ino File Reference}
+\label{_time_r_t_c_log_8ino}\index{Arduino/\+Libraries/\+Time/examples/\+Time\+R\+T\+C\+Log/\+Time\+R\+T\+C\+Log.\+ino@{Arduino/\+Libraries/\+Time/examples/\+Time\+R\+T\+C\+Log/\+Time\+R\+T\+C\+Log.\+ino}}
+{\ttfamily \#include $<$Time\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$D\+S1307\+R\+T\+C.\+h$>$}\newline
+Include dependency graph for Time\+R\+T\+C\+Log.\+ino\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_a158b724b878df3cf6b8476b243ea526d}{log\+Event} (int pin, boolean \hyperlink{_time_r_t_c_log_8ino_a0bb9d7a7fac8ced9421d6103bfbd1855}{state}, time\+\_\+t time\+Now, time\+\_\+t duration)
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_a69d5d357d188f3b15e4d959d5b37e0b5}{show\+Time} (time\+\_\+t t)
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_a772afab0396032477ec7b01d14c774b2}{print\+Digits} (int digits)
+\item 
+void \hyperlink{_time_r_t_c_log_8ino_ae08e98ce510140d68becbfb30e3e0cd8}{show\+Duration} (time\+\_\+t duration)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins} = 6
+\item 
+const int \hyperlink{_time_r_t_c_log_8ino_a2c88dea2053e96e8b031f5396f81edbb}{input\+Pins} \mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]} = \{2,3,4,5,6,7\}
+\item 
+boolean \hyperlink{_time_r_t_c_log_8ino_a0bb9d7a7fac8ced9421d6103bfbd1855}{state} \mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]}
+\item 
+time\+\_\+t \hyperlink{_time_r_t_c_log_8ino_a5ff4d956f4cef0ab16dbdcc42da26da0}{prev\+Event\+Time} \mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a158b724b878df3cf6b8476b243ea526d}\label{_time_r_t_c_log_8ino_a158b724b878df3cf6b8476b243ea526d}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!log\+Event@{log\+Event}}
+\index{log\+Event@{log\+Event}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{log\+Event()}{logEvent()}}
+{\footnotesize\ttfamily void log\+Event (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{boolean}]{state,  }\item[{time\+\_\+t}]{time\+Now,  }\item[{time\+\_\+t}]{duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_time_r_t_c_log_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!loop@{loop}}
+\index{loop@{loop}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a772afab0396032477ec7b01d14c774b2}\label{_time_r_t_c_log_8ino_a772afab0396032477ec7b01d14c774b2}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!print\+Digits@{print\+Digits}}
+\index{print\+Digits@{print\+Digits}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{print\+Digits()}{printDigits()}}
+{\footnotesize\ttfamily void print\+Digits (\begin{DoxyParamCaption}\item[{int}]{digits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_time_r_t_c_log_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!setup@{setup}}
+\index{setup@{setup}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_ae08e98ce510140d68becbfb30e3e0cd8}\label{_time_r_t_c_log_8ino_ae08e98ce510140d68becbfb30e3e0cd8}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!show\+Duration@{show\+Duration}}
+\index{show\+Duration@{show\+Duration}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{show\+Duration()}{showDuration()}}
+{\footnotesize\ttfamily void show\+Duration (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a69d5d357d188f3b15e4d959d5b37e0b5}\label{_time_r_t_c_log_8ino_a69d5d357d188f3b15e4d959d5b37e0b5}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!show\+Time@{show\+Time}}
+\index{show\+Time@{show\+Time}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{show\+Time()}{showTime()}}
+{\footnotesize\ttfamily void show\+Time (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a2c88dea2053e96e8b031f5396f81edbb}\label{_time_r_t_c_log_8ino_a2c88dea2053e96e8b031f5396f81edbb}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!input\+Pins@{input\+Pins}}
+\index{input\+Pins@{input\+Pins}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{input\+Pins}{inputPins}}
+{\footnotesize\ttfamily const int input\+Pins\mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]} = \{2,3,4,5,6,7\}}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}\label{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!nbr\+Input\+Pins@{nbr\+Input\+Pins}}
+\index{nbr\+Input\+Pins@{nbr\+Input\+Pins}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{nbr\+Input\+Pins}{nbrInputPins}}
+{\footnotesize\ttfamily const int nbr\+Input\+Pins = 6}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a5ff4d956f4cef0ab16dbdcc42da26da0}\label{_time_r_t_c_log_8ino_a5ff4d956f4cef0ab16dbdcc42da26da0}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!prev\+Event\+Time@{prev\+Event\+Time}}
+\index{prev\+Event\+Time@{prev\+Event\+Time}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{prev\+Event\+Time}{prevEventTime}}
+{\footnotesize\ttfamily time\+\_\+t prev\+Event\+Time\mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]}}
+
+\mbox{\Hypertarget{_time_r_t_c_log_8ino_a0bb9d7a7fac8ced9421d6103bfbd1855}\label{_time_r_t_c_log_8ino_a0bb9d7a7fac8ced9421d6103bfbd1855}} 
+\index{Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}!state@{state}}
+\index{state@{state}!Time\+R\+T\+C\+Log.\+ino@{Time\+R\+T\+C\+Log.\+ino}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily boolean state\mbox{[}\hyperlink{_time_r_t_c_log_8ino_ac8d580ffe5e5f45699f37478755e0f9a}{nbr\+Input\+Pins}\mbox{]}}
+

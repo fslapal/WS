@@ -1,0 +1,74 @@
+\hypertarget{_set_time_8ino}{}\section{Arduino/\+Libraries/\+D\+S1307\+R\+T\+C-\/master/examples/\+Set\+Time/\+Set\+Time.ino File Reference}
+\label{_set_time_8ino}\index{Arduino/\+Libraries/\+D\+S1307\+R\+T\+C-\/master/examples/\+Set\+Time/\+Set\+Time.\+ino@{Arduino/\+Libraries/\+D\+S1307\+R\+T\+C-\/master/examples/\+Set\+Time/\+Set\+Time.\+ino}}
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Time\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$D\+S1307\+R\+T\+C.\+h$>$}\newline
+Include dependency graph for Set\+Time.\+ino\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_set_time_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{_set_time_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+bool \hyperlink{_set_time_8ino_ae96ca3df2e8b9eef75d400de6ef06db3}{get\+Time} (const char $\ast$str)
+\item 
+bool \hyperlink{_set_time_8ino_a100af87d91fcaa6f23f2ca6a2fe146cc}{get\+Date} (const char $\ast$str)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{_set_time_8ino_a9fce7af8b9842b4ab3b85327b1af13fc}{month\+Name} \mbox{[}12\mbox{]}
+\item 
+tm\+Elements\+\_\+t \hyperlink{_set_time_8ino_a52357cbf68af66972047f7aed7a45218}{tm}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_set_time_8ino_a100af87d91fcaa6f23f2ca6a2fe146cc}\label{_set_time_8ino_a100af87d91fcaa6f23f2ca6a2fe146cc}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!get\+Date@{get\+Date}}
+\index{get\+Date@{get\+Date}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{get\+Date()}{getDate()}}
+{\footnotesize\ttfamily bool get\+Date (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_set_time_8ino_ae96ca3df2e8b9eef75d400de6ef06db3}\label{_set_time_8ino_ae96ca3df2e8b9eef75d400de6ef06db3}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily bool get\+Time (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_set_time_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_set_time_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!loop@{loop}}
+\index{loop@{loop}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_set_time_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_set_time_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!setup@{setup}}
+\index{setup@{setup}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_set_time_8ino_a9fce7af8b9842b4ab3b85327b1af13fc}\label{_set_time_8ino_a9fce7af8b9842b4ab3b85327b1af13fc}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!month\+Name@{month\+Name}}
+\index{month\+Name@{month\+Name}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{month\+Name}{monthName}}
+{\footnotesize\ttfamily const char$\ast$ month\+Name\mbox{[}12\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  \textcolor{stringliteral}{"Jan"}, \textcolor{stringliteral}{"Feb"}, \textcolor{stringliteral}{"Mar"}, \textcolor{stringliteral}{"Apr"}, \textcolor{stringliteral}{"May"}, \textcolor{stringliteral}{"Jun"},
+  \textcolor{stringliteral}{"Jul"}, \textcolor{stringliteral}{"Aug"}, \textcolor{stringliteral}{"Sep"}, \textcolor{stringliteral}{"Oct"}, \textcolor{stringliteral}{"Nov"}, \textcolor{stringliteral}{"Dec"}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{_set_time_8ino_a52357cbf68af66972047f7aed7a45218}\label{_set_time_8ino_a52357cbf68af66972047f7aed7a45218}} 
+\index{Set\+Time.\+ino@{Set\+Time.\+ino}!tm@{tm}}
+\index{tm@{tm}!Set\+Time.\+ino@{Set\+Time.\+ino}}
+\subsubsection{\texorpdfstring{tm}{tm}}
+{\footnotesize\ttfamily tm\+Elements\+\_\+t tm}
+

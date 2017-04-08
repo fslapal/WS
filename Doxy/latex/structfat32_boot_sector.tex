@@ -1,0 +1,125 @@
+\hypertarget{structfat32_boot_sector}{}\section{fat32\+Boot\+Sector Struct Reference}
+\label{structfat32_boot_sector}\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+
+
+Boot sector for a F\+A\+T16 or F\+A\+T32 volume.  
+
+
+
+
+{\ttfamily \#include $<$Fat\+Structs.\+h$>$}
+
+
+
+Collaboration diagram for fat32\+Boot\+Sector\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_ad8c4921d1fcaba0370cff44a27f6f2d1}{jmp\+To\+Boot\+Code} \mbox{[}3\mbox{]}
+\item 
+char \hyperlink{structfat32_boot_sector_a8516a46b7865715cf0f8f5c39dd96273}{oem\+Name} \mbox{[}8\mbox{]}
+\item 
+\hyperlink{_fat_structs_8h_a5c8af240713e05e7e6c959006ced35fb}{bpb\+\_\+t} \hyperlink{structfat32_boot_sector_a01848fd44bea48d521bf13dcc8d69c95}{bpb}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_a625a50384e3a46c5e330d0398c35a898}{drive\+Number}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_a0a59c59a3f18c1117ffc6a0c25295b9c}{reserved1}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_a1a06079dbeb74e505689a56ab08c05a7}{boot\+Signature}
+\item 
+uint32\+\_\+t \hyperlink{structfat32_boot_sector_aa4dffa8748097e02373c33d5f1957b1e}{volume\+Serial\+Number}
+\item 
+char \hyperlink{structfat32_boot_sector_a327d3769a6a9d172cec163cda30a35ee}{volume\+Label} \mbox{[}11\mbox{]}
+\item 
+char \hyperlink{structfat32_boot_sector_a2835c957e6b680afded2b5f7e133fd3e}{file\+System\+Type} \mbox{[}8\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_a7a845a41d575937bb7aac2c5204a6e1d}{boot\+Code} \mbox{[}420\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_aea26006be62f6bbca4637e359ce85e40}{boot\+Sector\+Sig0}
+\item 
+uint8\+\_\+t \hyperlink{structfat32_boot_sector_a92816cfa0d97e94c46eaff1ccc92f1fa}{boot\+Sector\+Sig1}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boot sector for a F\+A\+T16 or F\+A\+T32 volume. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structfat32_boot_sector_a7a845a41d575937bb7aac2c5204a6e1d}\label{structfat32_boot_sector_a7a845a41d575937bb7aac2c5204a6e1d}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!boot\+Code@{boot\+Code}}
+\index{boot\+Code@{boot\+Code}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{boot\+Code}{bootCode}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::boot\+Code\mbox{[}420\mbox{]}}
+
+X86 boot code \mbox{\Hypertarget{structfat32_boot_sector_aea26006be62f6bbca4637e359ce85e40}\label{structfat32_boot_sector_aea26006be62f6bbca4637e359ce85e40}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!boot\+Sector\+Sig0@{boot\+Sector\+Sig0}}
+\index{boot\+Sector\+Sig0@{boot\+Sector\+Sig0}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{boot\+Sector\+Sig0}{bootSectorSig0}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::boot\+Sector\+Sig0}
+
+must be 0\+X55 \mbox{\Hypertarget{structfat32_boot_sector_a92816cfa0d97e94c46eaff1ccc92f1fa}\label{structfat32_boot_sector_a92816cfa0d97e94c46eaff1ccc92f1fa}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!boot\+Sector\+Sig1@{boot\+Sector\+Sig1}}
+\index{boot\+Sector\+Sig1@{boot\+Sector\+Sig1}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{boot\+Sector\+Sig1}{bootSectorSig1}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::boot\+Sector\+Sig1}
+
+must be 0\+X\+AA \mbox{\Hypertarget{structfat32_boot_sector_a1a06079dbeb74e505689a56ab08c05a7}\label{structfat32_boot_sector_a1a06079dbeb74e505689a56ab08c05a7}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!boot\+Signature@{boot\+Signature}}
+\index{boot\+Signature@{boot\+Signature}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{boot\+Signature}{bootSignature}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::boot\+Signature}
+
+0\+X29 if next three fields are valid \mbox{\Hypertarget{structfat32_boot_sector_a01848fd44bea48d521bf13dcc8d69c95}\label{structfat32_boot_sector_a01848fd44bea48d521bf13dcc8d69c95}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!bpb@{bpb}}
+\index{bpb@{bpb}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{bpb}{bpb}}
+{\footnotesize\ttfamily \hyperlink{_fat_structs_8h_a5c8af240713e05e7e6c959006ced35fb}{bpb\+\_\+t} fat32\+Boot\+Sector\+::bpb}
+
+B\+I\+OS Parameter Block \mbox{\Hypertarget{structfat32_boot_sector_a625a50384e3a46c5e330d0398c35a898}\label{structfat32_boot_sector_a625a50384e3a46c5e330d0398c35a898}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!drive\+Number@{drive\+Number}}
+\index{drive\+Number@{drive\+Number}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{drive\+Number}{driveNumber}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::drive\+Number}
+
+for int0x13 use value 0\+X80 for hard drive \mbox{\Hypertarget{structfat32_boot_sector_a2835c957e6b680afded2b5f7e133fd3e}\label{structfat32_boot_sector_a2835c957e6b680afded2b5f7e133fd3e}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!file\+System\+Type@{file\+System\+Type}}
+\index{file\+System\+Type@{file\+System\+Type}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{file\+System\+Type}{fileSystemType}}
+{\footnotesize\ttfamily char fat32\+Boot\+Sector\+::file\+System\+Type\mbox{[}8\mbox{]}}
+
+informational only -\/ don\textquotesingle{}t depend on it \mbox{\Hypertarget{structfat32_boot_sector_ad8c4921d1fcaba0370cff44a27f6f2d1}\label{structfat32_boot_sector_ad8c4921d1fcaba0370cff44a27f6f2d1}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!jmp\+To\+Boot\+Code@{jmp\+To\+Boot\+Code}}
+\index{jmp\+To\+Boot\+Code@{jmp\+To\+Boot\+Code}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{jmp\+To\+Boot\+Code}{jmpToBootCode}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::jmp\+To\+Boot\+Code\mbox{[}3\mbox{]}}
+
+X86 jmp to boot program \mbox{\Hypertarget{structfat32_boot_sector_a8516a46b7865715cf0f8f5c39dd96273}\label{structfat32_boot_sector_a8516a46b7865715cf0f8f5c39dd96273}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!oem\+Name@{oem\+Name}}
+\index{oem\+Name@{oem\+Name}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{oem\+Name}{oemName}}
+{\footnotesize\ttfamily char fat32\+Boot\+Sector\+::oem\+Name\mbox{[}8\mbox{]}}
+
+informational only -\/ don\textquotesingle{}t depend on it \mbox{\Hypertarget{structfat32_boot_sector_a0a59c59a3f18c1117ffc6a0c25295b9c}\label{structfat32_boot_sector_a0a59c59a3f18c1117ffc6a0c25295b9c}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint8\+\_\+t fat32\+Boot\+Sector\+::reserved1}
+
+used by Windows NT -\/ should be zero for F\+AT \mbox{\Hypertarget{structfat32_boot_sector_a327d3769a6a9d172cec163cda30a35ee}\label{structfat32_boot_sector_a327d3769a6a9d172cec163cda30a35ee}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!volume\+Label@{volume\+Label}}
+\index{volume\+Label@{volume\+Label}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{volume\+Label}{volumeLabel}}
+{\footnotesize\ttfamily char fat32\+Boot\+Sector\+::volume\+Label\mbox{[}11\mbox{]}}
+
+should match volume label in root dir \mbox{\Hypertarget{structfat32_boot_sector_aa4dffa8748097e02373c33d5f1957b1e}\label{structfat32_boot_sector_aa4dffa8748097e02373c33d5f1957b1e}} 
+\index{fat32\+Boot\+Sector@{fat32\+Boot\+Sector}!volume\+Serial\+Number@{volume\+Serial\+Number}}
+\index{volume\+Serial\+Number@{volume\+Serial\+Number}!fat32\+Boot\+Sector@{fat32\+Boot\+Sector}}
+\subsubsection{\texorpdfstring{volume\+Serial\+Number}{volumeSerialNumber}}
+{\footnotesize\ttfamily uint32\+\_\+t fat32\+Boot\+Sector\+::volume\+Serial\+Number}
+
+usually generated by combining date and time 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Arduino/\+Libraries/\+S\+D/src/utility/\hyperlink{_fat_structs_8h}{Fat\+Structs.\+h}\end{DoxyCompactItemize}
