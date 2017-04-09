@@ -1,93 +1,67 @@
-\begin{center}Copyright \copyright{} 2009 by William Greiman \end{center} \hypertarget{index_Intro}{}\section{Introduction}\label{index_Intro}
-The Arduino Sd\+Fat Library is a minimal implementation of F\+A\+T16 and F\+A\+T32 file systems on SD flash memory cards. Standard SD and high capacity S\+D\+HC cards are supported.
+WS is a proof-\/of-\/concept student project. It was aimed at creating an indoor weather station based on Arduino that sends measured values to a web database.
 
-The Sd\+Fat only supports short 8.\+3 names.
+\section*{Components, wiring}
 
-The main classes in Sd\+Fat are \hyperlink{class_sd2_card}{Sd2\+Card}, \hyperlink{class_sd_volume}{Sd\+Volume}, and \hyperlink{class_sd_file}{Sd\+File}.
+ The complete scheme in Fritzing is available in the Documentation file.
 
-The \hyperlink{class_sd2_card}{Sd2\+Card} class supports access to standard SD cards and S\+D\+HC cards. Most applications will only need to call the \hyperlink{class_sd2_card_afaec9a22060626b02c07a09eff2e9113}{Sd2\+Card\+::init()} member function.
+\subsection*{Components\+:}
 
-The \hyperlink{class_sd_volume}{Sd\+Volume} class supports F\+A\+T16 and F\+A\+T32 partitions. Most applications will only need to call the \hyperlink{class_sd_volume_adfcf83cba537b831f3a993a058e7ca85}{Sd\+Volume\+::init()} member function.
 
-The \hyperlink{class_sd_file}{Sd\+File} class provides file access functions such as open(), read(), remove(), write(), close() and sync(). This class supports access to the root directory and subdirectories.
+\begin{DoxyItemize}
+\item Arduino Mega 2560 R3 -\/ microprocessor
+\item E\+S\+P8266 -\/ wifi module
+\item B\+M\+E280 -\/ temperature, humidity and pressure sensor
+\item R\+T\+C1307 -\/ real time clock module (+ C\+R2025 battery)
+\item Catalex Micro\+SD card module (+ Micro\+SD card)
+\item 20x4 L\+CD display
+\end{DoxyItemize}
 
-A number of example are provided in the Sd\+Fat/examples folder. These were developed to test Sd\+Fat and illustrate its use.
+\subsection*{Libraries\+:}
 
-Sd\+Fat was developed for high speed data recording. Sd\+Fat was used to implement an audio record/play class, Wave\+RP, for the Adafruit Wave Shield. This application uses special \hyperlink{class_sd2_card}{Sd2\+Card} calls to write to contiguous files in raw mode. These functions reduce write latency so that audio can be recorded with the small amount of R\+AM in the Arduino.\hypertarget{index_SDcard}{}\section{S\+D\textbackslash{}\+S\+D\+H\+C Cards}\label{index_SDcard}
-Arduinos access SD cards using the cards S\+PI protocol. P\+Cs, Macs, and most consumer devices use the 4-\/bit parallel SD protocol. A card that functions well on A PC or Mac may not work well on the Arduino.
 
-Most cards have good S\+PI read performance but cards vary widely in S\+PI write performance. Write performance is limited by how efficiently the card manages internal erase/remapping operations. The Arduino cannot optimize writes to reduce erase operations because of its limit R\+AM.
+\begin{DoxyItemize}
+\item cactus\+\_\+io\+\_\+\+B\+M\+E280\+\_\+\+I2C (B\+ME, R\+TC)
+\item D\+S1307\+R\+TC (R\+TC)
+\item Liquid\+Crystal (L\+CD)
+\item SD (SD module)
+\item S\+PI (B\+ME, SD module)
+\item Time\+Lib (R\+TC)
+\item Wire (I2C -\/$>$ B\+ME, R\+TC)
+\end{DoxyItemize}
 
-San\+Disk cards generally have good write performance. They seem to have more internal R\+AM buffering than other cards and therefore can limit the number of flash erase operations that the Arduino forces due to its limited R\+AM.\hypertarget{index_Hardware}{}\section{Hardware Configuration}\label{index_Hardware}
-Sd\+Fat was developed using an \href{http://www.adafruit.com/}{\tt Adafruit Industries} \href{http://www.ladyada.net/make/waveshield/}{\tt Wave Shield}.
+\section*{Installation}
 
-The hardware interface to the SD card should not use a resistor based level shifter. Sd\+Fat sets the S\+PI bus frequency to 8 M\+Hz which results in signal rise times that are too slow for the edge detectors in many newer SD card controllers when resistor voltage dividers are used.
+Code for the station was written and uploaded with help of Arduino I\+DE. Atom was used for the P\+HP server side programming. To start this station, there are needed a few steps to complete\+:
+\begin{DoxyEnumerate}
+\item Establish hosting, database and web page.
+\item Fill in the Server/variables.\+php with your right credentials.
+\item Upload the content of Server folder on your hosting server.
+\item Run mysql\+\_\+connect.\+php to create table in the database.
+\item Wire up the Arduino according to the wiring diagram included in this file.
+\item Fill in all the constants in the Arduino file with server, wifi and other wished credentials (instead of the x sign).
+\item Upload the sketch to Arduino and afterwards ensure the power supply is plugged in. It is good to provide the R\+TC with battery. In case of blackout, the right time will be sustained.
+\item Adjust both potentiometers to fit your desired brightness and contrast levels.
+\item Rejoice the beautiful statistics and graphs made from your data.
+\end{DoxyEnumerate}
 
-The 5 to 3.\+3 V level shifter for 5 V Arduinos should be IC based like the 74\+H\+C4050N based circuit shown in the file Sd\+Level.\+png. The Adafruit Wave Shield uses a 74\+A\+H\+C125N. Gravitech sells SD and Micro\+SD Card Adapters based on the 74\+L\+C\+X245.
+\section*{Pictures}
 
-If you are using a resistor based level shifter and are having problems try setting the S\+PI bus frequency to 4 M\+Hz. This can be done by using card.\+init(\+S\+P\+I\+\_\+\+H\+A\+L\+F\+\_\+\+S\+P\+E\+E\+D) to initialize the SD card.\hypertarget{index_comment}{}\section{Bugs and Comments}\label{index_comment}
-If you wish to report bugs or have comments, send email to \href{mailto:fat16lib@sbcglobal.net}{\tt fat16lib@sbcglobal.\+net}.\hypertarget{index_SdFatClass}{}\section{Sd\+Fat Usage}\label{index_SdFatClass}
-Sd\+Fat uses a slightly restricted form of short names. Only printable A\+S\+C\+II characters are supported. No characters with code point values greater than 127 are allowed. Space is not allowed even though space was allowed in the A\+PI of early versions of D\+OS.
+Overview of the project with wires\+: 
 
-Short names are limited to 8 characters followed by an optional period (.) and extension of up to 3 characters. The characters may be any combination of letters and digits. The following special characters are also allowed\+:
+Connectors\+: 
 
-\$ \% \textquotesingle{} -\/ \+\_\+ @ $\sim$ ` ! ( ) \{ \} $^\wedge$ \# \&
+Front\+: 
 
-Short names are always converted to upper case and their original case value is lost.
+B\+ME\+: 
 
-\begin{DoxyNote}{Note}
-The Arduino Print class uses character at a time writes so it was necessary to use a \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync() } function to control when data is written to the SD card.
-\end{DoxyNote}
-\begin{DoxyParagraph}{}
-An application which writes to a file using \hyperlink{}{print()}, \hyperlink{}{println() } or \hyperlink{class_sd_file_a67267a4b63d03a16e099195935613006}{write() } must call \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync() } at the appropriate time to force data and directory information to be written to the SD Card. Data and directory information are also written to the SD card when \hyperlink{class_sd_file_a6b24350c89cc41ff644a343231a3983c}{close() } is called.
-\end{DoxyParagraph}
-\begin{DoxyParagraph}{}
-Applications must use care calling \hyperlink{class_sd_file_a742d64ca964583ac3a92b31f0eba5e14}{sync() } since 2048 bytes of I/O is required to update file and directory information. This includes writing the current data block, reading the block that contains the directory entry for update, writing the directory block back and reading back the current data block.
-\end{DoxyParagraph}
-It is possible to open a file with two or more instances of \hyperlink{class_sd_file}{Sd\+File}. A file may be corrupted if data is written to the file by more than one instance of \hyperlink{class_sd_file}{Sd\+File}.\hypertarget{index_HowTo}{}\section{How to format S\+D Cards as F\+A\+T Volumes}\label{index_HowTo}
-You should use a freshly formatted SD card for best performance. F\+AT file systems become slower if many files have been created and deleted. This is because the directory entry for a deleted file is marked as deleted, but is not deleted. When a new file is created, these entries must be scanned before creating the file, a flaw in the F\+AT design. Also files can become fragmented which causes reads and writes to be slower.
+\section*{How does it work?}
 
-Microsoft operating systems support removable media formatted with a Master Boot Record, M\+BR, or formatted as a super floppy with a F\+AT Boot Sector in block zero.
+By setting the interval in the Arduino file a cycle for recording data begins. Every x hours the internet connection is checked. If E\+SP is connected, the presence of W\+S.\+txt file is checked. Data from B\+ME and R\+TC together with possible data from the SD card is transferred directly to the server. In case of a lost connection, data is stored on an SD card inserted into Catalex module. Both B\+ME and R\+TC work via I2C interface. A communication between Arduino and E\+SP runs on the serial line. SD card module is connected via S\+PI. The L\+CD display renews data every x minutes. A communication between client and database is based on P\+DO and S\+QL commands.
 
-Microsoft operating systems expect M\+BR formatted removable media to have only one partition. The first partition should be used.
+\section*{How to use WS?}
 
-Microsoft operating systems do not support partitioning SD flash cards. If you erase an SD card with a program like Kill\+Disk, Most versions of Windows will format the card as a super floppy.
+The index page shows average, max and min data for last week with a possibility to change the time horizon. There is also displayed the current date and time and last added row to the database. In the right bottom corner you can choose a specific date to see the detail values and graph. 
 
-The best way to restore an SD card\textquotesingle{}s format is to use S\+D\+Formatter which can be downloaded from\+:
+The S\+T\+A\+T\+I\+S\+T\+I\+KY page shows the longterm statistics of all values together with graph. You can change the desired date range. 
 
-\href{http://www.sdcard.org/consumers/formatter/}{\tt http\+://www.\+sdcard.\+org/consumers/formatter/}
-
-S\+D\+Formatter aligns flash erase boundaries with file system structures which reduces write latency and file system overhead.
-
-S\+D\+Formatter does not have an option for F\+AT type so it may format small cards as F\+A\+T12.
-
-After the M\+BR is restored by S\+D\+Formatter you may need to reformat small cards that have been formatted F\+A\+T12 to force the volume type to be F\+A\+T16.
-
-If you reformat the SD card with an OS utility, choose a cluster size that will result in\+:
-
-4084 $<$ Count\+Of\+Clusters \&\& Count\+Of\+Clusters $<$ 65525
-
-The volume will then be F\+A\+T16.
-
-If you are formatting an SD card on OS X or Linux, be sure to use the first partition. Format this partition with a cluster count in above range.\hypertarget{index_References}{}\section{References}\label{index_References}
-Adafruit Industries\+:
-
-\href{http://www.adafruit.com/}{\tt http\+://www.\+adafruit.\+com/}
-
-\href{http://www.ladyada.net/make/waveshield/}{\tt http\+://www.\+ladyada.\+net/make/waveshield/}
-
-The Arduino site\+:
-
-\href{http://www.arduino.cc/}{\tt http\+://www.\+arduino.\+cc/}
-
-For more information about F\+AT file systems see\+:
-
-\href{http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx}{\tt http\+://www.\+microsoft.\+com/whdc/system/platform/firmware/fatgen.\+mspx}
-
-For information about using SD cards as S\+PI devices see\+:
-
-\href{http://www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf}{\tt http\+://www.\+sdcard.\+org/developers/tech/sdcard/pls/\+Simplified\+\_\+\+Physical\+\_\+\+Layer\+\_\+\+Spec.\+pdf}
-
-The A\+Tmega328 datasheet\+:
-
-\href{http://www.atmel.com/dyn/resources/prod_documents/doc8161.pdf}{\tt http\+://www.\+atmel.\+com/dyn/resources/prod\+\_\+documents/doc8161.\+pdf} 
+The VÝ\+P\+IS H\+O\+D\+N\+OT page creates a table of last 50 recorded values.  

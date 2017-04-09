@@ -1,9 +1,0 @@
-digraph "Arduino/Libraries/Time/examples/TimeNTP_ESP8266WiFi" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_50e95a2769a186a5c9043732ad260356 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_50e95a2769a186a5c9043732ad260356.html"]
-  dir_fff877f4a96b6fe327cc8b33a0e0445e [shape=box, label="TimeNTP_ESP8266WiFi", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fff877f4a96b6fe327cc8b33a0e0445e.html"];
-  }
-}

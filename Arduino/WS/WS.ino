@@ -1,4 +1,4 @@
-/**
+/*!
  * @file WS.ino
  * @Author Filip Šlapal
  * @date April, 2017
@@ -14,148 +14,148 @@
 
 #include "cactus_io_BME280_I2C.h"
 
-/**
+/*!
 BME280 I2C address
 */
 BME280_I2C bme(0x76);  //address of BME -> 0x76
 
 char x;
 
-/**
+/*!
 * \brief Setting up LCD
 *
 * @param lcd (RS, E, D4, D5, D6, D7)
 */
 LiquidCrystal lcd(x, x, x, x, x, x);
 
-/**
+/*!
 WIFI SSID
 */
 #define ssid "x"// SSID
-/**
+/*!
 WIFI password
 */
 #define pass "x"// Network Password
-/**
+/*!
 Whole host server address
 */
 #define host "x"// Webhost
-/**
+/*!
 Shortened host server address
 */
 #define host1 "x"
-/**
+/*!
 Password for server
 */
 #define password "x"
-/**
+/*!
 Deviding sign in SD strings
 */
 #define sign "x"
-/**
+/*!
 SD card module pin
 */
 #define cs_pin x
 
 
-/**
+/*!
 Temperature from BME280
 */
 float temperature;
-/**
+/*!
 Humidity from BME280
 */
 float humidity;
-/**
+/*!
 Pressure from BME280
 */
 float pressure;
 
-/**
+/*!
 Second from RTM
 */
 String s;
-/**
+/*!
 Hour from RTM
 */
 String h;
-/**
+/*!
 Minute from RTM
 */
 String mi;
-/**
+/*!
 Minute to display on LCD (including null)
 */
 String mi_0;
-/**
+/*!
 Day from RTM
 */
 String d;
-/**
+/*!
 Year from RTM
 */
 String y;
-/**
+/*!
 Month from RTM
 */
 String mo;
-/**
+/*!
 SD card string - sign characters included
 */
 String lex;
-/**
+/*!
 SD card string - sign characters excluded
 */
 String l;
-/**
+/*!
 SD card string - sign characters included
 */
 String lx;
-/**
+/*!
 SD card string - count of strings to send
 */
 int count;
-/**
+/*!
 Integer for array
 */
 int i;
-/**
+/*!
 Integer for for() loop
 */
 int a;
-/**
+/*!
 Time variable
 */
 int tim;
-/**
+/*!
 Storing time from the beginning of program
 */
 int oldtim;
-/**
+/*!
 Interval in hours to start send procedure
 */
 #define interval_hour x
-/**
+/*!
 Interval in ms to repeat send procedure
 */
 int interval = interval_hour * 60 * 60;
-/**
+/*!
 Interval in seconds to start send procedure
 */
 #define interval_second x
-/**
+/*!
 Interval in ms to repeat lcd procedure
 */
 int interval_lcd = interval_second;
-/**
+/*!
 Time variable
 */
 int tim_lcd;
-/**
+/*!
 Storing time from the beginning of program
 */
 int oldtim_lcd;
-/**
+/*!
 Assigning month names
 */
 const char *monthName[12] = {
@@ -163,12 +163,12 @@ const char *monthName[12] = {
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 };
 
-/**
+/*!
 RTC data storage
 */
 tmElements_t tm;
 
-/**
+/*!
 * \brief Executed only once
 */
 void setup() {
@@ -234,12 +234,12 @@ oldtim = 0;
 oldtim_lcd = 0;
 }
 
-/**
+/*!
 * \brief Repeated loop
 */
 void loop() {
 
-/**
+/*!
 * \briefRTC data read
 */
 if (RTC.read(tm)) {
@@ -311,7 +311,7 @@ oldtim = tim;
 }
 else{}
 }
-/**
+/*!
 * \brief Writing data to SD card.
 *
 * Data from sensors and password are stored in a string suitable for post request (devided by & sign). At the end of each string a delimiter is added.
@@ -359,7 +359,7 @@ String cmd = "y=";
   }}
 
 
-/**
+/*!
 * \brief RTC get time.
 *
 * Setting date to RTC.
@@ -375,7 +375,7 @@ bool getTime(const char *str)
   tm.Second = Sec;
   return true;
 }
-/**
+/*!
 * \brief RTC get date.
 *
 * Setting date to RTC.
@@ -398,7 +398,7 @@ bool getDate(const char *str)
   return true;
 }
 
-/**
+/*!
 * \brief Checking WIFI connection.
 *
 * ESP8266 is set to STA mode. The preset values are applied to find the correct wifi and connect to it.
@@ -442,7 +442,7 @@ boolean connectWiFi(){
   }
 }
 
-/**
+/*!
 * \brief Reading data from SD card.
 *
 * The string is devided into tokens. Their count is determined by comparing the lengths of strings with and without delimiter. The individual tokens are then passed to sendSD() function as strings.
@@ -512,7 +512,7 @@ File myFile = SD.open("ws.txt");
 
 
 
-/**
+/*!
 * \brief Sending data stored on SD card
 *
 * A TPC connecion is established with the server and data are send via a POST request to the script that adds them to the databse.
@@ -581,7 +581,7 @@ String cipsend = "AT+CIPSEND=";
   return;
   }
 
-/**
+/*!
 * \brief Sending data directly from BME280
 *
 * A TPC connecion is established with the server and data are send via a POST request to the script that adds them to the databse.

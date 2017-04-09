@@ -5,23 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WS: Arduino SdFat Library</title>
+<title>WS: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -30,27 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="favicon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WS
    </div>
-   <div id="projectbrief">Arduino based weather station</div>
+   <div id="projectbrief">Arduinoweatherstation</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -60,21 +34,16 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
 </script>
-<div id="doc-content">
+<div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -91,80 +60,15 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Arduino SdFat Library </div>  </div>
+<div class="title">WS Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><center>Copyright &copy; 2009 by William Greiman </center><h1><a class="anchor" id="Intro"></a>
-Introduction</h1>
-<p>The Arduino SdFat Library is a minimal implementation of FAT16 and FAT32 file systems on SD flash memory cards. Standard SD and high capacity SDHC cards are supported.</p>
-<p>The SdFat only supports short 8.3 names.</p>
-<p>The main classes in SdFat are <a class="el" href="class_sd2_card.html" title="Raw access to SD and SDHC flash memory cards. ">Sd2Card</a>, <a class="el" href="class_sd_volume.html" title="Access FAT16 and FAT32 volumes on SD and SDHC cards. ">SdVolume</a>, and <a class="el" href="class_sd_file.html" title="Access FAT16 and FAT32 files on SD and SDHC cards. ">SdFile</a>.</p>
-<p>The <a class="el" href="class_sd2_card.html" title="Raw access to SD and SDHC flash memory cards. ">Sd2Card</a> class supports access to standard SD cards and SDHC cards. Most applications will only need to call the <a class="el" href="class_sd2_card.html#afaec9a22060626b02c07a09eff2e9113">Sd2Card::init()</a> member function.</p>
-<p>The <a class="el" href="class_sd_volume.html" title="Access FAT16 and FAT32 volumes on SD and SDHC cards. ">SdVolume</a> class supports FAT16 and FAT32 partitions. Most applications will only need to call the <a class="el" href="class_sd_volume.html#adfcf83cba537b831f3a993a058e7ca85">SdVolume::init()</a> member function.</p>
-<p>The <a class="el" href="class_sd_file.html" title="Access FAT16 and FAT32 files on SD and SDHC cards. ">SdFile</a> class provides file access functions such as open(), read(), remove(), write(), close() and sync(). This class supports access to the root directory and subdirectories.</p>
-<p>A number of example are provided in the SdFat/examples folder. These were developed to test SdFat and illustrate its use.</p>
-<p>SdFat was developed for high speed data recording. SdFat was used to implement an audio record/play class, WaveRP, for the Adafruit Wave Shield. This application uses special <a class="el" href="class_sd2_card.html" title="Raw access to SD and SDHC flash memory cards. ">Sd2Card</a> calls to write to contiguous files in raw mode. These functions reduce write latency so that audio can be recorded with the small amount of RAM in the Arduino.</p>
-<h1><a class="anchor" id="SDcard"></a>
-SD\SDHC Cards</h1>
-<p>Arduinos access SD cards using the cards SPI protocol. PCs, Macs, and most consumer devices use the 4-bit parallel SD protocol. A card that functions well on A PC or Mac may not work well on the Arduino.</p>
-<p>Most cards have good SPI read performance but cards vary widely in SPI write performance. Write performance is limited by how efficiently the card manages internal erase/remapping operations. The Arduino cannot optimize writes to reduce erase operations because of its limit RAM.</p>
-<p>SanDisk cards generally have good write performance. They seem to have more internal RAM buffering than other cards and therefore can limit the number of flash erase operations that the Arduino forces due to its limited RAM.</p>
-<h1><a class="anchor" id="Hardware"></a>
-Hardware Configuration</h1>
-<p>SdFat was developed using an <a href="http://www.adafruit.com/">Adafruit Industries</a> <a href="http://www.ladyada.net/make/waveshield/">Wave Shield</a>.</p>
-<p>The hardware interface to the SD card should not use a resistor based level shifter. SdFat sets the SPI bus frequency to 8 MHz which results in signal rise times that are too slow for the edge detectors in many newer SD card controllers when resistor voltage dividers are used.</p>
-<p>The 5 to 3.3 V level shifter for 5 V Arduinos should be IC based like the 74HC4050N based circuit shown in the file SdLevel.png. The Adafruit Wave Shield uses a 74AHC125N. Gravitech sells SD and MicroSD Card Adapters based on the 74LCX245.</p>
-<p>If you are using a resistor based level shifter and are having problems try setting the SPI bus frequency to 4 MHz. This can be done by using card.init(SPI_HALF_SPEED) to initialize the SD card.</p>
-<h1><a class="anchor" id="comment"></a>
-Bugs and Comments</h1>
-<p>If you wish to report bugs or have comments, send email to <a href="#" onclick="location.href='mai'+'lto:'+'fat'+'16'+'lib'+'@s'+'bcg'+'lo'+'bal'+'.n'+'et'; return false;">fat16<span style="display: none;">.nosp@m.</span>lib@<span style="display: none;">.nosp@m.</span>sbcgl<span style="display: none;">.nosp@m.</span>obal<span style="display: none;">.nosp@m.</span>.net</a>.</p>
-<h1><a class="anchor" id="SdFatClass"></a>
-SdFat Usage</h1>
-<p>SdFat uses a slightly restricted form of short names. Only printable ASCII characters are supported. No characters with code point values greater than 127 are allowed. Space is not allowed even though space was allowed in the API of early versions of DOS.</p>
-<p>Short names are limited to 8 characters followed by an optional period (.) and extension of up to 3 characters. The characters may be any combination of letters and digits. The following special characters are also allowed:</p>
-<p>$ % ' - _ @ ~ ` ! ( ) { } ^ # &amp;</p>
-<p>Short names are always converted to upper case and their original case value is lost.</p>
-<dl class="section note"><dt>Note</dt><dd>The Arduino Print class uses character at a time writes so it was necessary to use a <a class="el" href="class_sd_file.html#a742d64ca964583ac3a92b31f0eba5e14">sync() </a> function to control when data is written to the SD card.</dd></dl>
-<dl class="section user"><dt></dt><dd>An application which writes to a file using <a class="el" href="">print()</a>, <a class="el" href="">println() </a> or <a class="el" href="class_sd_file.html#a67267a4b63d03a16e099195935613006">write() </a> must call <a class="el" href="class_sd_file.html#a742d64ca964583ac3a92b31f0eba5e14">sync() </a> at the appropriate time to force data and directory information to be written to the SD Card. Data and directory information are also written to the SD card when <a class="el" href="class_sd_file.html#a6b24350c89cc41ff644a343231a3983c">close() </a> is called.</dd></dl>
-<dl class="section user"><dt></dt><dd>Applications must use care calling <a class="el" href="class_sd_file.html#a742d64ca964583ac3a92b31f0eba5e14">sync() </a> since 2048 bytes of I/O is required to update file and directory information. This includes writing the current data block, reading the block that contains the directory entry for update, writing the directory block back and reading back the current data block.</dd></dl>
-<p>It is possible to open a file with two or more instances of <a class="el" href="class_sd_file.html" title="Access FAT16 and FAT32 files on SD and SDHC cards. ">SdFile</a>. A file may be corrupted if data is written to the file by more than one instance of <a class="el" href="class_sd_file.html" title="Access FAT16 and FAT32 files on SD and SDHC cards. ">SdFile</a>.</p>
-<h1><a class="anchor" id="HowTo"></a>
-How to format SD Cards as FAT Volumes</h1>
-<p>You should use a freshly formatted SD card for best performance. FAT file systems become slower if many files have been created and deleted. This is because the directory entry for a deleted file is marked as deleted, but is not deleted. When a new file is created, these entries must be scanned before creating the file, a flaw in the FAT design. Also files can become fragmented which causes reads and writes to be slower.</p>
-<p>Microsoft operating systems support removable media formatted with a Master Boot Record, MBR, or formatted as a super floppy with a FAT Boot Sector in block zero.</p>
-<p>Microsoft operating systems expect MBR formatted removable media to have only one partition. The first partition should be used.</p>
-<p>Microsoft operating systems do not support partitioning SD flash cards. If you erase an SD card with a program like KillDisk, Most versions of Windows will format the card as a super floppy.</p>
-<p>The best way to restore an SD card's format is to use SDFormatter which can be downloaded from:</p>
-<p><a href="http://www.sdcard.org/consumers/formatter/">http://www.sdcard.org/consumers/formatter/</a></p>
-<p>SDFormatter aligns flash erase boundaries with file system structures which reduces write latency and file system overhead.</p>
-<p>SDFormatter does not have an option for FAT type so it may format small cards as FAT12.</p>
-<p>After the MBR is restored by SDFormatter you may need to reformat small cards that have been formatted FAT12 to force the volume type to be FAT16.</p>
-<p>If you reformat the SD card with an OS utility, choose a cluster size that will result in:</p>
-<p>4084 &lt; CountOfClusters &amp;&amp; CountOfClusters &lt; 65525</p>
-<p>The volume will then be FAT16.</p>
-<p>If you are formatting an SD card on OS X or Linux, be sure to use the first partition. Format this partition with a cluster count in above range.</p>
-<h1><a class="anchor" id="References"></a>
-References</h1>
-<p>Adafruit Industries:</p>
-<p><a href="http://www.adafruit.com/">http://www.adafruit.com/</a></p>
-<p><a href="http://www.ladyada.net/make/waveshield/">http://www.ladyada.net/make/waveshield/</a></p>
-<p>The Arduino site:</p>
-<p><a href="http://www.arduino.cc/">http://www.arduino.cc/</a></p>
-<p>For more information about FAT file systems see:</p>
-<p><a href="http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx">http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx</a></p>
-<p>For information about using SD cards as SPI devices see:</p>
-<p><a href="http://www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf">http://www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf</a></p>
-<p>The ATmega328 datasheet:</p>
-<p><a href="http://www.atmel.com/dyn/resources/prod_documents/doc8161.pdf">http://www.atmel.com/dyn/resources/prod_documents/doc8161.pdf</a> </p>
-</div></div><!-- contents -->
-</div><!-- doc-content -->
+</div><!-- contents -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

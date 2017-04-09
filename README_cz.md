@@ -34,6 +34,19 @@ Kód byl napsán a uploadován pomocí Arduino IDE. Na programování PHP skript
 8. Nastavte oba potenciometry tak, aby Vám vyhovoval jas a kontrast displeje.
 9. Užívejte si statistiky z Vašich dat.
 
+# Výroba
+Celkový pohled na stanici.
+![Overview](/Documentation/overview.png)
+
+Konektory:
+![Overview](/Documentation/Connector.png)
+
+Přední strana:
+![Front](/Documentation/front.png)
+
+BME:
+![BME](/Documentation/BME.png)
+
 # Jak to funguje?
 V nastaveném intervalu se spouští cyklus na měření dat. Každých x hodin je napřed testováno připojení k internetu. Když je ESP modul úspěšně připojen, tak se zkontroluje existence WS.txt souboru. Když jsou nalezena data na SD kartě, tak jsou společně s těmi aktuálně zaznamenanými z BME a RTC modulů přímo poslána na server. V případě neúspěšného pokusu o připojení se data zapíší na SD kartu (WS.txt) v modulu. Moduly BME a RTC pracují na I2C rozhraní. Komunikace mezi ESP a Arduinem probíhá na sériové lince. SD modul využívá SPI. LCD displej se obnovuje každých x nastavených minut.
 Komunikace mezi klientem a databází je založena na PDO a SQL příkazech.

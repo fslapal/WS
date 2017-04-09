@@ -38,6 +38,10 @@ Include dependency graph for W\+S.\+ino\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+B\+M\+E280\+\_\+\+I2C \hyperlink{_w_s_8ino_aaa44a3bc15fc4819e1e0e66a80d6a693}{bme} (0x76)
+\item 
+Liquid\+Crystal \hyperlink{_w_s_8ino_ad3d81d27015e5977de8035c02307bdc5}{lcd} (\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x})
+\begin{DoxyCompactList}\small\item\em Setting up L\+CD. \end{DoxyCompactList}\item 
 void \hyperlink{_w_s_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
 \begin{DoxyCompactList}\small\item\em Executed only once. \end{DoxyCompactList}\item 
 void \hyperlink{_w_s_8ino_afe461d27b9c48d5921c00d521181f12f}{loop} ()
@@ -59,12 +63,8 @@ void \hyperlink{_w_s_8ino_aa9f1e5f04588dc7c432816e2faac1c2a}{send\+Data} (String
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_b_m_e280___i2_c}{B\+M\+E280\+\_\+\+I2C} \hyperlink{_w_s_8ino_a2463f7d3b1d272d85b2aaa026d790416}{bme} (0x76)
-\item 
 char \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}
 \item 
-\hyperlink{class_liquid_crystal}{Liquid\+Crystal} \hyperlink{_w_s_8ino_ab5c27db0e833e3f4cf8f473022f11ecb}{lcd} (\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x})
-\begin{DoxyCompactList}\small\item\em Setting up L\+CD. \end{DoxyCompactList}\item 
 float \hyperlink{_w_s_8ino_afc1d28cfbce795d6ea954ebe725241f5}{temperature}
 \item 
 float \hyperlink{_w_s_8ino_a6a87b2b0cff24d38b367ccd34843a206}{humidity}
@@ -181,7 +181,13 @@ Deviding sign in SD strings \mbox{\Hypertarget{_w_s_8ino_abd15b8fcd3b82c2827693b
 W\+I\+FI S\+S\+ID 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{_w_s_8ino_a144025702d7aa7708d704324ecb09eff}\label{_w_s_8ino_a144025702d7aa7708d704324ecb09eff}} 
+\mbox{\Hypertarget{_w_s_8ino_aaa44a3bc15fc4819e1e0e66a80d6a693}\label{_w_s_8ino_aaa44a3bc15fc4819e1e0e66a80d6a693}} 
+\index{W\+S.\+ino@{W\+S.\+ino}!bme@{bme}}
+\index{bme@{bme}!W\+S.\+ino@{W\+S.\+ino}}
+\subsubsection{\texorpdfstring{bme()}{bme()}}
+{\footnotesize\ttfamily B\+M\+E280\+\_\+\+I2C bme (\begin{DoxyParamCaption}\item[{0x76}]{ }\end{DoxyParamCaption})}
+
+B\+M\+E280 I2C address \mbox{\Hypertarget{_w_s_8ino_a144025702d7aa7708d704324ecb09eff}\label{_w_s_8ino_a144025702d7aa7708d704324ecb09eff}} 
 \index{W\+S.\+ino@{W\+S.\+ino}!connect\+Wi\+Fi@{connect\+Wi\+Fi}}
 \index{connect\+Wi\+Fi@{connect\+Wi\+Fi}!W\+S.\+ino@{W\+S.\+ino}}
 \subsubsection{\texorpdfstring{connect\+Wi\+Fi()}{connectWiFi()}}
@@ -224,11 +230,26 @@ Setting date to R\+TC.
 {\em data} & from compiler \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{_w_s_8ino_ad3d81d27015e5977de8035c02307bdc5}\label{_w_s_8ino_ad3d81d27015e5977de8035c02307bdc5}} 
+\index{W\+S.\+ino@{W\+S.\+ino}!lcd@{lcd}}
+\index{lcd@{lcd}!W\+S.\+ino@{W\+S.\+ino}}
+\subsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily Liquid\+Crystal lcd (\begin{DoxyParamCaption}\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{,  }\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{,  }\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{,  }\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{,  }\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{,  }\item[{\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}}]{ }\end{DoxyParamCaption})}
+
+
+
+Setting up L\+CD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lcd} & (RS, E, D4, D5, D6, D7) \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{_w_s_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_w_s_8ino_afe461d27b9c48d5921c00d521181f12f}} 
 \index{W\+S.\+ino@{W\+S.\+ino}!loop@{loop}}
 \index{loop@{loop}!W\+S.\+ino@{W\+S.\+ino}}
 \subsubsection{\texorpdfstring{loop()}{loop()}}
-{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -306,13 +327,7 @@ Executed only once.
 \subsubsection{\texorpdfstring{a}{a}}
 {\footnotesize\ttfamily int a}
 
-Integer for for() loop \mbox{\Hypertarget{_w_s_8ino_a2463f7d3b1d272d85b2aaa026d790416}\label{_w_s_8ino_a2463f7d3b1d272d85b2aaa026d790416}} 
-\index{W\+S.\+ino@{W\+S.\+ino}!bme@{bme}}
-\index{bme@{bme}!W\+S.\+ino@{W\+S.\+ino}}
-\subsubsection{\texorpdfstring{bme}{bme}}
-{\footnotesize\ttfamily \hyperlink{class_b_m_e280___i2_c}{B\+M\+E280\+\_\+\+I2C} bme(0x76)}
-
-B\+M\+E280 I2C address \mbox{\Hypertarget{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
+Integer for for() loop \mbox{\Hypertarget{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{_w_s_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
 \index{W\+S.\+ino@{W\+S.\+ino}!count@{count}}
 \index{count@{count}!W\+S.\+ino@{W\+S.\+ino}}
 \subsubsection{\texorpdfstring{count}{count}}
@@ -360,22 +375,7 @@ Interval in ms to repeat lcd procedure \mbox{\Hypertarget{_w_s_8ino_a3d755e761d4
 \subsubsection{\texorpdfstring{l}{l}}
 {\footnotesize\ttfamily String l}
 
-SD card string -\/ sign characters excluded \mbox{\Hypertarget{_w_s_8ino_ab5c27db0e833e3f4cf8f473022f11ecb}\label{_w_s_8ino_ab5c27db0e833e3f4cf8f473022f11ecb}} 
-\index{W\+S.\+ino@{W\+S.\+ino}!lcd@{lcd}}
-\index{lcd@{lcd}!W\+S.\+ino@{W\+S.\+ino}}
-\subsubsection{\texorpdfstring{lcd}{lcd}}
-{\footnotesize\ttfamily \hyperlink{class_liquid_crystal}{Liquid\+Crystal} lcd(\hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x}, \hyperlink{_w_s_8ino_ab06e9aa782b61ccfb42f7c48996f6ed4}{x})}
-
-
-
-Setting up L\+CD. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em lcd} & (RS, E, D4, D5, D6, D7) \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{_w_s_8ino_a50a22a42df187974707beaeeb46ee1ec}\label{_w_s_8ino_a50a22a42df187974707beaeeb46ee1ec}} 
+SD card string -\/ sign characters excluded \mbox{\Hypertarget{_w_s_8ino_a50a22a42df187974707beaeeb46ee1ec}\label{_w_s_8ino_a50a22a42df187974707beaeeb46ee1ec}} 
 \index{W\+S.\+ino@{W\+S.\+ino}!lex@{lex}}
 \index{lex@{lex}!W\+S.\+ino@{W\+S.\+ino}}
 \subsubsection{\texorpdfstring{lex}{lex}}

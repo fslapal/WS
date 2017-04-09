@@ -1,9 +1,0 @@
-digraph "Arduino/Libraries/Wire/examples/slave_receiver" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_645b4aab1957ceb4557ae254e9319172 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="examples" fontname="Helvetica", fontsize="10", URL="dir_645b4aab1957ceb4557ae254e9319172.html"]
-  dir_cdb08325f1a9f79355d7f45ed2e02a65 [shape=box, label="slave_receiver", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cdb08325f1a9f79355d7f45ed2e02a65.html"];
-  }
-}

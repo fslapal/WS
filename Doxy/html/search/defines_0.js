@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['allow_5fdeprecated_5ffunctions',['ALLOW_DEPRECATED_FUNCTIONS',['../_sd_fat_8h.html#af8ef36dfd023f41169baa17d05f55c56',1,'SdFat.h']]]
+  ['cs_5fpin',['cs_pin',['../_w_s_8ino.html#ad7860cb7dbe49e4f2ebde8c624b448ef',1,'WS.ino']]]
 ];

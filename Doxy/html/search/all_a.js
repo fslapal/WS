@@ -1,27 +1,6 @@
 var searchData=
 [
-  ['i',['i',['../_w_s_8ino.html#acb559820d9ca11295b4500f179ef6392',1,'WS.ino']]],
-  ['idr',['idr',['../unionu__avr32__spi__idr__t.html#a2d18e7136f65428cfb8b3f137371a799',1,'u_avr32_spi_idr_t::idr()'],['../unionu__avr32__spi__idr__t.html#a06ada7c165b785398d24060fc7585668',1,'u_avr32_spi_idr_t::IDR()']]],
-  ['ier',['ier',['../unionu__avr32__spi__ier__t.html#adeeda709accca980f709f74e968d9fc1',1,'u_avr32_spi_ier_t::ier()'],['../unionu__avr32__spi__ier__t.html#ab999f7265b21cf8e7d3e1997ce8088f6',1,'u_avr32_spi_ier_t::IER()']]],
-  ['if',['if',['../extremes_8php.html#acc396d340190195fe0e0153c38622a9b',1,'if():&#160;extremes.php'],['../extremes__longterm_8php.html#a5bd83a7a52ff3be468b16a8c82e43673',1,'if():&#160;extremes_longterm.php'],['../index_8php.html#a5bd83a7a52ff3be468b16a8c82e43673',1,'if():&#160;index.php']]],
-  ['import_2ephp',['import.php',['../import_8php.html',1,'']]],
-  ['import_5ftest_2ephp',['import_test.php',['../import__test_8php.html',1,'']]],
-  ['index_2ephp',['index.php',['../index_8php.html',1,'']]],
-  ['info_2ephp',['info.php',['../info_8php.html',1,'']]],
-  ['init',['init',['../class_liquid_crystal.html#ae45eec827b26174f73e9cf3ddda635af',1,'LiquidCrystal::init()'],['../class_sd2_card.html#afaec9a22060626b02c07a09eff2e9113',1,'Sd2Card::init(void)'],['../class_sd2_card.html#ad99b2d2156c9746065c52839ef679354',1,'Sd2Card::init(uint8_t sckRateID)'],['../class_sd2_card.html#a919c789eb9b140426c706f0862780978',1,'Sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin)'],['../class_sd_volume.html#adfcf83cba537b831f3a993a058e7ca85',1,'SdVolume::init(Sd2Card *dev)'],['../class_sd_volume.html#a8f5879e458ea6f1a2a2a2b884d800550',1,'SdVolume::init(Sd2Card *dev, uint8_t part)'],['../class_sd_volume.html#a037defc7dc23b38ee7ddf7b5273aea5a',1,'SdVolume::init(Sd2Card &amp;dev)'],['../class_sd_volume.html#a51d8b4c5dd7372eb7dec486472139eb5',1,'SdVolume::init(Sd2Card &amp;dev, uint8_t part)']]],
-  ['inputpins',['inputPins',['../_time_r_t_c_log_8ino.html#a2c88dea2053e96e8b031f5396f81edbb',1,'TimeRTCLog.ino']]],
-  ['interval',['interval',['../_w_s_8ino.html#ae0c690118932b32ef40a74bb6a259acd',1,'WS.ino']]],
-  ['interval_5fhour',['interval_hour',['../_w_s_8ino.html#a4e07ce7aef83b2e94bd353d77029423e',1,'WS.ino']]],
-  ['interval_5flcd',['interval_lcd',['../_w_s_8ino.html#a64d680b4be82b34d0731c9dd84986ead',1,'WS.ino']]],
-  ['interval_5fsecond',['interval_second',['../_w_s_8ino.html#a0a56e85c196bfb2b3bf61abe7f007541',1,'WS.ino']]],
-  ['isam',['isAM',['../_time_8cpp.html#a93f95d54044b6bea7e53d820c2b3ac45',1,'isAM():&#160;Time.cpp'],['../_time_8cpp.html#a4334ceb57e1ed381be82347e196aabc6',1,'isAM(time_t t):&#160;Time.cpp']]],
-  ['isdir',['isDir',['../class_sd_file.html#a564e69a08c11f20e66eb18c38e24b748',1,'SdFile']]],
-  ['isdirectory',['isDirectory',['../class_s_d_lib_1_1_file.html#a532cb01e66c863f0a0c70bad3acbcdfe',1,'SDLib::File']]],
-  ['isfile',['isFile',['../class_sd_file.html#ad9ca9b2b519a933c25e8f893ee0201b6',1,'SdFile']]],
-  ['isopen',['isOpen',['../class_sd_file.html#a54e1b9385c43c33dc83eaad6de0d33be',1,'SdFile']]],
-  ['ispm',['isPM',['../_time_8cpp.html#a25dad3cd574983eff789b04781e57de8',1,'isPM():&#160;Time.cpp'],['../_time_8cpp.html#af53f46c9c1e0ad141f99045e3f96d688',1,'isPM(time_t t):&#160;Time.cpp']]],
-  ['isr',['ISR',['../twi_8c.html#a474f42eedbdc093683fdb4b88be3c48f',1,'twi.c']]],
-  ['isroot',['isRoot',['../class_sd_file.html#a29fd6e80e6cbd3c67724988f9fe02290',1,'SdFile']]],
-  ['isrunning',['isRunning',['../class_d_s1307_r_t_c.html#aa6e8002cae02d640cfeed73c1e274338',1,'DS1307RTC']]],
-  ['issubdir',['isSubDir',['../class_sd_file.html#a22fb79f645f5a92baf699d547395667b',1,'SdFile']]]
+  ['pass',['pass',['../_w_s_8ino.html#a9f2587d1070b8924b276ba83988d3667',1,'WS.ino']]],
+  ['password',['password',['../_w_s_8ino.html#ae59dfb8ffddb9128834034516c45e7ce',1,'WS.ino']]],
+  ['pressure',['pressure',['../_w_s_8ino.html#ac870e1249bab4a2a68cc4126761d24ef',1,'WS.ino']]]
 ];

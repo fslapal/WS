@@ -34,6 +34,19 @@ Code for the station was written and uploaded with help of Arduino IDE.  Atom wa
 8. Adjust both potentiometers to fit your desired brightness and contrast levels.
 9. Rejoice the beautiful statistics and graphs made from your data.
 
+# Manufacturing
+Overview of the project with wires:
+![Overview](/Documentation/overview.png)
+
+Connectors:
+![Overview](/Documentation/Connector.png)
+
+Front:
+![Front](/Documentation/front.png)
+
+BME:
+![BME](/Documentation/BME.png)
+
 # How does it work?
 By setting the interval in the Arduino file a cycle for recording data begins. Every x hours the internet connection is checked. If ESP is connected, the presence of WS.txt file is checked. Data from BME and RTC together with possible data from the SD card is transferred directly to the server. In case of a lost connection, data is stored on an SD card inserted into Catalex module. Both BME and RTC work via I2C interface. A communication between Arduino and ESP runs on the serial line. SD card module is connected via SPI. The LCD display renews data every x minutes.
 A communication between client and database is based on PDO and SQL commands.
