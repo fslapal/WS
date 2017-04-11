@@ -10,7 +10,6 @@ $sql = "CREATE TABLE IF NOT EXISTS $table (
     pres FLOAT(6,2) NOT NULL,
     hum FLOAT(5,2) NOT NULL
     )";
-
 $conn->exec($sql);
 $conn = null;
 echo "Tabulka úspěšně přidána do databáze!";

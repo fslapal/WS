@@ -15,20 +15,16 @@ $password = empty($_POST['pass']) ? '' : $_POST['pass'];
 $time = $hour.":".$minute;
 $date = $year."-".$month."-".$day;
 
-    if ($password == $pass){
+if ($password == $pass){
+  $sql = "INSERT INTO $table (date, time, temp, pres, hum)
+  VALUES ('$date', '$time', '$temp', '$pres', '$hum')
+  ";
+  $conn->exec($sql);
+  $conn = null;
+  }
 
-
-    $sql = "INSERT INTO $table (date, time, temp, pres, hum)
-    VALUES ('$date', '$time', '$temp', '$pres', '$hum')
-    ";
-
-    $conn->exec($sql);
-    $conn = null;
-     }
-
-    else{
-    echo "Password isn't correct!";
-    return false;
-    }
-
+else{
+  echo "Password isn't correct!";
+  return false;
+  }
 ?>

@@ -5,11 +5,9 @@ $result = $conn->query($sql);
 
 
 if ($result!==FALSE){
-
   echo "<table>";
   echo "<caption>Výpis zaznamenaných hodnot</caption>";
   echo "<tr><th>Čas</th><th>Teplota</th><th>Vlhkost</th><th>Tlak</th></tr>";
-
   while ($row = $result->fetch()){
      echo "<tr>
            <td> {$row['time']} </td>
@@ -17,13 +15,10 @@ if ($result!==FALSE){
            <td> {$row['temp']} </td>
            <td> {$row['hum']} </td>
            </tr>";
-   }
-    echo "</table>";
-  }
-
+     }
+ echo "</table>";
+ }
 else{
-echo "Nejsou k dispozici hodnoty!";
-
-}
-
-  ?>
+  echo "Nejsou k dispozici hodnoty!";
+  }
+?>

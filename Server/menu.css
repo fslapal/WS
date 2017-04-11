@@ -1,48 +1,44 @@
 body{
-    font-family: Verdana;
-    }
+  font-family: Verdana;
+  }
 
 #body{
   width: 100%;
   height: auto;
-}
+  }
 
-#menu {
+#menu{
   background: #f96e5b;
   width: 100%;
   display: inline-block;
   position: relative;
   border-radius: 5px;
+  }
 
-}
-
-#menu ul {
+#menu ul{
   list-style: none;
   margin: 0;
   padding: 0;
   line-height: 1;
   display: block;
-}
-#menu ul:after {
+  }
+#menu ul:after{
   content: "";
   display: block;
   font-size: 0;
   height: 0px;
   clear: both;
   visibility: hidden;
-
-}
-#menu ul li {
+  }
+#menu ul li{
   display: inline-block;
   padding: 0;
   margin: 0;
-}
-
-#menu ul li:first-child a {
+  }
+#menu ul li:first-child a{
   color: #333333;
-}
-
-#menu ul li a {
+  }
+#menu ul li a{
   color: #ffffff;
   text-decoration: none;
   display: block;
@@ -56,16 +52,15 @@ body{
   -ms-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
-}
-#menu ul li a:hover {
+  }
+#menu ul li a:hover{
   color: #333333;
-}
+  }
 
-#menu ul li a:hover:before {
+#menu ul li a:hover:before{
   width: 100%;
-}
-
-#menu ul li.li a:after {
+  }
+#menu ul li.li a:after{
   content: "";
   display: block;
   position: absolute;
@@ -75,8 +70,8 @@ body{
   width: 6px;
   background: #ffffff;
   opacity: 0.5;
-}
-#menu ul li a:before {
+  }
+#menu ul li a:before{
   content: "";
   display: block;
   position: absolute;
@@ -90,23 +85,20 @@ body{
   -ms-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-}
-
-@media screen and (max-width: 40em) {
-  #menu ul li {
+  }
+@media screen and (max-width: 40em){
+  #menu ul li{
     float: none;
     display: block;
-  }
-
-     #menu ul li.li a:after {
+    }
+  #menu ul li.li a:after{
     display: none;
-  }
-  #menu ul li a:before {
+    }
+  #menu ul li a:before{
     display: none;
+    }
   }
-  }
-
-  div.cals{
+div.cals{
   float: left;
   width: auto;
   height: 4.75em;
@@ -118,7 +110,7 @@ body{
   overflow: auto;
   }
 
-  div.values{
+div.values{
   width: auto;
   border: 1px solid black;
   border-radius: 5px;
@@ -127,7 +119,7 @@ body{
   overflow: auto;
   height: auto;
   }
-  div.title{
+div.title{
   width: auto;
   height: 4.75em;
   border: 1px solid black;
@@ -136,11 +128,11 @@ body{
   margin-top: 1em;
   overflow: auto;
   }
-  #day{
-     visibility: hidden;
-     height: 0px;
-     width: 0px;
-     overflow: hidden;
+#day{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
   }
 table, th, td {
   border: 1px solid black;
@@ -148,14 +140,14 @@ table, th, td {
   text-align: center;
   }
 table{
-    width: 95%;
-    margin: auto;
-     }
+  width: 95%;
+  margin: auto;
+   }
 caption{
   font-size: 20px;
   margin-bottom: 0.5em;
   }
-  div.data{
+div.data{
   width: auto;
   float: left;
   min-width: 50%;
@@ -167,7 +159,7 @@ caption{
   overflow: auto;
   height: 34em;
   }
-  div.calendar{
+div.calendar{
   width: auto;
   height: 20em;
   border: 1px solid black;
@@ -176,7 +168,7 @@ caption{
   margin-top: 1em;
   overflow: auto;
   }
-  div.time{
+div.time{
   width: auto;
   height: 11.4em;
   border: 1px solid black;
@@ -185,34 +177,32 @@ caption{
   margin-top: 1em;
   overflow: auto;
   }
-
-
-  @media screen and (max-width: 60em) {
+@media screen and (max-width: 60em) {
   div.calendar{
-  width: 90%;
-  margin: auto;
-  margin-top: 1em;
-  }
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    }
   div.data{
-  width: 90%;
-  margin: auto;
-  float: none;
-  margin-top: 1em;
-  }
+    width: 90%;
+    margin: auto;
+    float: none;
+    margin-top: 1em;
+    }
   div.time{
-  width: 90%;
-  margin: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    }
+  div.cals{
+    margin-bottom: 1em;
+    float: none;
+    height: auto;
+    margin-right: 0em;
+    }
+  div.title{
+    height: auto;
+    }}
+#min{
   margin-top: 1em;
   }
-  div.cals{
-  margin-bottom: 1em;
-  float: none;
-  height: auto;
-  margin-right: 0em;
-  }
-  div.title{
-  height: auto;
-  }}
-#min{
-margin-top: 1em;
-}

@@ -1,41 +1,26 @@
-<html>
-
+<!DOCTYPE HTML>
 <head>
-<script type="text/javascript"
-src="dygraph.js"></script>
-
-
-<link rel="stylesheet" href="dygraph.css"/>
-
-
-<style>
-div.graphdiv{
-margin-bottom: 1em;
-}
-</style>
-
+  <script type="text/javascript"
+  src="dygraph.js"></script>
+  <link rel="stylesheet" href="dygraph.css"/>
+  <style>
+    div.graphdiv{
+      margin-bottom: 1em;
+      }
+  </style>
 </head>
 
-
 <body>
+  <div id="graphdiv"></div>
+  <script type="text/javascript">
+    var exp = document.getElementById('day');
+    content = exp.textContent;
 
-<div id="graphdiv"></div>
-
-<script type="text/javascript">
-
-
-var exp = document.getElementById('day');
-content = exp.textContent;
-
-
-g = new Dygraph(
-document.getElementById("graphdiv"),
-"Datum,Tlak,Teplota,Vlhkost\n" +
-content + "\n"
-);
-
-</script>
-
-
+    g = new Dygraph(
+      document.getElementById("graphdiv"),
+      "Datum,Tlak,Teplota,Vlhkost\n" +
+      content + "\n"
+      );
+  </script>
 </body>
 </html>
