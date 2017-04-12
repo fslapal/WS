@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WS: Main Page</title>
+<title>WS: WS</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="favicon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WS
    </div>
@@ -60,10 +61,94 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">WS Documentation</div>  </div>
+<div class="title">WS </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>WS is a proof-of-concept student project. It was aimed at creating an indoor weather station based on Arduino that sends measured values to a web database.</p>
+<p><a href="https://www.github.com/fslapal/WS">GitHub repositary</a></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Components, wiring</h1>
+<div class="image">
+<img src="WS_diagram.png" width="95%" alt="WS_diagram.png"/>
+<div class="caption">
+Wiring diagram</div></div>
+<p>The complete scheme in the Fritzing is available in the Documentation file.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Components:</h2>
+<ul>
+<li>Arduino Mega 2560 R3 - microprocessor</li>
+<li>ESP8266 - wifi module</li>
+<li>BME280 - temperature, humidity and pressure sensor</li>
+<li>RTC1307 - real time clock module (+ CR2025 battery)</li>
+<li>Catalex MicroSD card module (+ MicroSD card)</li>
+<li>20x4 LCD display</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Libraries:</h2>
+<p>These libraries together with their example scripts were used to complete the project. All of them are uploaded in the folder Arduino/Libraries.</p><ul>
+<li>cactus_io_BME280_I2C (BME, RTC)</li>
+<li>DS1307RTC (RTC)</li>
+<li>LiquidCrystal (LCD)</li>
+<li>SD (SD module)</li>
+<li>SPI (BME, SD module)</li>
+<li>TimeLib (RTC)</li>
+<li>Wire (I2C -&gt; BME, RTC)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Installation</h1>
+<p>Code for the station was written and uploaded with the help of Arduino IDE. Atom was used for the PHP server side programming. To start this station, there are needed a few steps to complete:</p><ol type="1">
+<li>Establish hosting, database and web page.</li>
+<li>Fill in the <a class="el" href="variables_8php.html" title="Variables. ">Server/variables.php</a> with your right credentials.</li>
+<li>Upload the content of Server folder on your hosting server.</li>
+<li>Run <a class="el" href="mysql__connect_8php.html" title="Creates table in the database. ">mysql_connect.php</a> to create table in the database.</li>
+<li>Wire up the Arduino according to the wiring diagram included in this file.</li>
+<li>Fill in all the constants in the Arduino file with server, wifi and other wished credentials (instead of the x sign).</li>
+<li>Upload the sketch to Arduino and afterwards ensure the power supply is plugged in. It is good to provide the RTC with battery. In case of blackout, the right time will be sustained.</li>
+<li>Adjust both potentiometers to fit your desired brightness and contrast levels.</li>
+<li>Rejoice the beautiful statistics and graphs made from your data.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Manufacturing</h1>
+<p>After wiring all the Arduino components, choose a convenient box to make the case from. Then a few holes should be done. One for the lcd display, one for the BME to be outside of the box, two for Arduino connectors and two for potentiometers. </p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Possible result</h2>
+<div class="image">
+<img src="overview.png" width="75%" alt="overview.png"/>
+<div class="caption">
+Overview with wires</div></div>
+ <div class="image">
+<img src="Connector.png" height="200px" alt="Connector.png"/>
+<div class="caption">
+Connectors</div></div>
+ <div class="image">
+<img src="front.png" height="300px" alt="front.png"/>
+<div class="caption">
+Front</div></div>
+ <div class="image">
+<img src="BME.png" height="400px" alt="BME.png"/>
+<div class="caption">
+BME</div></div>
+ <h1><a class="anchor" id="autotoc_md7"></a>
+How does it work?</h1>
+<p>By setting the interval in the Arduino file a cycle for recording data begins. Every x hours the internet connection is checked. If the ESP is connected, the presence of WS.txt file is checked. Data from the BME and the RTC together with another possible data from the SD card is transferred directly to the server. In case of a lost connection, data is stored on the SD card inserted into the Catalex module. Both the BME and the RTC work via I2C interface. A communication between Arduino and the ESP runs on the serial line. The SD card module is connected via SPI. The LCD display renews data every x minutes. A communication between client and database is based on PDO and SQL commands.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+How to use WS?</h1>
+<p>It is necessary to upload the Arduino script only once. Afterwards, only power supply must be provided for the weather station to function. If a battery is installed in the RTC module, you can disingage the power as you wish and the right time will be sustained. The index page shows the average, max and min data for the last week with a possibility to change the time horizon. There is also displayed the current date and time and last added row to the database. In the right bottom corner you can choose a specific date to see the detail values and a graph. </p><div class="image">
+<img src="index.png" width="95%" alt="index.png"/>
+<div class="caption">
+Index</div></div>
+<p> The STATISTIKY page shows the longterm statistics of all values together with a graph. You can change the desired date range. </p><div class="image">
+<img src="stats.png" alt="stats.png"/>
+<div class="caption">
+Stats</div></div>
+<p> The VÝPIS HODNOT page creates a table of the last 20 recorded values. </p><div class="image">
+<img src="list.png" alt="list.png"/>
+<div class="caption">
+List of values</div></div>
+ <h1><a class="anchor" id="autotoc_md9"></a>
+Possible extension</h1>
+<p>One of the most obvious choice is deploying a BT module. The measured data could by transferred to a mobile phone via bluestooth and displayed in an app. The post request would be changed just to simple strings with the values that would be sent via the serial line to the HC-05 or HC-06 modules. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

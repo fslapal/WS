@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file export.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Makes a table with last 20 values.
+*/
 include ("connect.php");
 include ("menu.html");
 
@@ -8,7 +14,7 @@ $conn = Connection();
 $sql = "SELECT date, time, pres, temp, hum FROM $table ORDER BY date DESC LIMIT 20";
 $result = $conn->query($sql);
 
-if ($result!==FALSE){
+if ($result !== FALSE){
   echo "<br><table>";
   echo "<caption>Výpis posledních zaznamenaných hodnot</caption>";
   echo "<tr><th>Datum</th><th>Čas</th><th>Tlak</th><th>Teplota</th><th>Vlhkost</th></tr>";
@@ -23,5 +29,6 @@ if ($result!==FALSE){
   }
   echo "</table>";
   }
-$conn=null;
+
+$conn = null;
 ?>

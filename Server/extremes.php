@@ -1,18 +1,26 @@
 <?php
-$sql = "SELECT MAX(temp), MAX(pres), MAX(hum) FROM $table WHERE date >= DATE_SUB(curdate(),INTERVAL $interval DAY)";
-$result = $conn->query($sql);
-if ($result!==FALSE){
+/**
+  * @file extremes.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Makes a table with extreme values from the desired day until today.
+*/
+$sql = "SELECT MAX(temp), MAX(pres), MAX(hum) FROM $table WHERE date >= DATE_SUB(curdate(),INTERVAL ? DAY)";
+$result = $conn->prepare($sql);
+$result->execute(array($interval));
+if ($result !== FALSE){
   while ($row = $result->fetch()){
-    if (@@ROWCOUNT!==0){
+    if (@@ROWCOUNT !== 0){
       $tempmax = $row['MAX(temp)'];
       $presmax = $row['MAX(pres)'];
       $hummax = $row['MAX(hum)'];
     }}}
-    $sql = "SELECT MIN(temp), MIN(pres), MIN(hum) FROM $table WHERE date >= DATE_SUB(curdate(),INTERVAL $interval DAY)";
-    $result = $conn->query($sql);
-if ($result!==FALSE){
+$sql = "SELECT MIN(temp), MIN(pres), MIN(hum) FROM $table WHERE date >= DATE_SUB(curdate(),INTERVAL ? DAY)";
+$result = $conn->prepare($sql);
+$result->execute(array($interval));
+if ($result !== FALSE){
   while ($row = $result->fetch()){
-    if (@@ROWCOUNT!==0){
+    if (@@ROWCOUNT !== 0){
           $tempmin = $row['MIN(temp)'];
           $presmin = $row['MIN(pres)'];
           $hummin = $row['MIN(hum)'];

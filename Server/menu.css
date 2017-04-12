@@ -177,7 +177,7 @@ div.time{
   margin-top: 1em;
   overflow: auto;
   }
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 65em) {
   div.calendar{
     width: 90%;
     margin: auto;

@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file stats.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Shows statistics and grah for the desired day.
+*/
 $today = date("Y-m-d");
 $day = empty($_GET['date']) ? $today : $_GET['date'];
 

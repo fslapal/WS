@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['i',['i',['../_w_s_8ino.html#acb559820d9ca11295b4500f179ef6392',1,'WS.ino']]],
-  ['interval',['interval',['../_w_s_8ino.html#ae0c690118932b32ef40a74bb6a259acd',1,'WS.ino']]],
-  ['interval_5fhour',['interval_hour',['../_w_s_8ino.html#a4e07ce7aef83b2e94bd353d77029423e',1,'WS.ino']]],
-  ['interval_5flcd',['interval_lcd',['../_w_s_8ino.html#a64d680b4be82b34d0731c9dd84986ead',1,'WS.ino']]],
-  ['interval_5fsecond',['interval_second',['../_w_s_8ino.html#a0a56e85c196bfb2b3bf61abe7f007541',1,'WS.ino']]]
+  ['h',['h',['../_w_s_8ino.html#a5977e838367785a7176dc7d4106df5e3',1,'WS.ino']]],
+  ['host',['host',['../_w_s_8ino.html#ad9949162675c2cb74b115f5dfb224732',1,'WS.ino']]],
+  ['host1',['host1',['../_w_s_8ino.html#a9e2e38c07417ce7edf45d45a5a6b92c9',1,'WS.ino']]],
+  ['humidity',['humidity',['../_w_s_8ino.html#a6a87b2b0cff24d38b367ccd34843a206',1,'WS.ino']]]
 ];

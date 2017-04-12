@@ -1,6 +1,6 @@
 /*!
    @file WS.ino
-   @Author Filip Šlapal
+   @author Filip Šlapal
    @date April, 2017
    @brief Weather station power by Arduino.
 */
@@ -56,8 +56,6 @@ LiquidCrystal lcd(x, x, x, x, x, x);
   SD card module pin
 */
 #define cs_pin x
-
-
 /*!
   Temperature from BME280
 */
@@ -70,7 +68,6 @@ float humidity;
   Pressure from BME280
 */
 float pressure;
-
 /*!
   Second from RTM
 */
@@ -162,17 +159,14 @@ const char *monthName[12] = {
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 };
-
 /*!
   RTC data storage
 */
 tmElements_t tm;
-
 /*!
   \brief Executed only once
 */
-void setup() {
-
+void setup(){
   //LCD initialization
   lcd.begin(20, 4);
 
@@ -180,48 +174,44 @@ void setup() {
   Serial.begin(9600);
 
   //SD card initialization
-  if (!SD.begin(cs_pin)) {
+  if (!SD.begin(cs_pin)){
     Serial.println("Card failed, or not present!");
-  }
+    }
   else {
     Serial.println("Card initialized!");
-  }
+    }
 
 
   bool parse = false;
   bool config = false;
 
   // get the date and time the compiler was run
-  if (getDate(__DATE__) && getTime(__TIME__)) {
+  if(getDate(__DATE__) && getTime(__TIME__)){
     parse = true;
     // and configure the RTC with this info
-    if (RTC.write(tm)) {
+    if(RTC.write(tm)){
       config = true;
+      }
     }
-  }
 
-  if (parse && config) {
+  if(parse && config){
     Serial.println("Time set successfully!");
-  }
-  else if (parse) {
+    }
+  else if(parse){
     Serial.println("Configuration wasn't done!");
-  }
-  else  {
+    }
+  else{
     Serial.println("Parsing wasn't successful!");
-  }
-
-
+    }
   //BME280 initialization
-
-  if (!bme.begin()) {
+  if(!bme.begin()){
     Serial.println("BME280 doesn't work!");
-  }
-  else {
+    }
+  else{
     Serial.println("BME280 works!");
-  }
+    }
 
   bme.setTempCal(-1);// Temperature correction
-
 
   lcd.setCursor(0, 0);
   lcd.print("Starting WS...");
@@ -234,35 +224,32 @@ void setup() {
 
   oldtim = 0;
   oldtim_lcd = 0;
-}
-
+  }
 /*!
   \brief Repeated loop
 */
-void loop() {
-
+void loop(){
   /*!
     \briefRTC data read
   */
-  if (RTC.read(tm)) {
-
+  if(RTC.read(tm){
     h = (tm.Hour);
     s = (tm.Second);
     mi = (tm.Minute);
     d = (tm.Day);
     mo = (tm.Month);
     y = (tmYearToCalendar(tm.Year));
-  }
-  else {
-  }
+    }
+  else{
+    }
 
-  if (mi == "0" || mi == "1" || mi == "2" || mi == "3" || mi == "4" || mi == "5" || mi == "6" || mi == "7" || mi == "8" || mi == "9") {
+  if(mi == "0" || mi == "1" || mi == "2" || mi == "3" || mi == "4" || mi == "5" || mi == "6" || mi == "7" || mi == "8" || mi == "9"){
     mi_0 = "0";
     mi_0 += mi;
-  }
-  else {
+    }
+  else{
     mi_0 = mi;
-  }
+    }
 
 
   //Reading data from BME280
@@ -275,7 +262,7 @@ void loop() {
   tim = millis() / 1000;
   tim_lcd = millis() / 1000;
 
-  if (tim_lcd == oldtim_lcd + interval_lcd) {
+  if(tim_lcd == oldtim_lcd + interval_lcd){
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(d);
@@ -293,38 +280,33 @@ void loop() {
     lcd.print("Teplota: ");
     lcd.print(temperature);
 
-
     lcd.setCursor(0, 2);
     lcd.print("Tlak: ");
     lcd.print(pressure);
-
 
     lcd.setCursor(0, 3);
     lcd.print("Vlhkost: ");
     lcd.print(humidity);
 
     oldtim_lcd = tim_lcd;
-  }
-  else {}
-
-  if (tim == oldtim + interval) {
+    }
+  else{}
+  if(tim == oldtim + interval){
     connectWiFi();
     oldtim = tim;
   }
-  else {}
-}
+  else{}
+  }
 /*!
   \brief Writing data to SD card.
 
   Data from sensors and password are stored in a string suitable for post request (devided by & sign). At the end of each string a delimiter is added.
   @return Returns a message to Serial line.
 */
-void SDwrite() {
+void SDwrite(){
 
   File dataFile = SD.open("ws.txt", FILE_WRITE);
-
-  if (dataFile) {
-
+  if(dataFile){
     String cmd = "y=";
     cmd += y;
     cmd += "&m=";
@@ -346,37 +328,30 @@ void SDwrite() {
     cmd += sign;
 
     dataFile.print(cmd);
-
-
     dataFile.close();
+
     Serial.println("Data written successfully!");
     delay(2000);
     return;
-  }
-
-
-  else {
+    }
+  else{
     Serial.println("Couldn't write data!");
     return;
+    }
   }
-}
-
-
 /*!
   \brief RTC get time.
 
   Setting date to RTC.
   @param data from compiler
 */
-bool getTime(const char *str)
-{
+bool getTime(const char *str){
   int Hour, Min, Sec;
-
-  if (sscanf(str, "%d:%d:%d", &Hour, &Min, &Sec) != 3) return false;
-  tm.Hour = Hour;
-  tm.Minute = Min;
-  tm.Second = Sec;
-  return true;
+  if(sscanf(str, "%d:%d:%d", &Hour, &Min, &Sec) != 3) return false;
+    tm.Hour = Hour;
+    tm.Minute = Min;
+    tm.Second = Sec;
+    return true;
 }
 /*!
   \brief RTC get date.
@@ -384,23 +359,20 @@ bool getTime(const char *str)
   Setting date to RTC.
   @param data from compiler
 */
-bool getDate(const char *str)
-{
+bool getDate(const char *str){
   char Month[12];
   int Day, Year;
   uint8_t monthIndex;
-
   if (sscanf(str, "%s %d %d", Month, &Day, &Year) != 3) return false;
-  for (monthIndex = 0; monthIndex < 12; monthIndex++) {
-    if (strcmp(Month, monthName[monthIndex]) == 0) break;
-  }
-  if (monthIndex >= 12) return false;
-  tm.Day = Day;
-  tm.Month = monthIndex + 1;
-  tm.Year = CalendarYrToTm(Year);
-  return true;
+    for (monthIndex = 0; monthIndex < 12; monthIndex++) {
+      if (strcmp(Month, monthName[monthIndex]) == 0) break;
+      }
+  if(monthIndex >= 12) return false;
+    tm.Day = Day;
+    tm.Month = monthIndex + 1;
+    tm.Year = CalendarYrToTm(Year);
+    return true;
 }
-
 /*!
   \brief Checking WIFI connection.
 
@@ -411,10 +383,10 @@ bool getDate(const char *str)
 boolean connectWiFi() {
   Serial1.println("AT");
   delay(1000);
-  if (Serial1.find("OK")) {
+  if(Serial1.find("OK")){
     Serial1.println("AT+CWMODE=1");
     delay(2000);
-  }
+    }
   String con = "AT+CWJAP=\"";
   con += ssid;
   con += "\",\"";
@@ -422,12 +394,9 @@ boolean connectWiFi() {
   con += "\"";
   Serial1.println(con);
   delay(10000);
-
-  if (Serial1.find("OK")) {
-
+  if(Serial1.find("OK")){
     String mux = "AT+CIPMUX=0";
     Serial1.println(mux);
-
     if (Serial1.find("OK")) {
       Serial.println("Connection to WIFI successful!");
       Serial.println("Mode successfully set!");
@@ -435,9 +404,8 @@ boolean connectWiFi() {
       lcd.print(1);
       SDread();
       return true;
+      }
     }
-  }
-
   else {
     Serial.println("Connection unsuccessful!");
     lcd.setCursor(19, 0);
@@ -446,34 +414,27 @@ boolean connectWiFi() {
     return false;
   }
 }
-
 /*!
   \brief Reading data from SD card.
 
-  The string is devided into tokens. Their count is determined by comparing the lengths of strings with and without delimiter. The individual tokens are then passed to sendSD() function as strings.
+  A string is devided into tokens. Their count is determined by comparing the lengths of strings with and without delimiter. The individual tokens are then passed to sendSD() function as strings.
 */
-
 void SDread() {
-
-  if (SD.exists("ws.txt")) {
+  if(SD.exists("ws.txt")){
     Serial.println("Data found on the SD card!");
     File myFile = SD.open("ws.txt");
-    if (myFile) {
+    if(myFile){
       // read from the file until there's nothing else in it:
       while (myFile.available() > 0) {
-
         lx = myFile.readString();
         lex += lx;
-
-      }
-
+        }
       l = lex;
       l.replace("x", "");
 
       int lenx = lex.length();
       int len = l.length();
       count = lenx - len;
-
 
       char request[lenx];
       lx.toCharArray(request, lenx);
@@ -483,49 +444,35 @@ void SDread() {
 
       req[i] = strtok(request, "x");
 
-      while (req[i] != NULL)
-      {
+      while(req[i] != NULL){
         req[++i] = strtok(NULL, "x");
-      }
-
-      for (a = 0; a < count; a++) {
-
+        }
+      for(a = 0; a < count; a++){
         String irequest = req[a];
-
         sendSD(String(irequest));
         delay(2500);
+        }
       }
-
-    }
-
-
     myFile.close();
     SD.remove("ws.txt");
     delay(1000);
 
     sendData(String(y), String(mo), String(d), String(h), String(mi), String(temperature), String(humidity), String(pressure), String(password));
     return;
-  }
-
-  else {
+    }
+  else{
     Serial.println("No data on SD card!");
     sendData(String(y), String(mo), String(d), String(h), String(mi), String(temperature), String(humidity), String(pressure), String(password));
     return;
-  }
-
+    }
 }
-
-
-
 /*!
   \brief Sending data stored on SD card
 
-  A TPC connecion is established with the server and data are send via a POST request to the script that adds them to the databse.
+  A TPC connecion is established with the server and values are sent via a POST request to the web page PHP script that adds them to the databse.
   @param token from the SD card
 */
-
-void sendSD(String request) {
-
+void sendSD(String request){
   String cipstart = "AT+CIPSTART=\"TCP\",\"";         // Set up TCP connection
   cipstart += host;
   cipstart += "\",80";
@@ -533,12 +480,9 @@ void sendSD(String request) {
   Serial1.println(cipstart);
   delay(2000);
 
-  if (Serial1.find("OK")) {
-
+  if(Serial1.find("OK")){
     Serial.println("Connection to server successful!");
-
     String cmd = request;
-
     String post = "POST /import.php HTTP/1.1";
     String post1 = "Host: ";
     post1 += host1;
@@ -546,7 +490,6 @@ void sendSD(String request) {
     String post3 = "Content-Length: ";
     post3 += cmd.length();
     String post4 = "Content-Type: application/x-www-form-urlencoded; charset=UTF-8:";
-
 
     int len = post.length() + post1.length() + post2.length() + post3.length() + post4.length() + cmd.length() + 15;
 
@@ -556,8 +499,7 @@ void sendSD(String request) {
     Serial1.println(cipsend);
     delay(500);
 
-    if (Serial1.find(">")) {
-
+    if(Serial1.find(">")){
       Serial1.println(post);
       Serial1.println(post1);
       Serial1.println(post2);
@@ -567,25 +509,20 @@ void sendSD(String request) {
       Serial1.println(cmd);
       Serial1.println();
       Serial1.println();
-    }
-    else {
+      }
+    else{
       Serial.println("There is a problem with CIPSEND command!");
-    }
-
-    if (Serial1.find("SEND OK")) {
+      }
+    if(Serial1.find("SEND OK")){
       Serial.println("Data send successfully!");
-    }
-    else {
+      }
+    else{
       Serial.println("Something went wrong!");
-    }
+      }
     delay(2000);
-
-
   }
-
   return;
 }
-
 /*!
   \brief Sending data directly from BME280
 
@@ -593,8 +530,6 @@ void sendSD(String request) {
   @param values from the BME280 and RTC1307
 */
 void sendData(String eyear, String emonth, String eday, String ehour, String eminute, String etemp, String ehum, String epres, String epassword) {
-
-
   String cipstart = "AT+CIPSTART=\"TCP\",\"";         // Set up TCP connection
   cipstart += host;
   cipstart += "\",80";
@@ -603,9 +538,7 @@ void sendData(String eyear, String emonth, String eday, String ehour, String emi
   delay(2000);
 
   if (Serial1.find("OK")) {
-
     Serial.println("Connection to server successful!");
-
 
     String cmd = "y=";
     cmd += eyear;
@@ -626,9 +559,6 @@ void sendData(String eyear, String emonth, String eday, String ehour, String emi
     cmd += "&pass=";
     cmd += epassword;
 
-
-
-
     String post = "POST /import.php HTTP/1.1";
     String post1 = "Host: ";
     post1 += host1;
@@ -636,7 +566,6 @@ void sendData(String eyear, String emonth, String eday, String ehour, String emi
     String post3 = "Content-Length: ";
     post3 += cmd.length();
     String post4 = "Content-Type: application/x-www-form-urlencoded; charset=UTF-8:";
-
 
     int len = post.length() + post1.length() + post2.length() + post3.length() + post4.length() + cmd.length() + 15;
 
@@ -646,8 +575,7 @@ void sendData(String eyear, String emonth, String eday, String ehour, String emi
     Serial1.println(cipsend);
     delay(500);
 
-    if (Serial1.find(">")) {
-
+    if(Serial1.find(">")){
       Serial1.println(post);
       Serial1.println(post1);
       Serial1.println(post2);
@@ -657,16 +585,16 @@ void sendData(String eyear, String emonth, String eday, String ehour, String emi
       Serial1.println(cmd);
       Serial1.println();
       Serial1.println();
-    }
-    else {
+      }
+    else{
       Serial.println("There is a problem with CIPSEND command!");
-    }
-    if (Serial1.find("SEND OK")) {
+      }
+    if(Serial1.find("SEND OK")){
       Serial.println("Data send successfully!");
-    }
-    else {
+      }
+    else{
       Serial.println("Something went wrong!");
-    }
+      }
     delay(2000);
   }
   return;

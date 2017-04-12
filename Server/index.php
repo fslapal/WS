@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file index.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Index page
+*/
 include ("menu.html");
 include ("connect.php");
 include("datepicker.html");
@@ -48,7 +54,7 @@ echo "Poslední přidaný záznam:<br>";
 $sql = "SELECT date, time, pres, temp, hum FROM $table  WHERE id = (SELECT MAX(ID) FROM $table)";
 $result = $conn->query($sql);
 
-if ($result!==FALSE){
+if ($result !== FALSE){
   while ($row = $result->fetch()){
     echo "<tr>
           <td> {$row['date']} </td>
@@ -64,7 +70,7 @@ echo "</div>";
 echo "<div class='calendar'>
 <h2>Vyberte datum pro podrobnosti</h2>
 <form action='stats.php'>
-<input type='text' id='datepicker1' name='date'>
+<input type='text' id='datepicker1' pattern='[0-9]{4}+-[0-9]{2}+-[0-9]{2}' name='date'>
 <input type='submit' value='Potvrdit'></div>";
 
 $conn = null;

@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file import.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Imports sent values to the database.
+*/
 include("connect.php");
 $conn = Connection();
 
@@ -17,9 +23,9 @@ $date = $year."-".$month."-".$day;
 
 if ($password == $pass){
   $sql = "INSERT INTO $table (date, time, temp, pres, hum)
-  VALUES ('$date', '$time', '$temp', '$pres', '$hum')
-  ";
-  $conn->exec($sql);
+  VALUES (?, ?, ?, ?, ?)";
+  $result = $conn->prepare($sql);
+  $result->execute(array($date, $time, $temp, $pres, $hum));
   $conn = null;
   }
 

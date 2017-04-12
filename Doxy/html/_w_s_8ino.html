@@ -20,6 +20,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="favicon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">WS
    </div>
@@ -72,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Filip Šlapal  
+<p>Weather station power by Arduino.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;SPI.h&gt;</code><br />
 <code>#include &lt;SD.h&gt;</code><br />
@@ -261,8 +262,9 @@ tmElements_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a52357cbf68af66972047f7aed7a45218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Filip Šlapal </p>
-<dl class="section date"><dt>Date</dt><dd>April, 2017 Weather station power by Arduino. </dd></dl>
+<div class="textblock"><p>Weather station power by Arduino. </p>
+<dl class="section author"><dt>Author</dt><dd>Filip Šlapal </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>April, 2017 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a144025702d7aa7708d704324ecb09eff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a144025702d7aa7708d704324ecb09eff">&#9670;&nbsp;</a></span>connectWiFi()</h2>
@@ -432,7 +434,7 @@ tmElements_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>Reading data from SD card. </p>
-<p>The string is devided into tokens. Their count is determined by comparing the lengths of strings with and without delimiter. The individual tokens are then passed to <a class="el" href="_w_s_8ino.html#acca4eb89d9cb2ffb1d5d9fa19d429f9c" title="Sending data stored on SD card. ">sendSD()</a> function as strings. </p>
+<p>A string is devided into tokens. Their count is determined by comparing the lengths of strings with and without delimiter. The individual tokens are then passed to <a class="el" href="_w_s_8ino.html#acca4eb89d9cb2ffb1d5d9fa19d429f9c" title="Sending data stored on SD card. ">sendSD()</a> function as strings. </p>
 
 </div>
 </div>
@@ -551,7 +553,7 @@ tmElements_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>Sending data stored on SD card. </p>
-<p>A TPC connecion is established with the server and data are send via a POST request to the script that adds them to the databse. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>A TPC connecion is established with the server and values are sent via a POST request to the web page PHP script that adds them to the databse. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">token</td><td>from the SD card </td></tr>
   </table>

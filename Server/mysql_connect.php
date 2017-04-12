@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file mysql_connect.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Creates table in the database.
+*/
 include("connect.php");
 
 $conn = Connection();

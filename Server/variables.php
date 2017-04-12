@@ -1,4 +1,10 @@
 <?php
+/**
+  * @file variables.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Variables
+*/
 global $servername, $username, $password, $dbe, $db, $table, $pass;
 $servername = ""; //database server name, jméno serveru databáze
 $username = ""; //username, přihlašovací jméno

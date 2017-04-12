@@ -1,5 +1,10 @@
 <?php
-
+/**
+  * @file averages.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Makes a table and a graph with values from the desired interval
+*/
 $today = date("Y-m-d");
 $lastyear = date("Y")-1;
 $oney = date("$lastyear-m-d");
@@ -17,8 +22,8 @@ echo "
 Vyberte data od kdy do kdy:
 <br><br>
 <form action=".$_SERVER['PHP_SELF'].">
-<input type='text' id='datepicker1' name='from'>
-<input type='text' id='datepicker2' name='to'>
+<input type='text' id='datepicker1' pattern='[0-9]{4}+-[0-9]{2}+-[0-9]{2}' name='from'>
+<input type='text' id='datepicker2' pattern='[0-9]{4}+-[0-9]{2}+-[0-9]{2}' name='to'>
 <input type='submit' value='Potvrdit'>
 </div>
 
@@ -38,5 +43,5 @@ echo "<br>";
 include ('graph.html');
 echo "</div>";
 
-$conn=null;
+$conn = null;
 ?>

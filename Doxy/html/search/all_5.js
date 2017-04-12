@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['h',['h',['../_w_s_8ino.html#a5977e838367785a7176dc7d4106df5e3',1,'WS.ino']]],
-  ['host',['host',['../_w_s_8ino.html#ad9949162675c2cb74b115f5dfb224732',1,'WS.ino']]],
-  ['host1',['host1',['../_w_s_8ino.html#a9e2e38c07417ce7edf45d45a5a6b92c9',1,'WS.ino']]],
-  ['humidity',['humidity',['../_w_s_8ino.html#a6a87b2b0cff24d38b367ccd34843a206',1,'WS.ino']]]
+  ['getdate',['getDate',['../_w_s_8ino.html#a100af87d91fcaa6f23f2ca6a2fe146cc',1,'WS.ino']]],
+  ['gettime',['getTime',['../_w_s_8ino.html#ae96ca3df2e8b9eef75d400de6ef06db3',1,'WS.ino']]]
 ];

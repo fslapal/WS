@@ -1,11 +1,16 @@
 <?php
+/**
+  * @file day_data.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Selects values of the desired day.
+*/
+$sql = "SELECT time, pres, temp, hum FROM $table WHERE date = ?";
+$result = $conn->prepare($sql);
+$result->execute(array($day)); //select values recorded on the desired date
 
-$sql = "SELECT time, pres, temp, hum FROM $table WHERE date = '$day'";
-$result = $conn->query($sql);
-
-
-if ($result!==FALSE){
-  echo "<table>";
+if ($result !== FALSE){
+  echo "<table>"; //table with values
   echo "<caption>Výpis zaznamenaných hodnot</caption>";
   echo "<tr><th>Čas</th><th>Teplota</th><th>Vlhkost</th><th>Tlak</th></tr>";
   while ($row = $result->fetch()){

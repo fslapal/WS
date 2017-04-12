@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getdate',['getDate',['../_w_s_8ino.html#a100af87d91fcaa6f23f2ca6a2fe146cc',1,'WS.ino']]],
-  ['gettime',['getTime',['../_w_s_8ino.html#ae96ca3df2e8b9eef75d400de6ef06db3',1,'WS.ino']]]
+  ['export_2ephp',['export.php',['../export_8php.html',1,'']]],
+  ['extremes_2ephp',['extremes.php',['../extremes_8php.html',1,'']]],
+  ['extremes_5flongterm_2ephp',['extremes_longterm.php',['../extremes__longterm_8php.html',1,'']]]
 ];

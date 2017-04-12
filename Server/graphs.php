@@ -1,5 +1,10 @@
 <?php
-
+/**
+  * @file import.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Shows a graph.
+*/
 $today = date("Y-m-d");
 $day = empty($_GET['date']) ? $today : $_GET['date'];
 $int = 7;

@@ -1,19 +1,28 @@
 <?php
-$sql = "SELECT MAX(temp), MAX(pres), MAX(hum) FROM $table WHERE date >= '$dayfrom' AND date <= '$dayto'";
-$result = $conn->query($sql);
+/**
+  * @file extremes_longterm.php
+  * @author Filip Šlapal
+  * @date April, 2017
+  * @brief Makes a table with extreme values from the desired interval.
+*/
+$sql = "SELECT MAX(temp), MAX(pres), MAX(hum) FROM $table WHERE date >= ? AND date <= ?";
+$result = $conn->prepare($sql);
+$result->execute(array($dayfrom, $dayto));
 
-if ($result!==FALSE){
+if ($result !== FALSE){
   while ($row = $result->fetch()){
-    if (@@ROWCOUNT!==0){
+    if (@@ROWCOUNT !== 0){
       $tempmax = $row['MAX(temp)'];
       $presmax = $row['MAX(pres)'];
       $hummax = $row['MAX(hum)'];
     }}}
-$sql = "SELECT MIN(temp), MIN(pres), MIN(hum) FROM $table WHERE date >= '$dayfrom' AND date <= '$dayto'";
-$result = $conn->query($sql);
-if ($result!==FALSE){
+$sql = "SELECT MIN(temp), MIN(pres), MIN(hum) FROM $table WHERE date >= ? AND date <= ?";
+$result = $conn->prepare($sql);
+$result->execute(array($dayfrom, $dayto));
+
+if ($result !== FALSE){
   while ($row = $result->fetch()){
-    if (@@ROWCOUNT!==0){
+    if (@@ROWCOUNT !== 0){
       $tempmin = $row['MIN(temp)'];
       $presmin = $row['MIN(pres)'];
       $hummin = $row['MIN(hum)'];

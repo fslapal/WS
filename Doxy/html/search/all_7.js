@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['l',['l',['../_w_s_8ino.html#a3d755e761d498d63ec8ff4ba107f9b37',1,'WS.ino']]],
-  ['lcd',['lcd',['../_w_s_8ino.html#ad3d81d27015e5977de8035c02307bdc5',1,'WS.ino']]],
-  ['lex',['lex',['../_w_s_8ino.html#a50a22a42df187974707beaeeb46ee1ec',1,'WS.ino']]],
-  ['loop',['loop',['../_w_s_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'WS.ino']]],
-  ['lx',['lx',['../_w_s_8ino.html#a27093eb2a51400e98a5a829312514cab',1,'WS.ino']]]
+  ['i',['i',['../_w_s_8ino.html#acb559820d9ca11295b4500f179ef6392',1,'WS.ino']]],
+  ['import_2ephp',['import.php',['../import_8php.html',1,'']]],
+  ['index_2ephp',['index.php',['../index_8php.html',1,'']]],
+  ['interval',['interval',['../_w_s_8ino.html#ae0c690118932b32ef40a74bb6a259acd',1,'WS.ino']]],
+  ['interval_5fhour',['interval_hour',['../_w_s_8ino.html#a4e07ce7aef83b2e94bd353d77029423e',1,'WS.ino']]],
+  ['interval_5flcd',['interval_lcd',['../_w_s_8ino.html#a64d680b4be82b34d0731c9dd84986ead',1,'WS.ino']]],
+  ['interval_5fsecond',['interval_second',['../_w_s_8ino.html#a0a56e85c196bfb2b3bf61abe7f007541',1,'WS.ino']]]
 ];
