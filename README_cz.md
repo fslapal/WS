@@ -56,12 +56,15 @@ Komunikace mezi klientem a databází je založena na PDO a SQL příkazech.
 
 # Jak WS používat?
 Arduino kód je nutné nahrát jenom jednou. Potom stačí již jenom připojení zdroje pokaždé, když chceme, aby meteostanice začala posílat data. Po vložení baterie do RTC modulu bude správný čas zachován i při odpojení napájení. Index zobrazuje průměrné, minimální a maximální hodnoty za poslední týden s možností změny časového rozpětí. Aktuální čas, datum a poslední přidané hodnoty jsou také zobrazeny. V pravém dolním rohu je v kalendáři možnost výběru specifického data pro detailní zobrazení hodnot a grafu.
+
 ![Index](/Documentation/index.png)
 
 Ve STATISTIKách se zobrazují extrémní, průměrná data a graf za poslední rok s možností změny rozpětí datumů.
+
 ![Statistiky](/Documentation/stats.png)
 
 VÝPIS HODNOT zobrazí tabulku s posledními 20 zaznamenanými hodnotami.
+
 ![Výpis hodnot](/Documentation/list.png)
 
 # Možná rozšíření
