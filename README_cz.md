@@ -44,7 +44,7 @@ Po zapojení veškerých komponentů k Arduinu si vyberte vhodnou krabičku jako
 ## Možný výsledek
 ![Celkový pohled](/Documentation/overview.png)
 
-![Konektory](/Documentation/Connector.png)
+![Konektory](/Documentation/connector.png)
 
 ![Přední strana](/Documentation/front.png)
 

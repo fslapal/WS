@@ -43,7 +43,7 @@ After wiring all the Arduino components, choose a convenient box to make the cas
 ## Possible result
 ![Overview with wires](/Documentation/overview.png)
 
-![Connectors](/Documentation/Connector.png)
+![Connectors](/Documentation/connector.png)
 
 ![Front](/Documentation/front.png)
 
